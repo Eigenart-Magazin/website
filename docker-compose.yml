@@ -1,0 +1,42 @@
+version: '3.3'
+
+services:
+  db:
+    image: mysql:5.7
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: eigenart_root
+      MYSQL_DATABASE: eigenart_wp
+      MYSQL_USER: eigenart_wp
+      MYSQL_PASSWORD: eigenart_wp
+
+  wordpress:
+    depends_on:
+      - db
+    image: wordpress:php7.3-fpm
+    ports:
+      - 9000:9000
+    restart: unless-stopped
+    volumes:
+      - ./src:/var/www/html:rw,cached
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: eigenart_wp
+      WORDPRESS_DB_PASSWORD: eigenart_wp
+      WORDPRESS_DB_NAME: eigenart_wp
+
+  nginx:
+    image: nginx:1.17.8-alpine
+    ports:
+      - 8080:80
+      - 4430:443
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+      - ./src:/var/www/html:rw,cached
+      - ./logs/nginx:/var/log/nginx
+    depends_on:
+      - wordpress
+volumes:
+  db_data: {}
