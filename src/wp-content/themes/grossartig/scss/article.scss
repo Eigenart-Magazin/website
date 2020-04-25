@@ -1,0 +1,29 @@
+@import "_fonts";
+@import "_colors";
+
+.article {
+  padding: 30px;
+
+  &__excerpt {
+    padding: 20px 0;
+
+    * {
+      font-size: $font-size-secondary-heading;
+    }
+  }
+
+  &__meta {
+    font-size: $font-size-small;
+    font-weight: lighter;
+    padding-bottom: $font-size-small;
+  }
+
+  h2 {
+    margin: $font-size-primary-heading 0;
+  }
+
+  p {
+    margin: $font-size-paragraph * 2 0;
+    line-height: $font-size-paragraph * 4;
+  }
+}

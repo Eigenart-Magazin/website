@@ -1,0 +1,43 @@
+@import '_colors.scss';
+
+$font-size-primary-heading: 90px;
+$font-size-secondary-heading: 26px;
+$font-size-tertiary-heading: 16px;
+$font-size-paragraph: 18px;
+$font-size-small: $font-size-paragraph * 0.8;
+
+:root {
+  font-size: $font-size-paragraph;
+  word-break: break-word;
+}
+
+body, p, span, a, strong, b, u, i, ol, ul, li {
+  font-family: Apercu, Calibri, sans-serif;
+  font-size: $font-size-paragraph;
+  font-weight: normal;
+  color: $primary-color;
+}
+
+h1, h2, h3, h4, h5, h6, strong, b {
+  color: $primary-color;
+  font-family: Apercu, Calibri, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 40px 0;
+  font-size: $font-size-primary-heading;
+  font-weight: bold;
+}
+
+h1 {
+  margin: 0;
+  font-weight: bolder;
+}
+
+h2 {
+  font-size: $font-size-secondary-heading;
+}
+
+h3 {
+  font-size: $font-size-tertiary-heading;
+}
