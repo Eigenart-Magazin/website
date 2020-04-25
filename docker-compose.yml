@@ -27,6 +27,22 @@ services:
       WORDPRESS_DB_PASSWORD: eigenart_wp
       WORDPRESS_DB_NAME: eigenart_wp
 
+  # Execute with "docker-compose run yarn <yarn-commands>"
+  yarn:
+    build: .docker/yarn
+    working_dir: /app/wp-content/themes/grossartig/
+    entrypoint: yarn
+    volumes:
+      - ./src:/app
+
+  sass-watch:
+    build: .docker/yarn
+    working_dir: /app/wp-content/themes/grossartig/
+    command: sass-watch
+    restart: always
+    volumes:
+      - ./src:/app
+
   nginx:
     image: nginx:1.17.8-alpine
     ports:
@@ -40,5 +56,6 @@ services:
       - ./logs/nginx:/var/log/nginx
     depends_on:
       - wordpress
+
 volumes:
   db_data: {}

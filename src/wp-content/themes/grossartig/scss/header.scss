@@ -1,0 +1,20 @@
+@import "_colors";
+
+.header {
+  position: sticky;
+  top: 0;
+  padding: 30px 60px;
+  background-color: $background-inverted;
+  color: $primary-color-inverted;
+
+  img {
+    width: 100%;
+    height: auto;
+    margin: auto;
+  }
+
+  &--type-post {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+}
