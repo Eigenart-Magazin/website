@@ -30,8 +30,10 @@ services:
   nginx:
     image: nginx:1.17.8-alpine
     ports:
-      - 8080:80
-      - 4430:443
+      - 80:80
+      - 443:443
+    hostname: eigenart.dev
+    domainname: eigenart.dev
     volumes:
       - ./nginx:/etc/nginx/conf.d
       - ./src:/var/www/html:rw,cached
