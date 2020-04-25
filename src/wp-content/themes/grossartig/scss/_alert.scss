@@ -1,0 +1,12 @@
+.alert {
+  display: block;
+  font-size: 1rem;
+  padding: 2rem;
+
+  &--red {
+    border: 1px solid #fff;
+    background-color: rgb(170, 50, 50);
+    box-shadow: 1px 1px 1rem rgb(170, 50, 50);
+    color: #fff;
+  }
+}

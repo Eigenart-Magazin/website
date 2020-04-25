@@ -1,5 +1,9 @@
 <article class="article article--heute">
-    <h1><?php the_title() ?></h1>
+    <span class="article__author">
+        <?php echo get_custom_field_or_alert('article_author', 'red'); ?>
+    </span>
+
+    <h1 class="article__title"><?php the_title() ?></h1>
 
     <?php if(has_excerpt()): ?>
         <?php the_excerpt(); ?>
