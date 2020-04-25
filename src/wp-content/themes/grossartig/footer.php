@@ -1,3 +1,4 @@
+</main>
 <footer>
     © Copyright 2020 - <?php bloginfo('name'); ?>
     <ul>
