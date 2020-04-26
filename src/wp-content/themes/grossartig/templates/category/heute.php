@@ -10,7 +10,7 @@
             $date = get_post_datetime() ?: new DateTimeImmutable();
             $fields = array_merge(
                 [$date->format('d.m.Y')],
-                get_custom_field_or_alert('article_author', 'red'),
+                get_custom_field_or_alert('article_author', 'red')
             );
 
             echo implode(' / ', $fields);
