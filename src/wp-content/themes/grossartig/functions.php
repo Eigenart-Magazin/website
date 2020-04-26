@@ -1,6 +1,8 @@
 <?php
 
-function get_custom_field_or_alert(string $field, string $alert_modifier = 'red'): string
+add_theme_support('post-thumbnails');
+
+function get_custom_field_or_alert(string $field, string $alert_modifier = 'red'): array
 {
     $custom_field = post_custom($field);
 
@@ -12,5 +14,5 @@ function get_custom_field_or_alert(string $field, string $alert_modifier = 'red'
 ALERT;
     }
 
-    return $custom_field;
+    return is_array($custom_field) ? $custom_field : [$custom_field];
 }

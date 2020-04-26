@@ -36,4 +36,49 @@
       height: auto;
     }
   }
+
+  &__recommendations {
+    border: 5px solid $background-inverted;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+  }
+
+  &__recommendations-list {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 60px;
+  }
+
+  &__recommended-list-item {
+    padding: 0 15px;
+    * {
+      text-decoration: none;
+    }
+
+    span, h2, p {
+      font-size: $font-size-small;
+      line-height: $font-size-small;
+      margin: 0;
+      padding: 0;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    span {
+      font-size: $font-size-small / 1.5;
+    }
+
+    h2 {
+      font-size: $font-size-paragraph;
+      margin: 20px 0;
+    }
+
+    p {
+      line-height: $font-size-paragraph * 2;
+    }
+  }
 }
