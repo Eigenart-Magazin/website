@@ -1,0 +1,16 @@
+@import "_colors";
+@import "_fonts";
+
+.footer {
+  margin-top: 200px;
+  padding: 20px;
+  background-color: $background-inverted;
+
+  * {
+    color: $primary-color-inverted;
+  }
+
+  span {
+    font-size: $font-size-small / 1.5;
+  }
+}

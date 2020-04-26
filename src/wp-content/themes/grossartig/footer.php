@@ -1,6 +1,5 @@
 </main>
-<footer>
-    © Copyright 2020 - <?php bloginfo('name'); ?>
+<footer class="footer">
     <ul>
     <?php foreach (wp_get_nav_menu_items('footer') ?: [] as $menu_item): ?>
         <li>
@@ -8,6 +7,8 @@
         </li>
     <?php endforeach; ?>
     </ul>
+
+    <span>© Copyright 2020 - <?php bloginfo('name'); ?></span>
 </footer>
 </body>
 </html>
