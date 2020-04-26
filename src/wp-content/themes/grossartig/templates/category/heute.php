@@ -6,8 +6,8 @@
     <?php endif; ?>
 
     <span class="article__meta">
-        05.04.2020 / NIKA GRIGORIAN / Redaktionsleitung / Art in Context
-        <!--<?php echo get_custom_field_or_alert('article_author', 'red'); ?>-->
+        <?php $date = get_post_datetime(); echo $date ? $date->format('d.m.Y') . ' / ' : ''; ?>
+        <?php echo get_custom_field_or_alert('article_author', 'red'); ?>
     </span>
 
     <?php echo get_post()->post_content; ?>
