@@ -11,6 +11,21 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Update Production Credentials
+        env:
+          WP_DB_NAME: ${{ secrets.WP_DB_NAME }}
+          WP_DB_USER: ${{ secrets.WP_DB_USER }}
+          WP_DB_PASSWORD: ${{ secrets.WP_DB_PASSWORD }}
+          WP_DB_HOST: ${{ secrets.WP_DB_HOST }}
+        run: |
+          sed -E "s/define\( 'DB_NAME', 'eigenart_wp'\)/define('DB_NAME', '$WP_DB_NAME')/" src/wp-config.php | \
+          sed -E "s/define\( 'DB_USER', 'eigenart_wp'\)/define('DB_USER', '$WP_DB_USER')/" | \
+          sed -E "s/define\( 'DB_PASSWORD', 'eigenart_wp'\)/define('DB_PASSWORD', '$WP_DB_PASSWORD')/" | \
+          sed -E "s/define\( 'DB_HOST', 'db:3306'\)/define('DB_HOST', '$WP_DB_HOST')/" | \
+          sed -E "s/define\( 'WP_DEBUG', true \)/define('WP_DEBUG', false)/" > src/wp-config.php.tmp
+          rm src/wp-config.php
+          mv src/wp-config.php.tmp src/wp-config.php
+
       - name: Deploy to Server
         uses: sebastianpopp/ftp-action@releases/v2
         with:
