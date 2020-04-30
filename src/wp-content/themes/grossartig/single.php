@@ -1,19 +1,20 @@
 <?php
 
+use function GrossArtig\get_top_category;
+
 get_header();
 
-$post = get_post();
-$category = strtolower(get_the_category_by_ID($post->post_category[0]));
+$category = get_top_category();
 
-switch ($category) {
+switch (strtolower($category->name)) {
     case 'heute':
-        require_once get_template_directory() . '/templates/category/heute.php';
+        require_once get_template_directory() . '/templates/article/heute.php';
         break;
     case 'morgen':
-        require_once get_template_directory() . '/templates/category/morgen.php';
+        require_once get_template_directory() . '/templates/article/morgen.php';
         break;
     case 'gestern':
-        require_once get_template_directory() . '/templates/category/gestern.php';
+        require_once get_template_directory() . '/templates/article/gestern.php';
         break;
     default:
         wp_redirect('/404', 404);

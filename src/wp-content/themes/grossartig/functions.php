@@ -1,10 +1,14 @@
 <?php
 
+namespace GrossArtig;
+
+use WP_Term;
+
 add_theme_support('post-thumbnails');
 
 function get_custom_field_or_alert(string $field, string $alert_modifier = 'red'): array
 {
-    $custom_field = post_custom($field);
+    $custom_field = \post_custom($field);
 
     if (false === $custom_field) {
         $custom_field = <<<ALERT
@@ -15,4 +19,13 @@ ALERT;
     }
 
     return is_array($custom_field) ? $custom_field : [$custom_field];
+}
+
+function get_top_category(): WP_Term
+{
+    $parent_category = current(array_filter(get_categories(), function (WP_Term $term) {
+        return $term->parent === 0;
+    }));
+
+    return $parent_category;
 }
