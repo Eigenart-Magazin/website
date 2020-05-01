@@ -1,0 +1,56 @@
+@import "_colors";
+@import "_fonts";
+
+.category {
+  &__description, .articles-list, h1 {
+    padding: 10px;
+  }
+
+  &__description {
+    background-color: $background-inverted;
+    color: $primary-color-inverted;
+
+    margin-top: 1px;
+    text-indent: 1rem;
+  }
+
+  .articles-list {
+    &__item {
+      h2 {
+        margin: 10px 0;
+      }
+
+      img {
+        margin: 5px 0;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      p {
+        margin: 10px 0;
+      }
+    }
+
+    &__item-meta {
+      font-size: $font-size-small;
+      display: block;
+      padding: 5px;
+    }
+
+    &__item-tags {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__divider {
+      border: 1px solid $primary-color;
+    }
+  }
+
+  .wp-post-image {
+    width: 100%;
+    height: auto;
+  }
+}

@@ -1,8 +1,8 @@
 @import '_colors.scss';
 
-$font-size-primary-heading: 90px;
-$font-size-secondary-heading: 26px;
-$font-size-tertiary-heading: 16px;
+$font-size-primary-heading: 36px;
+$font-size-secondary-heading: 28px;
+$font-size-tertiary-heading: 22px;
 $font-size-paragraph: 18px;
 $font-size-small: $font-size-paragraph * 0.8;
 
@@ -24,7 +24,7 @@ h1, h2, h3, h4, h5, h6, strong, b {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 40px 0;
+  margin: 20px 0;
   font-size: $font-size-primary-heading;
   font-weight: bold;
 }
