@@ -5,6 +5,11 @@ get_header();
 
 $post = get_post();
 
-echo $post->post_content;
+?>
 
+<article class="about">
+  <?php echo $post->post_content; ?>
+</article>
+
+<?php
 get_footer();
