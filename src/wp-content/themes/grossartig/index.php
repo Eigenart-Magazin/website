@@ -1,18 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
+<?php
 
-</head>
-<body>
-    <h1><?php bloginfo('name'); ?></h1>
-    <h2><?php bloginfo('description') ?></h2>
+get_header();
 
-    <?php while (have_posts()): the_post(); ?>
-    <h3><?php the_title(); ?></h3>
+$menu_items = wp_get_nav_menu_items('home-main-menu');
 
-    <?php the_content(); ?>
-    <?php wp_link_pages(); ?>
+?>
 
-    <?php endwhile; ?>
-</body>
-</html>
+<ul>
+    <?php foreach ($menu_items as $item): ?>
+    <li>
+        <a href="<?php echo $item->url; ?>"><?php echo $item->title; ?></a>
+    </li>
+    <? endforeach; ?>
+</ul>
+
+<?php
+
+get_footer();
