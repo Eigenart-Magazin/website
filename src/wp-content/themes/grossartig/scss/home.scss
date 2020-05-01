@@ -1,6 +1,8 @@
 @import "_colors";
 
 .home {
+  overflow-x: hidden;
+
   marquee {
     color: $primary-color-inverted;
     background-color: $background-inverted;
