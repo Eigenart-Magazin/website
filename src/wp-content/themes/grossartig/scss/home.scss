@@ -1,18 +1,23 @@
 @import "_colors";
+@import "_fonts";
 
 .home {
   overflow-x: hidden;
 
-  marquee {
+  &__text {
     color: $primary-color-inverted;
     background-color: $background-inverted;
 
     width: 70%;
     margin-left: 30%;
     margin-top: 10px;
-    padding: 10px;
+    padding: 10px 10px 10px 20px;
+    font-size: $font-size-small;
+    font-weight: lighter;
 
     border-radius: 30px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
   }
 
   .category-list {

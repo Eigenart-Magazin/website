@@ -6,11 +6,9 @@ use function GrossArtig\get_custom_field_or_alert;
 get_header();
 
 $menu_items = wp_get_nav_menu_items('home-main-menu');
-
-$marquee_text = get_custom_field_or_alert('marquee')[0];
 ?>
 <div class="home">
-  <marquee behavior="" direction=""><?php echo $marquee_text; ?></marquee>
+  <?php echo get_post()->post_content; ?>
   <ul class="category-list">
     <?php foreach ($menu_items as $item): ?>
       <li class="category-list__item">
