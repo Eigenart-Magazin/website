@@ -23,7 +23,7 @@ ALERT;
 
 function get_top_category(): WP_Term
 {
-    $parent_category = current(array_filter(get_categories(), function (WP_Term $term) {
+    $parent_category = current(array_filter(get_the_category(), function (WP_Term $term) {
         return $term->parent === 0;
     }));
 

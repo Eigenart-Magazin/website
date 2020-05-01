@@ -1,8 +1,6 @@
 <?php
 
-$parent_category = current(array_filter(get_categories(), function (WP_Term $term) {
-    return $term->parent === 0;
-}));
+use function GrossArtig\get_top_category;
 
 $category = get_the_category()[0] ?? null;
 if (true === is_null($category)) {
@@ -10,7 +8,14 @@ if (true === is_null($category)) {
     exit;
 }
 
-$posts = query_posts("cat={$category->ID}");
+$parent_category = get_top_category();
+
+$posts = query_posts([
+    'cat' => $parent_category->cat_ID,
+    'post_type' => 'post',
+    'orderby' => 'date',
+    'order' => 'DESC'
+]);
 
 ?>
 <article>
