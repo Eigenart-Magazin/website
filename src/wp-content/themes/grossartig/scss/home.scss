@@ -1,0 +1,43 @@
+@import "_colors";
+
+.home {
+  marquee {
+    color: $primary-color-inverted;
+    background-color: $background-inverted;
+
+    width: 70%;
+    margin-left: 30%;
+    margin-top: 10px;
+    padding: 10px;
+
+    border-radius: 30px;
+  }
+
+  .category-list {
+    margin: 0 15px;
+
+    &__item {
+      display: flex;
+      margin: 2rem 0;
+
+      a {
+        font-size: 3rem;
+        text-decoration: none;
+      }
+
+      &:nth-child(odd) {
+        &::before {
+          content: ' ';
+          flex-grow: 1;
+        }
+      }
+
+      &:nth-child(even) {
+        &::after {
+          content: ' ';
+          flex-grow: 1;
+        }
+      }
+    }
+  }
+}
