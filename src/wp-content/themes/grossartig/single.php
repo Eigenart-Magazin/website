@@ -12,25 +12,29 @@ $post = get_post();
 
 ?>
 <article class="article article--heute">
-  <h1 class="article__title"><?php the_title() ?></h1>
+  <div class="article__header">
+    <h1 class="article__title"><?php the_title() ?></h1>
 
-  <?php if(has_excerpt()): ?>
-    <div class="article__excerpt"><?php the_excerpt(); ?></div>
-  <?php endif; ?>
+    <?php if(has_excerpt()): ?>
+      <div class="article__excerpt"><?php the_excerpt(); ?></div>
+    <?php endif; ?>
 
-  <span class="article__meta">
-    <?php
-    $date = get_post_datetime() ?: new DateTimeImmutable();
-    $fields = array_merge(
-        [$date->format('d.m.Y')],
-        get_custom_field_or_alert('article_author', 'red')
-    );
+    <span class="article__meta">
+      <?php
+      $date = get_post_datetime() ?: new DateTimeImmutable();
+      $fields = array_merge(
+          [$date->format('d.m.Y')],
+          get_custom_field_or_alert('article_author', 'red')
+      );
 
-    echo implode(' / ', $fields);
-    ?>
-  </span>
+      echo implode(' / ', $fields);
+      ?>
+    </span>
+  </div>
 
-  <?php echo $post->post_content; ?>
+  <div class="article__content">
+    <?php echo $post->post_content; ?>
+  </div>
 </article>
 
 <?php
