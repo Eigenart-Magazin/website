@@ -71,6 +71,8 @@
       alt="<?php bloginfo('name'); ?>"
     >
   </a>
+
+  <?php if ('HomePage' !== pathinfo(get_page_template(), PATHINFO_FILENAME)): ?>
   <ul class="header__menu">
     <?php foreach (wp_get_nav_menu_items('header-menu') ?: [] as $menu_item): ?>
     <li>
@@ -78,5 +80,11 @@
     </li>
     <?php endforeach; ?>
   </ul>
+  <?php endif; ?>
 </header>
 <main>
+<?php if ('HomePage' === pathinfo(get_page_template(), PATHINFO_FILENAME)): ?>
+<span class="home-headline">
+  Das Studierendenmagazin der Universität der Künste Berlin
+</span>
+<?php endif; ?>

@@ -1,5 +1,6 @@
 @import "_colors";
 @import "_fonts";
+@import "_mixins";
 
 .home {
   overflow-x: hidden;
@@ -46,5 +47,33 @@
         }
       }
     }
+  }
+}
+
+.home-headline {
+  display: inline-block;
+  font-size: $font-size-small;
+  margin-left: 30%;
+  margin-top: 20px;
+  padding: 10px 20px;
+
+  background-color: $background-inverted;
+  color: $primary-color-inverted;
+
+  border-radius: 30px;
+
+  @include mobile-only {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  @include tablet-up {
+    position: absolute;
+    top: 22px;
+    right: 10px;
+    margin: 0;
+
+    background-color: $background;
+    color: $primary-color;
   }
 }
