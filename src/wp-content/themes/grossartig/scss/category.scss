@@ -69,6 +69,14 @@
         border-right: 0;
         border-bottom: 0;
         padding: 10px;
+
+        &:hover {
+          background-color: $background-inverted;
+          * {
+            border-color: $primary-color-inverted;
+            color: $primary-color-inverted;
+          }
+        }
       }
     }
 
