@@ -1,9 +1,26 @@
 @import "_colors";
 @import "_fonts";
+@import "_mixins";
 
 .category {
+  @include tablet-up {
+    display: grid;
+    grid-template-columns: 35% 65%;
+  }
+
+  &__main {
+    @include tablet-up {
+      border-left: 2px solid $background-inverted;
+      padding-bottom: 80px;
+    }
+  }
+
   &__description, .articles-list, h1 {
     padding: 10px;
+
+    @include tablet-up {
+      padding: initial;
+    }
   }
 
   &__description {
@@ -12,6 +29,16 @@
 
     margin-top: 1px;
     text-indent: 1rem;
+
+    @include tablet-up {
+      padding: 30px;
+      text-indent: 0;
+      margin-top: 0;
+    }
+
+    @include desktop-up {
+      padding-left: 80px;
+    }
   }
 
   .articles-list {
@@ -22,6 +49,10 @@
 
       img {
         margin: 5px 0;
+
+        @include tablet-up {
+          display: none;
+        }
       }
 
       a {
@@ -31,21 +62,33 @@
       p {
         margin: 10px 0;
       }
+
+      @include tablet-up {
+        border: 2px solid $primary-color;
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 0;
+        padding: 10px;
+      }
     }
 
     &__item-meta {
       font-size: $font-size-small;
       display: block;
       padding: 5px;
+
+      @include tablet-up {
+        padding: 0;
+      }
     }
 
     &__item-tags {
       display: flex;
       flex-wrap: wrap;
-    }
 
-    &__divider {
-      border: 1px solid $primary-color;
+      @include tablet-up {
+        display: none;
+      }
     }
   }
 

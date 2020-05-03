@@ -14,14 +14,15 @@ $posts = query_posts([
 ]);
 
 ?>
-  <article class="category">
+
+<div class="category">
+  <aside class="category__aside"></aside>
+  <article class="category__main">
     <p class="category__description">
       <?php echo $parent_category->description; ?>
     </p>
-    <h1><?php echo $parent_category->name; ?></h1>
     <ul class="articles-list">
       <?php foreach ($posts as $post): ?>
-        <hr class="articles-list__divider">
         <li class="articles-list__item">
           <a href="<?php echo get_permalink($post); ?>">
             <!-- img -->
@@ -54,7 +55,7 @@ $posts = query_posts([
       ?>
     </ul>
   </article>
-
+</div>
 <?php
 wp_reset_query();
 
