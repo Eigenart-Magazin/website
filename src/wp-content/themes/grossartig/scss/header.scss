@@ -1,4 +1,5 @@
 @import "_colors";
+@import "_mixins";
 
 .header {
   position: sticky;
@@ -15,10 +16,45 @@
 
   &--type-page {
     position: initial;
+
+    @include tablet-up {
+      display: grid;
+      grid-template-columns: 50% 50%;
+    }
   }
 
   &--type-post {
     display: grid;
     grid-template-columns: 50% 50%;
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: flex-end;
+
+    li {
+      display: inline-block;
+      margin: 0 10px;
+      align-self: center;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    * {
+      color: $primary-color-inverted;
+    }
+
+    @include mobile-only {
+      display: none;
+    }
+  }
+
+  @include tablet-up {
+    img {
+      width: auto;
+      height: 60px;
+    }
   }
 }

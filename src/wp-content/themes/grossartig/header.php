@@ -71,5 +71,12 @@
       alt="<?php bloginfo('name'); ?>"
     >
   </a>
+  <ul class="header__menu">
+    <?php foreach (wp_get_nav_menu_items('footer') ?: [] as $menu_item): ?>
+    <li>
+      <a href="<?php echo $menu_item->url ?: '#'; ?>"><?php echo $menu_item->title; ?></a>
+    </li>
+    <?php endforeach; ?>
+  </ul>
 </header>
 <main>
