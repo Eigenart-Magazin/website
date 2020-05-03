@@ -13,14 +13,24 @@ $posts = query_posts([
     'order' => 'DESC'
 ]);
 
+$category = get_the_category()[0];
+$is_heute = 'heute' === strtolower($parent_category->name);
 ?>
 
-<div class="category">
+<div class="category <?php echo $is_heute ? 'category--heute' : '' ?>">
   <aside class="category__aside"></aside>
   <article class="category__main">
-    <p class="category__description">
-      <?php echo $parent_category->description; ?>
-    </p>
+    <div class="category__description">
+      <p><?php echo $parent_category->description; ?></p>
+    </div>
+    <?php if (true === $is_heute): ?>
+    <div class="category__description category__description--contrast-background">
+      <div class="category__description--open-call">
+        <h1><?php echo $category->name; ?></h1>
+        <p><?php echo $category->description; ?></p>
+      </div>
+    </div>
+    <?php endif; ?>
     <ul class="articles-list">
       <?php foreach ($posts as $post): ?>
         <li class="articles-list__item">

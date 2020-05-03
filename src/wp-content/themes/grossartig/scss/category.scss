@@ -27,6 +27,11 @@
     background-color: $background-inverted;
     color: $primary-color-inverted;
 
+    h1, p {
+      color: inherit;
+      background-color: inherit;
+    }
+
     margin-top: 1px;
     text-indent: 1rem;
 
@@ -103,5 +108,72 @@
   .wp-post-image {
     width: 100%;
     height: auto;
+  }
+
+  &--heute {
+    @include tablet-up {
+      display: initial;
+    }
+
+    .category {
+      &__description {
+        @include tablet-up {
+          display: none;
+        }
+
+        &--contrast-background {
+          color: $primary-color-inverted;
+          background-color: $background-inverted;
+
+          @include tablet-up {
+            display: block;
+            padding-left: 0;
+          }
+        }
+
+        &--open-call {
+          padding: 10px 0;
+
+          @include mobile-only {
+            h1 {
+              color: $primary-color;
+              background-color: $background;
+              margin: 10px 15px 10px 0;
+
+              border-radius: 30px;
+              border-top-left-radius: 0;
+              border-bottom-left-radius: 0;
+            }
+
+            p {
+              padding: 10px;
+            }
+          }
+
+          @include tablet-up {
+            width: 90%;
+            color: $primary-color;
+            background-color: $background;
+            padding: 10px 80px;
+            border-radius: 80px;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+
+            h1 {
+              margin: 10px 0;
+            }
+          }
+        }
+      }
+    }
+
+    .articles-list {
+      &__item {
+        border: 2px solid #000;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+      }
+    }
   }
 }
