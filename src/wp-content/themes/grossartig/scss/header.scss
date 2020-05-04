@@ -47,7 +47,40 @@
     }
 
     @include mobile-only {
-      display: none;
+      li {
+        display: none;
+      }
+
+      &--active {
+        background-color: $background-inverted;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        justify-content: center;
+        flex-direction: column;
+
+        li {
+          display: initial;
+          margin: 10px;
+        }
+      }
+    }
+  }
+
+  &__menu-button {
+    display: none;
+    color: initial;
+    background: initial;
+    border: initial;
+
+    @include mobile-only {
+      display: block;
+      position: absolute;
+      top: 15px;
+      right: 5px;
     }
   }
 

@@ -60,6 +60,11 @@
   </style>
   <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript">
+    function toggleMenu(button) {
+        button.parentNode.classList.toggle('header__menu--active');
+    }
+  </script>
 
   <title><?php wp_title(''); ?> | <?php bloginfo('name'); ?></title>
 </head>
@@ -72,8 +77,15 @@
     >
   </a>
 
-  <?php if ('HomePage' !== pathinfo(get_page_template(), PATHINFO_FILENAME)): ?>
+  <?php if (!in_array(pathinfo(get_page_template(), PATHINFO_FILENAME), ['HomePage', 'AboutPage'])): ?>
   <ul class="header__menu">
+      <button class="header__menu-button" onclick="toggleMenu(this)">
+        <img
+          class="header__menu-icon"
+          src="<?php echo get_theme_file_uri('/assets/images/hamburger-menu-icon.png'); ?>"
+          alt="Open Menu"
+        />
+      </button>
     <?php foreach (wp_get_nav_menu_items('header-menu') ?: [] as $menu_item): ?>
     <li>
       <a href="<?php echo $menu_item->url ?: '#'; ?>"><?php echo $menu_item->title; ?></a>
