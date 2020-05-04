@@ -10,9 +10,17 @@
     margin: auto;
   }
 
-  @include desktop-up {
-    &__content p, &__content h2 {
-      padding: 0 15%;
+  &__content {
+    li {
+      padding: 10px 5px;
+      list-style-type: initial;
+      list-style-position: inside;
+    }
+
+    @include desktop-up {
+      p, h1, h2, h3, h4, h5, h6, ul {
+        padding: 0 15%;
+      }
     }
   }
 
