@@ -7,8 +7,10 @@ $post = get_post();
 
 ?>
 
-<article class="about">
-  <?php echo $post->post_content; ?>
+<article class="about article">
+  <div class="article__content">
+    <?php echo $post->post_content; ?>
+  </div>
 </article>
 
 <?php
