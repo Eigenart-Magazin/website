@@ -1,0 +1,32 @@
+@import "_mixins";
+
+.wp-block-gallery {
+  padding: 0 15%;
+}
+
+ul.blocks-gallery-grid {
+  padding: 0;
+}
+
+.blocks-gallery-grid {
+  display: inline-block;
+  overflow: hidden;
+  overflow-x: scroll;
+  white-space: nowrap;
+  scroll-snap-type: x mandatory;
+
+  li {
+    display: inline-block;
+    padding: initial;
+    list-style: none;
+    scroll-snap-align: start;
+    width: 100%;
+    vertical-align: middle;
+  }
+}
+
+.blocks-gallery-item {
+  display: block;
+  width: 100%;
+  height: auto;
+}
