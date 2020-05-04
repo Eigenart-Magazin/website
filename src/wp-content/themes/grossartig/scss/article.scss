@@ -109,4 +109,57 @@
       margin: 10px 0;
     }
   }
+
+  &--morgen {
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .blocks-gallery-grid {
+      width: 100%;
+    }
+
+    .wp-block-gallery {
+      padding: initial;
+    }
+
+    @include tablet-up {
+      display: grid;
+      grid-template-columns: 35% 65%;
+      width: initial;
+
+      .article__header {
+        text-align: initial;
+        padding: 0 5px;
+      }
+
+      .wp-block-image, .wp-block-gallery {
+        position: absolute;
+        left: 0;
+        width: 35%;
+        margin: 0;
+        text-align: initial;
+        padding: initial;
+      }
+    }
+
+    .article__main {
+      border: 2px solid $primary-color;
+      border-top: 0;
+      border-right: 0;
+      border-bottom: 0;
+
+      @include mobile-only {
+        border: 0;
+      }
+    }
+
+    .article__content {
+      @include desktop-up {
+        p, h1, h2, h3, h4, h5, h6 {
+          padding: 0 5px;
+        }
+      }
+    }
+  }
 }
