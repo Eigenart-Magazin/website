@@ -50,7 +50,7 @@ $post = get_post();
 $recommended_articles = query_posts([
   'cat' => $category->term_id,
   'post__not_in' => [$post->ID],
-  'posts_per_page' => 2,
+  'posts_per_page' => 5,
 ]) ?: [];
 
 wp_reset_query();
