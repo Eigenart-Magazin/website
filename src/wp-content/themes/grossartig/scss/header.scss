@@ -95,3 +95,36 @@
     }
   }
 }
+
+@supports not (display: grid) {
+  .header {
+    display: block;
+    height: 85px;
+
+    &::after {
+      content: ' ';
+      display: block;
+      clear: both;
+    }
+
+    a {
+      display: block;
+      float: left;
+      height: 100%;
+
+      img {
+        height: 100%;
+        width: auto;
+      }
+    }
+
+    li > a {
+      float: initial;
+    }
+
+    .header__menu {
+      float: right;
+      height: 100%;
+    }
+  }
+}
