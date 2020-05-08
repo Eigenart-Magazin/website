@@ -8,10 +8,21 @@
     grid-template-columns: 35% 65%;
   }
 
+  &__scroll-top {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+
+    img {
+      width: 34px;
+      height: auto;
+    }
+  }
+
   &__main {
     @include screen-size-m {
       border-left: 2px solid $background-inverted;
-      padding-bottom: 80px;
+      padding-bottom: 20px;
     }
   }
 
@@ -33,17 +44,20 @@
     }
 
     margin-top: 1px;
-    text-indent: 1rem;
 
     @include screen-size-m {
       padding: 30px;
-      text-indent: 0;
       margin-top: 0;
     }
 
     @include screen-size-xl {
       padding-left: 80px;
     }
+  }
+
+  &__description-arrow {
+    width: 22px;
+    height: 18px;
   }
 
   .articles-list {

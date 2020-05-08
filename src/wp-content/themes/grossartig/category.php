@@ -21,7 +21,14 @@ $is_heute = 'heute' === strtolower($parent_category->name);
   <aside class="category__aside"></aside>
   <article class="category__main">
     <div class="category__description">
-      <p><?php echo $parent_category->description; ?></p>
+      <p>
+        <img
+          class="category__description-arrow"
+          src="<?php echo get_theme_file_uri('/assets/images/short-arrow-right.png'); ?>"
+          alt=""
+        />
+        <?php echo $parent_category->description; ?>
+      </p>
     </div>
     <?php if (true === $is_heute): ?>
     <div class="category__description category__description--contrast-background">
@@ -64,6 +71,12 @@ $is_heute = 'heute' === strtolower($parent_category->name);
       endforeach;
       ?>
     </ul>
+    <a href="#" class="category__scroll-top">
+        <img
+          src="<?php echo get_theme_file_uri('/assets/images/arrow-top.png'); ?>"
+          alt="Scroll to Top"
+        />
+    </a>
   </article>
 </div>
 <?php
