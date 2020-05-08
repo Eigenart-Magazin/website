@@ -96,6 +96,7 @@
   }
 }
 
+// Style for fixing Safari's shitty behaviour
 @supports not (display: grid) {
   .header {
     display: block;
@@ -125,6 +126,15 @@
     .header__menu {
       float: right;
       height: 100%;
+
+      &--active {
+        text-align: center;
+        padding-top: 50%;
+      }
+
+      li {
+        display: block;
+      }
     }
   }
 }
