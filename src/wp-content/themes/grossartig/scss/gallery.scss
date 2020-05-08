@@ -1,11 +1,12 @@
 @import "_mixins";
 
 .wp-block-gallery {
-  padding: 0 15%;
+  padding: 0;
 }
 
 ul.blocks-gallery-grid {
   padding: 0;
+  width: 100%;
 }
 
 .blocks-gallery-grid {
@@ -20,7 +21,6 @@ ul.blocks-gallery-grid {
     padding: initial;
     list-style: none;
     scroll-snap-align: start;
-    width: 100%;
     vertical-align: middle;
   }
 }

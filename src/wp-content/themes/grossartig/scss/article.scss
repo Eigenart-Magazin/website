@@ -5,7 +5,7 @@
 .article {
   padding: 10px;
 
-  @include tablet-up {
+  @include screen-size-l {
     width: 80vw;
     margin: auto;
   }
@@ -17,7 +17,7 @@
       list-style-position: inside;
     }
 
-    @include desktop-up {
+    @include screen-size-xl {
       p, h1, h2, h3, h4, h5, h6, ul {
         padding: 0 15%;
       }
@@ -25,9 +25,9 @@
   }
 
   &__header {
-    @include tablet-up {
+    text-align: center;
+    @include screen-size-l {
       margin: 50px 0;
-      text-align: center;
     }
   }
 
@@ -40,7 +40,7 @@
     margin: $font-size-paragraph 0;
     line-height: $font-size-paragraph * 1.4;
 
-    @include tablet-up {
+    @include screen-size-l {
       margin: $font-size-paragraph * 2 0;
     }
   }
@@ -64,7 +64,7 @@
     border-right: 0;
     border-bottom: 0;
 
-    @include tablet-up {
+    @include screen-size-l {
       width: 100%;
     }
   }
@@ -74,7 +74,7 @@
     grid-template-columns: 50% 50%;
     margin-top: 15px;
 
-    @include desktop-up {
+    @include screen-size-xl {
       grid-template-columns: repeat(5, 20%);
     }
   }
@@ -123,7 +123,7 @@
       padding: initial;
     }
 
-    @include tablet-up {
+    @include screen-size-l {
       display: grid;
       grid-template-columns: 35% 65%;
       width: initial;
@@ -144,18 +144,18 @@
     }
 
     .article__main {
-      border: 2px solid $primary-color;
-      border-top: 0;
-      border-right: 0;
-      border-bottom: 0;
+      border: 0;
 
-      @include mobile-only {
-        border: 0;
+      @include screen-size-l {
+        border: 2px solid $primary-color;
+        border-top: 0;
+        border-right: 0;
+        border-bottom: 0;
       }
     }
 
     .article__content {
-      @include desktop-up {
+      @include screen-size-xl {
         p, h1, h2, h3, h4, h5, h6 {
           padding: 0 5px;
         }

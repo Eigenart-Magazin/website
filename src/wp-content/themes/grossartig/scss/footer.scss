@@ -8,7 +8,7 @@
   background-color: $background-inverted;
   align-items: center;
 
-  @include tablet-up {
+  @include screen-size-m {
     margin-top: 0;
     display: flex;
     flex-flow: row-reverse;

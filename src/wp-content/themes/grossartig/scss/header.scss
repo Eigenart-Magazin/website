@@ -18,7 +18,7 @@
   &--type-page {
     position: initial;
 
-    @include tablet-up {
+    @include screen-size-l {
       display: grid;
       grid-template-columns: 50% 50%;
     }
@@ -33,12 +33,6 @@
     display: flex;
     justify-content: flex-end;
 
-    li {
-      display: inline-block;
-      margin: 0 10px;
-      align-self: center;
-    }
-
     a {
       text-decoration: none;
     }
@@ -47,45 +41,54 @@
       color: $primary-color-inverted;
     }
 
-    @include mobile-only {
+    li {
+      display: none;
+    }
+
+    @include screen-size-l {
       li {
-        display: none;
+        display: initial;
+        margin: 0 10px;
+        place-self: center;
       }
+    }
 
-      &--active {
-        background-color: $background-inverted;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+    &--active {
+      background-color: $background-inverted;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
 
-        justify-content: center;
-        flex-direction: column;
+      justify-content: center;
+      flex-direction: column;
 
-        li {
-          display: initial;
-          margin: 10px;
-        }
+      li {
+        display: inline-block;
+        margin: 10px;
+        align-self: center;
       }
     }
   }
 
   &__menu-button {
-    display: none;
-    color: initial;
-    background: initial;
-    border: initial;
+    display: block;
+    background-color: transparent;
+    border: transparent;
+    position: absolute;
+    top: 15px;
+    right: 5px;
 
-    @include mobile-only {
-      display: block;
-      position: absolute;
-      top: 15px;
-      right: 5px;
+    @include screen-size-l {
+      display: none;
+      color: initial;
+      background: initial;
+      border: initial;
     }
   }
 
-  @include tablet-up {
+  @include screen-size-l {
     img {
       width: auto;
       height: 60px;

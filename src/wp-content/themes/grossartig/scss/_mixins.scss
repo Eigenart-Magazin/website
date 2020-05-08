@@ -1,11 +1,19 @@
-@mixin mobile-only {
-  @media (max-width: 599px) { @content; }
+@mixin screen-size-xs {
+  @media (max-width: 600px) { @content; }
 }
 
-@mixin tablet-up {
+@mixin screen-size-s {
   @media (min-width: 600px) { @content; }
 }
 
-@mixin desktop-up {
+@mixin screen-size-m {
+  @media (min-width: 768px) { @content; }
+}
+
+@mixin screen-size-l {
+  @media (min-width: 992px) { @content; }
+}
+
+@mixin screen-size-xl {
   @media (min-width: 1200px) { @content; }
 }

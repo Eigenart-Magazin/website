@@ -62,12 +62,12 @@
 
   border-radius: 30px;
 
-  @include mobile-only {
+  @include screen-size-s {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
 
-  @include tablet-up {
+  @include screen-size-m {
     position: absolute;
     top: 22px;
     right: 10px;

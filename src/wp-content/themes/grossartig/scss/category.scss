@@ -3,13 +3,13 @@
 @import "_mixins";
 
 .category {
-  @include tablet-up {
+  @include screen-size-m {
     display: grid;
     grid-template-columns: 35% 65%;
   }
 
   &__main {
-    @include tablet-up {
+    @include screen-size-m {
       border-left: 2px solid $background-inverted;
       padding-bottom: 80px;
     }
@@ -18,7 +18,7 @@
   &__description, .articles-list, h1 {
     padding: 10px;
 
-    @include tablet-up {
+    @include screen-size-m {
       padding: initial;
     }
   }
@@ -35,13 +35,13 @@
     margin-top: 1px;
     text-indent: 1rem;
 
-    @include tablet-up {
+    @include screen-size-m {
       padding: 30px;
       text-indent: 0;
       margin-top: 0;
     }
 
-    @include desktop-up {
+    @include screen-size-xl {
       padding-left: 80px;
     }
   }
@@ -55,7 +55,7 @@
       img {
         margin: 5px 0;
 
-        @include tablet-up {
+        @include screen-size-m {
           display: none;
         }
       }
@@ -68,7 +68,7 @@
         margin: 10px 0;
       }
 
-      @include tablet-up {
+      @include screen-size-m {
         border: 2px solid $primary-color;
         border-left: 0;
         border-right: 0;
@@ -90,7 +90,7 @@
       display: block;
       padding: 5px;
 
-      @include tablet-up {
+      @include screen-size-m {
         padding: 0;
       }
     }
@@ -99,7 +99,7 @@
       display: flex;
       flex-wrap: wrap;
 
-      @include tablet-up {
+      @include screen-size-m {
         display: none;
       }
     }
@@ -111,13 +111,13 @@
   }
 
   &--heute {
-    @include tablet-up {
+    @include screen-size-m {
       display: initial;
     }
 
     .category {
       &__description {
-        @include tablet-up {
+        @include screen-size-m {
           display: none;
         }
 
@@ -125,7 +125,7 @@
           color: $primary-color-inverted;
           background-color: $background-inverted;
 
-          @include tablet-up {
+          @include screen-size-m {
             display: block;
             padding-left: 0;
           }
@@ -134,7 +134,7 @@
         &--open-call {
           padding: 10px 0;
 
-          @include mobile-only {
+          @include screen-size-s {
             h1 {
               color: $primary-color;
               background-color: $background;
@@ -150,7 +150,7 @@
             }
           }
 
-          @include tablet-up {
+          @include screen-size-l {
             width: 90%;
             color: $primary-color;
             background-color: $background;
