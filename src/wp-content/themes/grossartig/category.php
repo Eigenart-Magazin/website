@@ -29,6 +29,11 @@ $is_heute = 'heute' === strtolower($parent_category->name);
         />
         <?php echo $parent_category->description; ?>
       </p>
+      <img
+        class="category__edge-arrow"
+        src="<?php echo get_theme_file_uri('/assets/images/curved-arrow-left.png'); ?>"
+        alt=""
+      />
     </div>
     <?php if (true === $is_heute): ?>
     <div class="category__description category__description--contrast-background">

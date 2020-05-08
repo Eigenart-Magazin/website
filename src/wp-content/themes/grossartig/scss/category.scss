@@ -60,6 +60,11 @@
     height: 18px;
   }
 
+  &__edge-arrow {
+    width: 25px;
+    height: 38px;
+  }
+
   .articles-list {
     &__item {
       border: 2px solid $primary-color;
@@ -157,11 +162,15 @@
 
     .category {
       &__description {
-        @include screen-size-m {
+        text-align: right;
+        padding-top: 0;
+
+        p {
           display: none;
         }
 
         &--contrast-background {
+          padding: 0;
           color: $primary-color-inverted;
           background-color: $background-inverted;
 
@@ -173,21 +182,21 @@
 
         &--open-call {
           padding: 10px 0;
+          text-align: initial;
 
-          @include screen-size-s {
-            h1 {
-              color: $primary-color;
-              background-color: $background;
-              margin: 10px 15px 10px 0;
+          p {
+            display: block;
+            padding: 0 10px;
+          }
 
-              border-radius: 30px;
-              border-top-left-radius: 0;
-              border-bottom-left-radius: 0;
-            }
+          h1 {
+            color: $primary-color;
+            background-color: $background;
+            margin: 10px 15px 10px 0;
 
-            p {
-              padding: 10px;
-            }
+            border-radius: 30px;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
           }
 
           @include screen-size-l {
