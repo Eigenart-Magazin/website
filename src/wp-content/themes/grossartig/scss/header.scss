@@ -72,6 +72,12 @@
     }
   }
 
+  &__menu-icon {
+    &--hidden {
+      display: none;
+    }
+  }
+
   &__menu-button {
     display: block;
     background-color: transparent;
@@ -79,6 +85,16 @@
     position: absolute;
     top: 15px;
     right: 5px;
+
+    &:active {
+      transform: rotate(360deg);
+      transition-duration: 0.7s;
+      transition-property: transform;
+
+      -webkit-transform: rotate(360deg);
+      -webkit-transition-duration: 0.7s;
+      -webkit-transition-property: transform;
+    }
 
     @include screen-size-l {
       display: none;

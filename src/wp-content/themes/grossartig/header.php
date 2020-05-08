@@ -63,6 +63,10 @@
   <script type="text/javascript">
     function toggleMenu(button) {
         button.parentNode.classList.toggle('header__menu--active');
+        var imgs = button.children;
+        for (var i = 0; i < imgs.length; i++) {
+          imgs[i].classList.toggle('header__menu-icon--hidden');
+        }
     }
   </script>
 
@@ -84,6 +88,11 @@
           class="header__menu-icon"
           src="<?php echo get_theme_file_uri('/assets/images/hamburger-menu-icon.png'); ?>"
           alt="Open Menu"
+        />
+        <img
+          class="header__menu-icon header__menu-icon--hidden"
+          src="<?php echo get_theme_file_uri('/assets/images/cross-icon.png'); ?>"
+          alt="Close Menu"
         />
       </button>
     <?php foreach (wp_get_nav_menu_items('header-menu') ?: [] as $menu_item): ?>
