@@ -137,6 +137,7 @@
     &__item-tags {
       display: flex;
       flex-wrap: wrap;
+      margin-bottom: 5px;
 
       @include screen-size-m {
         display: none;
