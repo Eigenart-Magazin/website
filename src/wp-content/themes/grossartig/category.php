@@ -42,9 +42,6 @@ $is_heute = 'heute' === strtolower($parent_category->name);
       <?php foreach ($posts as $post): ?>
         <li class="articles-list__item">
           <a href="<?php echo get_permalink($post); ?>">
-            <!-- img -->
-            <?php echo get_the_post_thumbnail($post) ?>
-
             <!-- pill -->
             <?php foreach (get_the_tags($post) as $tag): ?>
               <div class="articles-list__item-tags">
@@ -65,6 +62,9 @@ $is_heute = 'heute' === strtolower($parent_category->name);
             <h2><?php echo $post->post_title; ?></h2>
             <!-- paragraph -->
             <p><?php echo $post->post_excerpt; ?></p>
+
+            <!-- img -->
+            <?php echo get_the_post_thumbnail($post) ?>
           </a>
         </li>
       <?php

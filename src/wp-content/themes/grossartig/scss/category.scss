@@ -63,6 +63,7 @@
   .articles-list {
     &__item {
       border: 2px solid $primary-color;
+      border-top: 0;
       border-left: 0;
       border-right: 0;
       padding: 10px;
