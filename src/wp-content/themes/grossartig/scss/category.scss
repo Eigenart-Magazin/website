@@ -29,7 +29,7 @@
   &__description, h1 {
     padding: 10px;
 
-    @include screen-size-m {
+    @include screen-size-l {
       padding: initial;
     }
   }
@@ -45,7 +45,7 @@
 
     margin-top: 1px;
 
-    @include screen-size-m {
+    @include screen-size-l {
       padding: 30px;
       margin-top: 0;
     }
@@ -61,11 +61,28 @@
   }
 
   &__edge-arrow {
+    display: none;
     width: 25px;
     height: 38px;
+    margin-right: 10px;
+  }
+
+  &__open-call-arrow {
+    display: none;
+    width: 70px;
+    height: auto;
+    margin-left: 10px;
+
+    @include screen-size-l {
+      display: initial;
+    }
   }
 
   .articles-list {
+    &__item-excerpt-arrow {
+      display: none;
+    }
+
     &__item {
       border: 2px solid $primary-color;
       border-top: 0;
@@ -161,16 +178,32 @@
     }
 
     .category {
+      @include screen-size-l {
+        &__scroll-top {
+          text-align: right;
+          margin-right: 20px;
+        }
+      }
+
+      &__edge-arrow {
+        display: initial;
+      }
+
       &__description {
         text-align: right;
-        padding-top: 0;
+        padding: 0;
+
+        @include screen-size-l {
+          display: none;
+        }
 
         p {
           display: none;
         }
 
         &--contrast-background {
-          padding: 0;
+          display: block;
+          padding-bottom: 20px;
           color: $primary-color-inverted;
           background-color: $background-inverted;
 
@@ -187,6 +220,11 @@
           p {
             display: block;
             padding: 0 10px;
+            font-weight: 600;
+
+            @include screen-size-l {
+              margin-left: 80px;
+            }
           }
 
           h1 {
@@ -204,6 +242,7 @@
             color: $primary-color;
             background-color: $background;
             padding: 10px 80px;
+            padding-left: 0;
             border-radius: 80px;
             border-top-left-radius: 0;
             border-bottom-left-radius: 0;
@@ -216,12 +255,52 @@
       }
     }
 
+    img.articles-list__item-excerpt-arrow {
+      display: initial;
+      width: 20px;
+      height: auto;
+      vertical-align: middle;
+    }
+
     .articles-list {
+      &__item-tags {
+        display: block;
+
+        @include screen-size-m {
+          position: absolute;
+          left: 0;
+          margin-left: 10px;
+        }
+      }
+
       &__item {
         border: 2px solid #000;
         border-top: 0;
         border-left: 0;
         border-right: 0;
+
+        @include screen-size-m {
+          a {
+            display: block;
+            width: 60%;
+            margin-left: 10%;
+          }
+
+          &:hover {
+            position: relative;
+
+            img {
+              display: block;
+              position: absolute;
+              top: 0;
+              right: 10px;
+              left: initial;
+              width: 25%;
+              height: 300px;
+              object-fit: cover;
+            }
+          }
+        }
       }
     }
   }

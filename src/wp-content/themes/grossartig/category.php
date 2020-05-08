@@ -38,7 +38,14 @@ $is_heute = 'heute' === strtolower($parent_category->name);
     <?php if (true === $is_heute): ?>
     <div class="category__description category__description--contrast-background">
       <div class="category__description--open-call">
-        <h1><?php echo $category->name; ?></h1>
+        <h1>
+          <img
+            class="category__open-call-arrow"
+            src="<?php echo get_theme_file_uri('/assets/images/arrow-right.png'); ?>"
+            alt=""
+          />
+          <?php echo $category->name; ?>
+        </h1>
         <p><?php echo $category->description; ?></p>
       </div>
     </div>
@@ -66,7 +73,14 @@ $is_heute = 'heute' === strtolower($parent_category->name);
             <!-- title -->
             <h2><?php echo $post->post_title; ?></h2>
             <!-- paragraph -->
-            <p><?php echo $post->post_excerpt; ?></p>
+            <p>
+              <?php echo $post->post_excerpt; ?>
+              <img
+                class="articles-list__item-excerpt-arrow"
+                src="<?php echo get_theme_file_uri('/assets/images/black-short-arrow-right.png'); ?>"
+                alt=""
+              />
+            </p>
 
             <!-- img -->
             <?php echo get_the_post_thumbnail($post) ?>
