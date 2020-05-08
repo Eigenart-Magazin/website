@@ -15,6 +15,11 @@
     margin: auto;
   }
 
+  a > img {
+    width: auto;
+    height: 85px;
+  }
+
   &--type-page {
     position: initial;
 

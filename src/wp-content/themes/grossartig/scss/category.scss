@@ -15,7 +15,7 @@
     }
   }
 
-  &__description, .articles-list, h1 {
+  &__description, h1 {
     padding: 10px;
 
     @include screen-size-m {
@@ -48,15 +48,39 @@
 
   .articles-list {
     &__item {
+      border: 2px solid $primary-color;
+      border-left: 0;
+      border-right: 0;
+      padding: 10px;
+
       h2 {
         margin: 10px 0;
       }
 
       img {
         margin: 5px 0;
+        height: 200px;
+        object-fit: cover;
+
+        @include screen-size-s {
+          height: 350px;
+        }
 
         @include screen-size-m {
           display: none;
+        }
+      }
+
+      @include screen-size-m {
+        &:hover {
+          img {
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 105px;
+            width: 35%;
+            height: 400px;
+          }
         }
       }
 
