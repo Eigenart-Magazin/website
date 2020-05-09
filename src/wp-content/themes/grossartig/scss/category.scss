@@ -261,7 +261,6 @@
             display: block;
             padding: 18px 25px;
             line-height: 35px;
-            font-size: 20px;
 
             @include screen-size-l {
               margin-left: 110px;
@@ -269,6 +268,7 @@
               padding-bottom: 0;
               font-weight: 600;
               line-height: 25px;
+              font-size: 20px;
             }
           }
 
