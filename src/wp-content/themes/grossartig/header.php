@@ -139,7 +139,13 @@
       </button>
     <?php foreach (wp_get_nav_menu_items('header-menu') ?: [] as $menu_item): ?>
     <li>
-      <a href="<?php echo $menu_item->url ?: '#'; ?>"><?php echo $menu_item->title; ?></a>
+      <a href="<?php echo $menu_item->url ?: '#'; ?>">
+        <?php $item = strtolower($menu_item->title); ?>
+        <img
+          src="<?php echo get_theme_file_uri("/assets/images/menu-{$item}.png"); ?>"
+          alt="<?php echo $item; ?>"
+        />
+      </a>
     </li>
     <?php endforeach; ?>
   </ul>
