@@ -3,6 +3,48 @@
 <head>
   <style type="text/css">
     @font-face {
+      font-family: 'Founders';
+      font-weight: 200;
+      src: url('<?php echo get_theme_file_uri('/assets/fonts/Founders/Founders\ Grotesk\ Light.otf'); ?>');
+    }
+
+    @font-face {
+      font-family: 'Founders';
+      font-weight: 400;
+      src: url('<?php echo get_theme_file_uri('/assets/fonts/Founders/Founders\ Grotesk\ Regular.otf'); ?>');
+    }
+
+    @font-face {
+      font-family: 'Founders';
+      font-weight: 600;
+      src: url('<?php echo get_theme_file_uri('/assets/fonts/Founders/Founders\ Grotesk\ Medium.otf'); ?>');
+    }
+
+    @font-face {
+      font-family: 'Founders';
+      font-weight: 800;
+      src: url('<?php echo get_theme_file_uri('/assets/fonts/Founders/Founders\ Grotesk\ Semibold.otf'); ?>');
+    }
+
+    @font-face {
+      font-family: 'Founders Mono';
+      font-weight: 200;
+      src: url('<?php echo get_theme_file_uri('/assets/fonts/Founders/FoundersGroteskMonoLight.otf'); ?>');
+    }
+
+    @font-face {
+      font-family: 'Founders Mono';
+      font-weight: 400;
+      src: url('<?php echo get_theme_file_uri('/assets/fonts/Founders/FoundersGroteskMonoRegular.otf'); ?>');
+    }
+
+    @font-face {
+      font-family: 'Founders Mono';
+      font-weight: 600;
+      src: url('<?php echo get_theme_file_uri('/assets/fonts/Founders/FoundersGroteskMonoMedium.otf'); ?>');
+    }
+
+    @font-face {
       font-family: 'Apercu';
       font-weight: 200;
       font-style: normal;

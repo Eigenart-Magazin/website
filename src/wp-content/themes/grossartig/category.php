@@ -22,11 +22,6 @@ $is_heute = 'heute' === strtolower($parent_category->name);
   <article class="category__main">
     <div class="category__description">
       <p>
-        <img
-          class="category__description-arrow"
-          src="<?php echo get_theme_file_uri('/assets/images/short-arrow-right.png'); ?>"
-          alt=""
-        />
         <?php echo $parent_category->description; ?>
       </p>
       <img
@@ -54,11 +49,14 @@ $is_heute = 'heute' === strtolower($parent_category->name);
       <?php foreach ($posts as $post): ?>
         <li class="articles-list__item">
           <a href="<?php echo get_permalink($post); ?>">
+            <!-- img -->
+            <?php echo get_the_post_thumbnail($post) ?>
+
             <!-- pill -->
             <?php foreach (get_the_tags($post) as $tag): ?>
-              <div class="articles-list__item-tags">
-                <span class="pill"><?php echo $tag->name; ?></span>
-              </div>
+<!--              <div class="articles-list__item-tags">-->
+<!--                <span class="pill">--><?php //echo $tag->name; ?><!--</span>-->
+<!--              </div>-->
             <?php endforeach; ?>
 
             <?php
@@ -75,15 +73,7 @@ $is_heute = 'heute' === strtolower($parent_category->name);
             <!-- paragraph -->
             <p>
               <?php echo $post->post_excerpt; ?>
-              <img
-                class="articles-list__item-excerpt-arrow"
-                src="<?php echo get_theme_file_uri('/assets/images/black-short-arrow-right.png'); ?>"
-                alt=""
-              />
             </p>
-
-            <!-- img -->
-            <?php echo get_the_post_thumbnail($post) ?>
           </a>
         </li>
       <?php

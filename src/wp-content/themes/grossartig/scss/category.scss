@@ -5,7 +5,7 @@
 .category {
   @include screen-size-m {
     display: grid;
-    grid-template-columns: 35% 65%;
+    grid-template-columns: 40% 60%;
   }
 
   &__scroll-top {
@@ -27,7 +27,7 @@
   }
 
   &__description, h1 {
-    padding: 10px;
+    padding: 15px;
 
     @include screen-size-l {
       padding: initial;
@@ -35,6 +35,8 @@
   }
 
   &__description {
+    padding-right: 70px;
+
     background-color: $background-inverted;
     color: $primary-color-inverted;
 
@@ -43,21 +45,36 @@
       background-color: inherit;
     }
 
-    margin-top: 1px;
+    p {
+      position: relative;
+      font-weight: 200;
+      font-size: 30px;
+      line-height: 35px;
+      text-indent: 30px;
 
-    @include screen-size-l {
-      padding: 30px;
-      margin-top: 0;
+      @include screen-size-m {
+        padding: 10px 0;
+        padding-right: 30px;
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: 400;
+        text-indent: initial;
+      }
     }
 
-    @include screen-size-xl {
-      padding-left: 80px;
+    margin-top: 1px;
+
+    @include screen-size-m {
+      padding: 10px;
+      padding-left: 135px;
+      margin-top: 0;
     }
   }
 
   &__description-arrow {
-    width: 41px;
+    width: 22px;
     height: 18px;
+    image-rendering: optimizeQuality;
   }
 
   &__edge-arrow {
@@ -88,15 +105,16 @@
       border-top: 0;
       border-left: 0;
       border-right: 0;
-      padding: 10px;
 
       h2 {
         margin: 10px 0;
+        font-weight: 800;
+        font-size: 45px;
       }
 
       img {
         margin: 5px 0;
-        height: 200px;
+        height: 300px;
         object-fit: cover;
 
         @include screen-size-s {
@@ -122,19 +140,30 @@
       }
 
       a {
+        display: block;
         text-decoration: none;
+        padding: 10px 20px;
       }
 
       p {
         margin: 10px 0;
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 38px;
       }
 
       @include screen-size-m {
-        border: 2px solid $primary-color;
-        border-left: 0;
-        border-right: 0;
-        border-bottom: 0;
-        padding: 10px;
+        padding-left: 115px;
+
+        h2 {
+          font-size: 28px;
+        }
+
+        p {
+          font-weight: 200;
+          font-size: 18px;
+          line-height: 18px;
+        }
 
         &:hover {
           background-color: $background-inverted;
@@ -147,12 +176,17 @@
     }
 
     &__item-meta {
-      font-size: $font-size-small;
+      font-family: 'Founders Mono', monospace;
+      font-size: 18px;
+      font-weight: 200;
       display: block;
-      padding: 5px;
+      padding: 20px 0;
+      padding-bottom: 10px;
 
       @include screen-size-m {
-        padding: 0;
+        padding: 10px 0;
+        padding-bottom: 0;
+        font-size: 12px;
       }
     }
 

@@ -12,7 +12,7 @@ $font-size-small: $font-size-paragraph * 0.8;
 }
 
 body, p, span, a, strong, b, u, i, ol, ul, li {
-  font-family: Apercu, Calibri, sans-serif;
+  font-family: Founders, Calibri, sans-serif;
   font-size: $font-size-paragraph;
   font-weight: normal;
   color: $primary-color;
@@ -20,18 +20,18 @@ body, p, span, a, strong, b, u, i, ol, ul, li {
 
 h1, h2, h3, h4, h5, h6, strong, b {
   color: $primary-color;
-  font-family: Apercu, Calibri, sans-serif;
+  font-family: Founders, Calibri, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 20px 0;
   font-size: $font-size-primary-heading;
-  font-weight: bold;
+  font-weight: 800;
 }
 
 h1 {
   margin: 0;
-  font-weight: bolder;
+  font-weight: 800;
 }
 
 h2 {
