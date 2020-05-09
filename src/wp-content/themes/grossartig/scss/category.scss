@@ -328,6 +328,12 @@
         }
       }
 
+      &__item-meta {
+        @include screen-size-m {
+          font-size: 13px;
+        }
+      }
+
       &__item {
         padding-left: initial;
         border: 2px solid #000;
@@ -339,7 +345,16 @@
           a {
             display: block;
             width: 60%;
-            margin-left: 110px
+            margin-left: 120px;
+          }
+
+          h2 {
+            font-size: 40px;
+          }
+
+          p {
+            font-size: 22px;
+            line-height: 28px;
           }
 
           &:hover {
