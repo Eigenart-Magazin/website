@@ -11,15 +11,18 @@
 @import "gallery";
 
 .pill {
+  font-family: 'Founders Mono', monospace;
+  font-weight: 200;
+  font-size: 9px;
   display: inline-block;
-  font-size: $font-size-small;
   padding: 5px;
   border-radius: 20px;
   color: $primary-color;
   background-color: $background;
   border: 1px solid $background-inverted;
   text-decoration: none!important;
-  margin: 2px;
+  margin: 1px 10px;
+  width: 100px;
 
   &--inverted {
     color: $primary-color-inverted;
