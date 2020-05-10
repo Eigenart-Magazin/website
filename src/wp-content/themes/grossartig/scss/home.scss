@@ -3,8 +3,6 @@
 @import "_mixins";
 
 .home {
-  overflow-x: hidden;
-
   &__text {
     width: 70%;
     margin-left: 30%;
@@ -34,29 +32,54 @@
       }
 
       a {
-        font-size: 3rem;
         text-decoration: none;
 
         img {
-          height: 85px;
+          height: 65px;
 
           @include screen-size-m {
             height: 115px;
           }
         }
       }
+    }
 
-      &:nth-child(odd) {
-        &::before {
-          content: ' ';
-          flex-grow: 1;
+    &__arrow {
+      flex-grow: 1;
+
+      img {
+        display: none;
+        width: 95%;
+        height: auto;
+        margin-top: -25px;
+
+        @include screen-size-s {
+          display: block;
         }
       }
 
-      &:nth-child(even) {
-        &::after {
-          content: ' ';
-          flex-grow: 1;
+      .small {
+        display: initial;
+        width: 90%;
+        height: auto;
+        margin-top: -130px;
+
+        @include screen-size-s {
+          display: none;
+        }
+      }
+
+      &--right {
+        text-align: right;
+        overflow-y: hidden;
+
+        img {
+          transform: scaleX(-1);
+          width: 90%;
+        }
+
+        .small {
+          margin-top: -100px;
         }
       }
     }
@@ -67,7 +90,7 @@
   display: inline-block;
   font-size: 15px;
   line-height: 16px;
-  margin-left: 30%;
+  margin-left: 50px;
   margin-top: 29px;
   padding: 8px 32px;
   font-weight: 200;
@@ -77,11 +100,6 @@
   color: $primary-color-inverted;
 
   border-radius: 30px;
-
-  @include screen-size-s {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-  }
 
   @include screen-size-m {
     position: absolute;
