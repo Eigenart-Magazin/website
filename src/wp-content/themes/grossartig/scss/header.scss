@@ -20,11 +20,19 @@
   }
 
   &--type-post {
-    height: 42px;
+    height: 70px;
 
     a > img {
-      padding: 8px;
-      margin-left: 5px;
+      padding: 12px;
+    }
+
+    @include screen-size-l {
+      height: 42px;
+
+      a > img {
+        padding: 8px;
+        margin-left: 5px;
+      }
     }
   }
 

@@ -25,10 +25,12 @@
 
     p strong {
       font-weight: 600;
+      font-size: inherit;
     }
 
     p em {
       font-style: oblique;
+      font-size: inherit;
     }
   }
 
@@ -145,6 +147,7 @@
 }
 
 @import "article-heute";
+@import "article-morgen";
 
 .has-text-align-center {
   text-align: center;

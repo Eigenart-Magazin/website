@@ -17,6 +17,12 @@ $category = get_top_category();
 $post = get_post();
 
 ?>
+  <!-- pill -->
+  <?php foreach (get_the_tags($post) as $tag): ?>
+    <div class="article-tags">
+      <span class="pill"><?php echo $tag->name; ?></span>
+    </div>
+  <?php endforeach; ?>
   <article class="article article--morgen">
     <aside class="article__side"></aside>
     <div class="article__main">
@@ -56,9 +62,12 @@ $recommended_articles = query_posts([
 
 wp_reset_query();
 ?>
-
-  <aside class="article article__recommendations">
-    <h1>mehr & much more</h1>
+  <?php if (count($recommended_articles) > 0): ?>
+  <aside class="article article__recommendations article__recommendations--heute">
+    <header class="article__recommendations-header">
+      <img src="<?php echo get_theme_file_uri('/assets/images/mehr-und-more-arrow.png'); ?>" alt="" />
+      <h2>mehr & much more</h2>
+    </header>
     <ul class="article__recommendations-list">
       <?php foreach ($recommended_articles as $recommended): ?>
         <li class="article__recommended-list-item">
@@ -72,13 +81,14 @@ wp_reset_query();
             ?>
             <span><?php echo implode(' / ', $meta); ?></span>
 
-            <h2><?php echo $recommended->post_title; ?></h2>
+            <h3><?php echo $recommended->post_title; ?></h3>
             <p><?php echo $recommended->post_excerpt; ?></p>
           </a>
         </li>
       <?php endforeach; ?>
     </ul>
   </aside>
+  <?php endif; ?>
 
 <?php
 get_footer();

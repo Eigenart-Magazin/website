@@ -1,47 +1,5 @@
 @import "_mixins";
 
-.article {
-  &--morgen {
-    .blocks-gallery-grid {
-      width: 80%;
-
-      @include screen-size-l {
-        margin-left: 10%;
-      }
-    }
-
-    .wp-block-gallery {
-      padding: initial;
-    }
-
-    @include screen-size-l {
-      display: grid;
-      grid-template-columns: 35% 65%;
-      width: initial;
-
-      .article__header {
-        text-align: initial;
-        padding: 0 5px;
-      }
-
-      .wp-block-image, .wp-block-gallery {
-        position: absolute;
-        left: 0;
-        width: 35%;
-        margin: 0;
-        text-align: initial;
-        padding: initial;
-      }
-
-      .gallery {
-        &__button {
-          width: 10%;
-        }
-      }
-    }
-  }
-}
-
 .wp-block-gallery {
   padding: 0;
   position: relative;
