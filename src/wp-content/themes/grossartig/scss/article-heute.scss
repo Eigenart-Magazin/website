@@ -148,14 +148,14 @@
   }
 
   .blocks-gallery-item {
-    figure > img {
+    figure img {
       @include screen-size-l {
         object-fit: contain;
         max-height: 700px;
       }
     }
 
-    figure > figcaption {
+    figure figcaption {
       font-family: 'Founders Mono', monospace;
       font-size: 15px;
       margin: 10px;
