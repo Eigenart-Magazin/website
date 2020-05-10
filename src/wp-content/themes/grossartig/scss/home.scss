@@ -6,9 +6,6 @@
   overflow-x: hidden;
 
   &__text {
-    color: $primary-color-inverted;
-    background-color: $background-inverted;
-
     width: 70%;
     margin-left: 30%;
     margin-top: 10px;
@@ -24,13 +21,29 @@
   .category-list {
     margin: 0 15px;
 
+    @include screen-size-m {
+      margin: 0 5px;
+    }
+
     &__item {
       display: flex;
-      margin: 2rem 0;
+      margin: 27px 0;
+
+      @include screen-size-m {
+        margin: 24px 0;
+      }
 
       a {
         font-size: 3rem;
         text-decoration: none;
+
+        img {
+          height: 85px;
+
+          @include screen-size-m {
+            height: 115px;
+          }
+        }
       }
 
       &:nth-child(odd) {
@@ -52,10 +65,13 @@
 
 .home-headline {
   display: inline-block;
-  font-size: $font-size-small;
+  font-size: 15px;
+  line-height: 16px;
   margin-left: 30%;
-  margin-top: 20px;
-  padding: 10px 20px;
+  margin-top: 29px;
+  padding: 8px 32px;
+  font-weight: 200;
+  font-family: 'Founders Mono', monospace;
 
   background-color: $background-inverted;
   color: $primary-color-inverted;
@@ -69,9 +85,14 @@
 
   @include screen-size-m {
     position: absolute;
-    top: 22px;
+    top: 28px;
     right: 10px;
     margin: 0;
+    font-size: 11px;
+    padding: 3px 21px;
+
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
 
     background-color: $background;
     color: $primary-color;

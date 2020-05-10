@@ -14,9 +14,21 @@
     padding: 15px;
     margin-left: 10px;
     max-height: 100%;
+
+    @include screen-size-m {
+      padding: 10px;
+      margin: 0;
+    }
   }
 
   &--type-page {
+    text-align: center;
+    height: 140px;
+
+    @include screen-size-m {
+      text-align: left;
+      height: 75px;
+    }
   }
 
   &--type-post {
