@@ -20,6 +20,12 @@
   }
 
   &--type-post {
+    height: 42px;
+
+    a > img {
+      padding: 8px;
+      margin-left: 5px;
+    }
   }
 
   &__menu {
