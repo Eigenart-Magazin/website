@@ -110,6 +110,18 @@
           imgs[i].classList.toggle('header__menu-icon--hidden');
         }
     }
+
+    function galleryOnClickPrevious(button) {
+        var gallery = button.parentElement.querySelector('ul');
+        var scrollX = gallery.scrollWidth / gallery.childElementCount;
+        gallery.scroll({ left: gallery.scrollLeft - scrollX, behavior: 'smooth' });
+    }
+
+    function galleryOnClickNext(button) {
+        var gallery = button.parentElement.querySelector('ul');
+        var scrollX = gallery.scrollWidth / gallery.childElementCount;
+        gallery.scroll({ left: gallery.scrollLeft + scrollX, behavior: 'smooth' });
+    }
   </script>
 
   <title><?php wp_title(''); ?> | <?php bloginfo('name'); ?></title>

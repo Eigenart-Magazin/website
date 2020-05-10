@@ -29,3 +29,34 @@ function get_top_category(): WP_Term
 
     return $parent_category;
 }
+
+function grossartig_block_wrapper(string $block_content, array $block): string
+{
+    if ('core/gallery' === $block['blockName']) {
+        $arrowImageUrl = get_theme_file_uri('/assets/images/gallery-arrow-right.png');
+        $arrowImg = "<img src='{$arrowImageUrl}' />";
+        $leftButton = '<button onClick="galleryOnClickPrevious(this)" class="gallery__button gallery__button--left">'
+            . $arrowImg . '</button>';
+        $rightButton = '<button onClick="galleryOnClickNext(this)" class="gallery__button gallery__button--right">'
+            . $arrowImg . '</button>';
+
+        $block_content = str_replace(
+            '<ul class="blocks-gallery-grid">',
+            $leftButton . '<ul class="blocks-gallery-grid">',
+            $block_content
+        );
+
+        $block_content = str_replace(
+            '</ul>',
+            '</ul>' . $rightButton,
+            $block_content
+        );
+    }
+
+    return $block_content;
+}
+
+/**
+ * Gallery
+ */
+add_filter('render_block', 'GrossArtig\\grossartig_block_wrapper', 10, 2);

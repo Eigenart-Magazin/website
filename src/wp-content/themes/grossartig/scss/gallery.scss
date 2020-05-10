@@ -1,12 +1,55 @@
 @import "_mixins";
 
+.article {
+  &--morgen {
+    .blocks-gallery-grid {
+      width: 80%;
+
+      @include screen-size-l {
+        margin-left: 10%;
+      }
+    }
+
+    .wp-block-gallery {
+      padding: initial;
+    }
+
+    @include screen-size-l {
+      display: grid;
+      grid-template-columns: 35% 65%;
+      width: initial;
+
+      .article__header {
+        text-align: initial;
+        padding: 0 5px;
+      }
+
+      .wp-block-image, .wp-block-gallery {
+        position: absolute;
+        left: 0;
+        width: 35%;
+        margin: 0;
+        text-align: initial;
+        padding: initial;
+      }
+
+      .gallery {
+        &__button {
+          width: 10%;
+        }
+      }
+    }
+  }
+}
+
 .wp-block-gallery {
   padding: 0;
+  position: relative;
 }
 
 ul.blocks-gallery-grid {
   padding: 0;
-  width: 100%;
+  width: 90%;
 }
 
 .blocks-gallery-grid {
@@ -29,4 +72,27 @@ ul.blocks-gallery-grid {
   display: block;
   width: 100%;
   height: auto;
+}
+
+.gallery {
+  &__button {
+    width: 5%;
+    position: absolute;
+    top: 50%;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+
+    &--left {
+      left: 0;
+
+      img {
+        transform: rotate(180deg);
+      }
+    }
+
+    &--right {
+      right: 0;
+    }
+  }
 }

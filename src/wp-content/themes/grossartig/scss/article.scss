@@ -115,34 +115,6 @@
     padding-top: 0;
     padding-bottom: 0;
 
-    .blocks-gallery-grid {
-      width: 100%;
-    }
-
-    .wp-block-gallery {
-      padding: initial;
-    }
-
-    @include screen-size-l {
-      display: grid;
-      grid-template-columns: 35% 65%;
-      width: initial;
-
-      .article__header {
-        text-align: initial;
-        padding: 0 5px;
-      }
-
-      .wp-block-image, .wp-block-gallery {
-        position: absolute;
-        left: 0;
-        width: 35%;
-        margin: 0;
-        text-align: initial;
-        padding: initial;
-      }
-    }
-
     .article__main {
       border: 0;
 

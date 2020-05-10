@@ -11,6 +11,8 @@ use function GrossArtig\{
 
 get_header();
 
+the_post();
+
 $category = get_top_category();
 $post = get_post();
 
@@ -37,7 +39,7 @@ $post = get_post();
     </div>
 
     <div class="article__content">
-      <?php echo $post->post_content; ?>
+      <?php the_content(); ?>
     </div>
   </article>
 
