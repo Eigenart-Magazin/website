@@ -122,6 +122,30 @@
         var scrollX = gallery.scrollWidth / gallery.childElementCount;
         gallery.scroll({ left: gallery.scrollLeft + scrollX, behavior: 'smooth' });
     }
+
+    window.addEventListener('DOMContentLoaded', function () {
+        var galleries = Array.prototype.slice.apply(document.querySelectorAll('.wp-block-gallery'));
+
+        for (var i = 0; i < galleries.length; i++) {
+            var gallery = galleries[i];
+            var columns = 1;
+            if (gallery.classList.contains('columns-2')) {
+                columns = 2;
+            } else if (gallery.classList.contains('columns-3')) {
+                columns = 3;
+            } else if (gallery.classList.contains('columns-4')) {
+                columns = 4;
+            } else if (gallery.classList.contains('columns-5')) {
+                columns = 5;
+            }
+
+            var elements = gallery.querySelector('.blocks-gallery-grid').childElementCount;
+            if (elements === columns) {
+                gallery.querySelector('.gallery__button--left').style.display = 'none';
+                gallery.querySelector('.gallery__button--right').style.display = 'none';
+            }
+        }
+    });
   </script>
 
   <title><?php wp_title(''); ?> | <?php bloginfo('name'); ?></title>

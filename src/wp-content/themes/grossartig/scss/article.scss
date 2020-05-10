@@ -22,6 +22,14 @@
         padding: 0 15%;
       }
     }
+
+    p strong {
+      font-weight: 600;
+    }
+
+    p em {
+      font-style: oblique;
+    }
   }
 
   &__header {
@@ -137,3 +145,20 @@
 }
 
 @import "article-heute";
+
+.has-text-align-center {
+  text-align: center;
+}
+
+.has-text-align-right {
+  text-align: right;
+}
+
+.has-text-align-left {
+  text-align: left;
+}
+
+.wp-block-separator {
+  margin: 0 42%;
+  border: 1px solid $primary-color;
+}

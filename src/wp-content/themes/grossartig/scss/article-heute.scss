@@ -115,6 +115,30 @@
     }
   }
 
+  @include screen-size-l {
+    .blocks-gallery-item {
+      margin: 0 10px;
+    }
+
+    .columns-2 {
+      .blocks-gallery-item {
+        width: calc(100% / 2);
+      }
+    }
+
+    .columns-3 {
+      .blocks-gallery-item {
+        width: calc(95% / 3);
+      }
+    }
+
+    .columns-4 {
+      .blocks-gallery-item {
+        width: calc(95% / 4);
+      }
+    }
+  }
+
   .blocks-gallery-grid {
     width: 94%;
 
@@ -126,9 +150,15 @@
   .blocks-gallery-item {
     figure > img {
       @include screen-size-l {
-        object-fit: initial;
-        max-height: initial;
+        object-fit: contain;
+        max-height: 700px;
       }
+    }
+
+    figure > figcaption {
+      font-family: 'Founders Mono', monospace;
+      font-size: 15px;
+      margin: 10px;
     }
   }
 }
@@ -194,5 +224,4 @@
       }
     }
   }
-
 }
