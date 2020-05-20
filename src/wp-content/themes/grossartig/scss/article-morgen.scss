@@ -217,7 +217,7 @@
   }
 
   .blocks-gallery-grid {
-    width: auto;
+    width: 100%;
 
     @include screen-size-l {
       width: 85%;
