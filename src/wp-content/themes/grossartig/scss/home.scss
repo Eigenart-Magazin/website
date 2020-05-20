@@ -3,6 +3,8 @@
 @import "_mixins";
 
 .home {
+  margin-top: 60px;
+
   &__text {
     width: 70%;
     margin-left: 30%;
@@ -88,31 +90,44 @@
 
 .home-headline {
   display: inline-block;
-  font-size: 15px;
-  line-height: 16px;
-  margin-left: 50px;
-  margin-top: 29px;
-  padding: 8px 32px;
-  font-weight: 200;
-  font-family: 'Founders Mono', monospace;
-
-  background-color: $background-inverted;
-  color: $primary-color-inverted;
-
-  border-radius: 30px;
+  width: 100%;
+  margin-top: 15px;
+  margin-left: 15px;
 
   @include screen-size-m {
-    position: absolute;
-    top: 28px;
-    right: 10px;
-    margin: 0;
-    font-size: 11px;
-    padding: 3px 21px;
+    display: inline-flex;
+    float: right;
+    width: grid-width(7);
+    height: 100%;
+    margin: auto;
+  }
 
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
+  @include screen-size-l {
+    width: grid-width(6);
+  }
 
-    background-color: $background;
-    color: $primary-color;
+  @include screen-size-xl {
+    width: grid-width(5);
+  }
+
+  p {
+    border-radius: 30px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: $background-inverted;
+    color: $primary-color-inverted;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 200;
+    font-family: 'Founders Mono', monospace;
+    width: 100%;
+    margin: auto;
+
+    @include screen-size-m {
+      border-top-right-radius: 30px;
+      border-bottom-right-radius: 30px;
+      background-color: $background;
+      color: $primary-color;
+    }
   }
 }

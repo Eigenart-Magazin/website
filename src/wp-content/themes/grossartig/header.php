@@ -186,10 +186,10 @@
     </button>
   </ul>
   <?php endif; ?>
+  <?php if ('HomePage' === pathinfo(get_page_template(), PATHINFO_FILENAME)): ?>
+  <span class="home-headline">
+    <p class="pill">Das Studierendenmagazin der Universität der Künste Berlin</p>
+  </span>
+  <?php endif; ?>
 </header>
 <main>
-<?php if ('HomePage' === pathinfo(get_page_template(), PATHINFO_FILENAME)): ?>
-<span class="home-headline">
-  Das Studierendenmagazin der Universität der Künste Berlin
-</span>
-<?php endif; ?>

@@ -3,14 +3,13 @@
 
 .header {
   @include grid-wrapper;
+  background-color: $background-inverted;
 
   height: 70px;
 
   @include screen-size-l {
     height: 65px;
   }
-
-  background-color: $background-inverted;
 
   &__logo {
     display: inline-flex;
@@ -145,6 +144,20 @@
   &__menu-icon {
     &--hidden {
       display: none;
+    }
+  }
+
+  &--type-page {
+    height: 110px;
+
+    .header {
+      &__logo {
+        width: 100%;
+
+        @include screen-size-m {
+          width: grid-width(2);
+        }
+      }
     }
   }
 }
