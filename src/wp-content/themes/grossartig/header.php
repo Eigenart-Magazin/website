@@ -152,7 +152,7 @@
 </head>
 <body>
 <header class="header <?php echo 'header--type-' . get_post_type(); ?>">
-  <a href="<?php echo get_site_url(); ?>">
+  <a class="header__logo" href="<?php echo get_site_url(); ?>">
     <img
       src="<?php echo get_theme_file_uri('/assets/images/logo.png'); ?>"
       alt="<?php bloginfo('name'); ?>"

@@ -1,4 +1,8 @@
+@import "_mixins";
+
 .virtual-grid {
+  @include grid-wrapper;
+
   position: fixed;
   top: 0;
   right: 0;
@@ -8,10 +12,18 @@
   .virtual-grid__item {
     display: block;
     float: left;
-    width: calc((100vw / 10) - 1vw);
+    width: grid-width(1);
+    margin: 0 grid-margin();
     height: 100vh;
-    margin: 0 0.5vw;
-    background-color: #00a0d2;
-    opacity: 0.5;
+    background-color: #d21800;
+    opacity: 0.4;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }

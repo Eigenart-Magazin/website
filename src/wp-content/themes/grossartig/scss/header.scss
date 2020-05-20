@@ -2,22 +2,30 @@
 @import "_mixins";
 
 .header {
+  @include grid-wrapper;
+
   height: 70px;
   background-color: $background-inverted;
 
-  a {
-    display: inline-block;
+  &__logo {
+    display: inline-flex;
+    width: grid-width(4);
     height: 100%;
-  }
-
-  a > img {
-    padding: 15px;
-    max-height: 100%;
-    max-width: 100%;
 
     @include screen-size-m {
-      padding: 10px;
-      margin: 0;
+      display: inline-flex;
+      width: grid-width(2);
+    }
+
+    @include screen-size-l {
+      width: grid-width(1);
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      max-height: 100%;
+      object-fit: scale-down;
     }
   }
 
@@ -34,17 +42,8 @@
   &--type-post {
     height: 70px;
 
-    a > img {
-      padding: 12px;
-    }
-
     @include screen-size-l {
-      height: 42px;
-
-      a > img {
-        padding: 8px;
-        margin-left: 5px;
-      }
+      height: 65px;
     }
   }
 
@@ -55,6 +54,7 @@
     padding-right: 10px;
 
     a {
+      text-decoration: none;
       img {
         margin: 0 10px;
         padding: 0;

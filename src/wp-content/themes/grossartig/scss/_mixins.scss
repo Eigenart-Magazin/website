@@ -17,3 +17,21 @@
 @mixin screen-size-xl {
   @media (min-width: 1200px) { @content; }
 }
+
+// Grid layout
+@mixin grid-wrapper {
+  padding-left: 0.7vw;
+  padding-right: 0.7vw;
+}
+
+@function grid-width($size: 1) {
+  @return (((100vw / 10) - 1.4vw) * $size) + (1.4vw * ($size - 1));
+}
+
+@function grid-margin() {
+  // available space = screen total width - horizontal margins - (grid column width * 10)
+  $availableSpace: 100vw - 1.4vw - (grid-width(1) * 10);
+  $gridGaps: 9;
+
+  @return ($availableSpace / $gridGaps) / 2;
+}
