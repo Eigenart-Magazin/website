@@ -5,15 +5,22 @@
   @include grid-wrapper;
 
   height: 70px;
+
+  @include screen-size-l {
+    height: 65px;
+  }
+
   background-color: $background-inverted;
 
   &__logo {
     display: inline-flex;
     width: grid-width(4);
+    float: left;
     height: 100%;
 
+    text-decoration: none;
+
     @include screen-size-m {
-      display: inline-flex;
       width: grid-width(2);
     }
 
@@ -29,90 +36,93 @@
     }
   }
 
-  &--type-page {
-    text-align: center;
-    height: 115px;
-
-    @include screen-size-m {
-      text-align: left;
-      height: 75px;
-    }
-  }
-
-  &--type-post {
-    height: 70px;
+  &__menu {
+    display: inline-flex;
+    width: grid-width(1);
+    height: 100%;
+    float: right;
 
     @include screen-size-l {
-      height: 65px;
-    }
-  }
-
-  &__menu {
-    display: inline-block;
-    float: right;
-    height: 100%;
-    padding-right: 10px;
-
-    a {
-      text-decoration: none;
-      img {
-        margin: 0 10px;
-        padding: 0;
-      }
+      width: grid-width(4);
     }
 
     li {
       display: none;
 
-      @include screen-size-m {
-        display: initial;
+      @include screen-size-l {
+        display: inline-block;
+        width: grid-width(1);
+        height: 100%;
+        margin-left: 1.4vw;
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+
+      a {
+        display: block;
+        height: 100%;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        max-height: 100%;
+        object-fit: scale-down;
       }
     }
 
     &--active {
+      width: 100%;
       position: absolute;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-      padding: 25%;
+      display: flex;
+      flex-flow: column;
+      text-align: center;
+      height: inherit;
 
-      background-color: $background-inverted;
+      &::before {
+        content: ' ';
+        z-index: 2;
+        background-color: $background-inverted;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+      }
 
       .header__menu-button {
+        z-index: 2;
+        width: grid-width(1);
+        height: inherit;
         position: absolute;
-        top: 0;
-        right: 0;
-        margin: 20px 10px 0 0;
+        right: 0.7vw;
       }
 
       li {
-        display: block;
-        text-align: center;
-        margin: 20px;
-      }
+        display: initial;
+        z-index: 2;
+        margin: 5% auto;
+        width: grid-width(4);
 
-      a {
-        color: $primary-color-inverted;
-        text-decoration: none;
+        img {
+          width: initial;
+        }
       }
-    }
-  }
-
-  &__menu-icon {
-    &--hidden {
-      display: none;
     }
   }
 
   &__menu-button {
+    width: 100%;
+    padding: 0;
     background-color: transparent;
     border: 0;
     outline: none;
-    margin-top: 50%;
 
-    @include screen-size-m {
+    @include screen-size-l {
       display: none;
     }
 
@@ -129,6 +139,12 @@
       -webkit-transform: rotate(360deg);
       -webkit-transition-duration: 0.7s;
       -webkit-transition-property: transform;
+    }
+  }
+
+  &__menu-icon {
+    &--hidden {
+      display: none;
     }
   }
 }

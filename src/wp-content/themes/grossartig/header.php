@@ -161,18 +161,6 @@
 
   <?php if (!in_array(pathinfo(get_page_template(), PATHINFO_FILENAME), ['HomePage', 'AboutPage'])): ?>
   <ul class="header__menu">
-      <button class="header__menu-button" onclick="toggleMenu(this)">
-        <img
-          class="header__menu-icon"
-          src="<?php echo get_theme_file_uri('/assets/images/hamburger-menu-icon.png'); ?>"
-          alt="Open Menu"
-        />
-        <img
-          class="header__menu-icon header__menu-icon--hidden"
-          src="<?php echo get_theme_file_uri('/assets/images/cross-icon.png'); ?>"
-          alt="Close Menu"
-        />
-      </button>
     <?php foreach (wp_get_nav_menu_items('header-menu') ?: [] as $menu_item): ?>
     <li>
       <a href="<?php echo $menu_item->url ?: '#'; ?>">
@@ -184,6 +172,18 @@
       </a>
     </li>
     <?php endforeach; ?>
+    <button class="header__menu-button" onclick="toggleMenu(this)">
+      <img
+        class="header__menu-icon"
+        src="<?php echo get_theme_file_uri('/assets/images/hamburger-menu-icon.png'); ?>"
+        alt="Open Menu"
+      />
+      <img
+        class="header__menu-icon header__menu-icon--hidden"
+        src="<?php echo get_theme_file_uri('/assets/images/cross-icon.png'); ?>"
+        alt="Close Menu"
+      />
+    </button>
   </ul>
   <?php endif; ?>
 </header>
