@@ -1,3 +1,6 @@
+<?php
+use function GrossArtig\is_dev_mode_on;
+?>
 </main>
 <footer class="footer">
   <ul>
@@ -12,5 +15,16 @@
 
   <span>© Copyright 2020 - <?php bloginfo('name'); ?></span>
 </footer>
+<?php
+
+if (is_dev_mode_on()) {
+    $elements = '';
+    foreach (range(1, 10) as $i) {
+        $elements .= "<div class='virtual-grid__item virtual-grid-item-{$i}'></div>";
+    }
+    echo "<div class='virtual-grid'>{$elements}</div>";
+}
+
+?>
 </body>
 </html>

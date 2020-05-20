@@ -6,6 +6,11 @@ use WP_Term;
 
 add_theme_support('post-thumbnails');
 
+function is_dev_mode_on(): bool
+{
+    return 'eigenart.dev' === ($_SERVER['SERVER_NAME'] ?? '');
+}
+
 function get_custom_field_or_alert(string $field, string $alert_modifier = 'red'): array
 {
     $custom_field = \post_custom($field);
