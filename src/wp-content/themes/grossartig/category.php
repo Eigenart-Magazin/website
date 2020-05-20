@@ -10,7 +10,8 @@ $posts = query_posts([
     'cat' => $parent_category->cat_ID,
     'post_type' => 'post',
     'orderby' => 'date',
-    'order' => 'DESC'
+    'order' => 'DESC',
+    'nopaging' => true,
 ]);
 
 $category = get_the_category()[0];
