@@ -51,6 +51,8 @@
     }
 
     &__main {
+      padding-bottom: 25vh;
+
       @include screen-size-m {
         border-left: 2px solid $primary-color;
       }
