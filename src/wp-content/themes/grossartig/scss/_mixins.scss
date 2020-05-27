@@ -18,6 +18,10 @@
   @media (min-width: 1200px) { @content; }
 }
 
+@mixin screen-size-xxl {
+  @media (min-width: 1367px) { @content; }
+}
+
 // Grid layout
 @mixin grid-wrapper {
   padding-left: 0.7vw;
