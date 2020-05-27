@@ -2,6 +2,10 @@
 @import "_fonts";
 @import "_mixins";
 
+.category-page {
+  display: inherit;
+}
+
 .category {
   min-height: 535px;
 

@@ -2,7 +2,7 @@
 
 use function GrossArtig\get_top_category;
 
-get_header();
+get_header('category');
 
 $parent_category = get_top_category();
 
