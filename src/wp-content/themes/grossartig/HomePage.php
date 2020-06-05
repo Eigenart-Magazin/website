@@ -18,11 +18,10 @@ $menu_items = wp_get_nav_menu_items('home-main-menu');
   <?php echo get_post()->post_content; ?>
   <ul class="category-list">
     <?php foreach ($menu_items as $pos => $item): ?>
-      <li class="category-list__item">
+      <li class="category-list__item <?php echo 'category-list__item--' . ($pos % 2 === 0 ? 'left' : 'right'); ?>">
         <?php if ($pos % 2 === 0): ?>
-        <div class="category-list__arrow">
-<!--          <img src="--><?php //echo get_theme_file_uri('/assets/images/arrow-home-page.png'); ?><!--" alt="" />-->
-<!--          <img class="small" src="--><?php //echo get_theme_file_uri('/assets/images/arrow-home-page-small.png'); ?><!--" alt="" />-->
+        <div class="category-list__arrow category-list__arrow--left">
+            <i class="category-list__arrow-head"></i>
         </div>
         <?php endif; ?>
         <a href="<?php echo $item->url; ?>">
@@ -58,8 +57,7 @@ $menu_items = wp_get_nav_menu_items('home-main-menu');
         </a>
         <?php if ($pos % 2 === 1): ?>
         <div class="category-list__arrow category-list__arrow--right">
-<!--          <img src="--><?php //echo get_theme_file_uri('/assets/images/arrow-home-page.png'); ?><!--" alt="" />-->
-<!--          <img class="small" src="--><?php //echo get_theme_file_uri('/assets/images/arrow-home-page-small-right.png'); ?><!--" alt="" />-->
+            <i class="category-list__arrow-head"></i>
         </div>
         <?php endif; ?>
       </li>

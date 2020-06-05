@@ -2,8 +2,14 @@
 @import "_fonts";
 @import "_mixins";
 
+$arrow-thickness: 10px;
+
 .home {
   margin-top: 60px;
+
+  @include screen-size-m {
+    margin-top: 0;
+  }
 
   &__text {
     width: 70%;
@@ -27,7 +33,36 @@
 
     &__item {
       display: flex;
+      position: relative;
       margin: 27px 0;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &::before, &::after {
+        position: absolute;
+        top: 0;
+
+        display: inline-block;
+        width: $arrow-thickness;
+        height: 50%;
+        background: $background-inverted;
+      }
+
+      &--left {
+        &::before {
+          content: ' ';
+          left: 0;
+        }
+      }
+
+      &--right {
+        &::after {
+          content: ' ';
+          right: 0;
+        }
+      }
 
       @include screen-size-m {
         margin: 24px 0;
@@ -63,41 +98,114 @@
 
     &__arrow {
       flex-grow: 1;
+      position: relative;
+      padding: 0 10px;
 
-      img {
-        display: none;
-        width: 95%;
-        height: auto;
-        margin-top: -25px;
-
-        @include screen-size-s {
-          display: block;
-        }
+      @include screen-size-s {
+        padding: 0 40px;
       }
 
-      .small {
-        display: initial;
-        width: 90%;
-        height: auto;
-        margin-top: -130px;
+      &::before {
+        content: ' ';
+        display: inline-block;
+        width: 100%;
+        height: $arrow-thickness;
+        background: $background-inverted;
+        position: relative;
+        top: 50%;
+        transform: translateY(-100%);
 
-        @include screen-size-s {
-          display: none;
-        }
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+      }
+
+      &--left {
+        padding-left: 0;
       }
 
       &--right {
-        text-align: right;
-        overflow-y: hidden;
+        padding-right: 0;
+      }
+    }
 
-        img {
-          transform: scaleX(-1);
-          width: 90%;
-        }
+    &__arrow-head {
+      display: flex;
+      z-index: -1;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
 
-        .small {
-          margin-top: -100px;
-        }
+      width: $arrow-thickness * 5;
+      height: $arrow-thickness * 5;
+
+      border: $arrow-thickness solid $background-inverted;
+
+      &::before, &::after {
+        display: block;
+        background: $background;
+        position: absolute;
+
+      }
+
+      &::before {
+        content: ' ';
+        top: -2px;
+        right: 0;
+
+        width: $arrow-thickness * 1.5;
+        height: 3px;
+
+        transform: rotate(-15deg);
+      }
+
+      &::after {
+        content: ' ';
+        top: 0;
+        right: -2px;
+
+        width: 3px;
+        height: $arrow-thickness * 1.5;
+
+        transform: rotate(15deg);
+      }
+    }
+
+    &__item:nth-child(odd) .category-list__arrow-head {
+      right: 10px;
+      border-left: 0;
+      border-bottom: 0;
+      border-top-right-radius: $arrow-thickness;
+
+      @include screen-size-s {
+        right: 40px;
+      }
+    }
+
+    &__item:nth-child(even) .category-list__arrow-head {
+      left: 10px;
+      border-top: 0;
+      border-right: 0;
+      border-bottom-left-radius: $arrow-thickness;
+
+      @include screen-size-s {
+        left: 40px;
+      }
+
+      &::before, &::after {
+        top: initial;
+        right: initial;
+      }
+
+      &::before {
+        bottom: -2px;
+        left: 0;
+        transform: rotate(165deg);
+      }
+
+      &::after {
+        bottom: 0;
+        left: -2px;
+        transform: rotate(-165deg);
       }
     }
   }
@@ -131,12 +239,14 @@
     border-bottom-right-radius: 0;
     background-color: $background-inverted;
     color: $primary-color-inverted;
-    font-size: 14px;
-    line-height: 16px;
+    font-size: 11px;
+    line-height: 10px;
     font-weight: 200;
     font-family: 'Founders Mono', monospace;
     width: 100%;
     margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
 
     @include screen-size-m {
       border-top-right-radius: 30px;

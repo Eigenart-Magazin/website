@@ -154,12 +154,20 @@
   &--type-page {
     height: 110px;
 
+    @include screen-size-s {
+      height: 72px;
+    }
+
     .header {
       &__logo {
         width: 100%;
 
         @include screen-size-m {
           width: grid-width(2);
+        }
+
+        img {
+          width: inherit;
         }
       }
     }
