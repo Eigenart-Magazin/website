@@ -36,11 +36,26 @@
       a {
         text-decoration: none;
 
+        @include screen-size-m {
+          max-width: grid-width(6);
+        }
+
+        @include screen-size-l {
+          max-width: grid-width(4);
+        }
+
+        @include screen-size-xl {
+          max-width: grid-width(4) - (grid-width(1) / 2);
+        }
+
         img {
-          height: 65px;
+          width: auto;
+          height: auto;
+          max-width: inherit;
+          max-height: 65px;
 
           @include screen-size-m {
-            height: 115px;
+            max-height: 115px;
           }
         }
       }
@@ -97,17 +112,17 @@
   @include screen-size-m {
     display: inline-flex;
     float: right;
-    width: grid-width(7);
+    width: grid-width(6);
     height: 100%;
     margin: auto;
   }
 
   @include screen-size-l {
-    width: grid-width(6);
+    width: grid-width(4);
   }
 
   @include screen-size-xl {
-    width: grid-width(5);
+    width: grid-width(4) - (grid-width(1) / 2);
   }
 
   p {
