@@ -114,17 +114,24 @@ $arrow-thickness: 10px;
         position: relative;
         top: 50%;
         transform: translateY(-100%);
-
-        border-bottom-left-radius: 10px;
-        border-top-left-radius: 10px;
       }
 
       &--left {
         padding-left: 0;
+
+        &::before {
+          border-bottom-left-radius: 10px;
+          border-top-left-radius: 10px;
+        }
       }
 
       &--right {
         padding-right: 0;
+
+        &::before {
+          border-bottom-right-radius: 10px;
+          border-top-right-radius: 10px;
+        }
       }
     }
 
