@@ -28,13 +28,17 @@
   padding-right: 0.7vw;
 }
 
+@function grid-gap($multiplier) {
+  @return 1.4vw * $multiplier;
+}
+
 @function grid-width($size: 1) {
-  @return (((100vw / 10) - 1.4vw) * $size) + (1.4vw * ($size - 1));
+  @return (((100vw / 10) - grid-gap(1)) * $size) + (grid-gap(1) * ($size - 1));
 }
 
 @function grid-margin() {
   // available space = screen total width - horizontal margins - (grid column width * 10)
-  $availableSpace: 100vw - 1.4vw - (grid-width(1) * 10);
+  $availableSpace: 100vw - grid-gap(1) - (grid-width(1) * 10);
   $gridGaps: 9;
 
   @return ($availableSpace / $gridGaps) / 2;

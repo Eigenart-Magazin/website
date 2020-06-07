@@ -21,10 +21,6 @@ $post = get_post();
     <div class="article__header">
       <h1 class="article__title"><?php the_title() ?></h1>
 
-      <?php if(has_excerpt()): ?>
-        <div class="article__excerpt"><?php the_excerpt(); ?></div>
-      <?php endif; ?>
-
       <span class="article__meta">
         <?php
         $date = get_post_datetime() ?: new DateTimeImmutable();
@@ -36,6 +32,10 @@ $post = get_post();
         echo implode(' / ', $fields);
         ?>
       </span>
+
+      <?php if(has_excerpt()): ?>
+        <div class="article__excerpt"><?php the_excerpt(); ?></div>
+      <?php endif; ?>
     </div>
 
     <div class="article__content">
