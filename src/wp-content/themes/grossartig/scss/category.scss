@@ -266,6 +266,10 @@
             display: block;
             padding-left: 0;
           }
+
+          @include screen-size-l {
+            padding-top: 0;
+          }
         }
 
         &--open-call {
