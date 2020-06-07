@@ -89,17 +89,6 @@
     margin-right: 10px;
   }
 
-  &__open-call-arrow {
-    display: none;
-    width: 70px;
-    height: auto;
-    margin-left: 10px;
-
-    @include screen-size-l {
-      display: initial;
-    }
-  }
-
   .articles-list {
     &__item-excerpt-arrow {
       display: none;
@@ -235,12 +224,6 @@
         }
       }
 
-      &__open-call-arrow {
-        @include screen-size-l {
-          width: 100px
-        }
-      }
-
       &__main {
         min-height: 550px;
       }
@@ -275,38 +258,44 @@
         &--open-call {
           text-align: initial;
 
-          p {
-            display: block;
-            padding: 18px 25px;
-            line-height: 35px;
-
-            @include screen-size-l {
-              margin-left: 110px;
-              padding-top: 0;
-              padding-bottom: 0;
-              font-weight: 600;
-              line-height: 25px;
-              font-size: 20px;
-            }
-          }
-
           h1 {
             color: $primary-color;
             background-color: $background;
             margin: 25px 15px 10px 0;
-            text-transform: uppercase;
-            font-weight: 600;
-            font-size: 50px;
-            padding: 14px;
+            padding: 14px 0;
 
             border-radius: 50px;
             border-top-left-radius: 0;
             border-bottom-left-radius: 0;
 
             @include screen-size-l {
+              display: flex;
+              flex-direction: row;
               padding-top: 0;
               padding-bottom: 0;
               font-weight: 800;
+
+              span {
+                flex-grow: 1;
+                margin: auto 0 auto grid-gap(1);
+                text-transform: uppercase;
+                font-weight: 600;
+                font-size: 50px;
+              }
+            }
+          }
+
+          p {
+            display: block;
+            padding: 18px 25px;
+            line-height: 35px;
+
+            @include screen-size-l {
+              margin-left: grid-gap(1) + grid-width(1) + grid-margin();
+              padding: 0;
+              font-weight: 600;
+              line-height: 25px;
+              font-size: 20px;
             }
           }
 
@@ -324,6 +313,20 @@
               margin: 10px 0;
             }
           }
+        }
+      }
+
+      &__open-call-arrow {
+        display: none;
+        width: 70px;
+        height: auto;
+        margin-left: grid-margin();
+
+        @include screen-size-l {
+          display: initial;
+          width: grid-width(1);
+          height: auto;
+          object-fit: scale-down;
         }
       }
     }

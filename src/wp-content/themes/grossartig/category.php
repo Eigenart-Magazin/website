@@ -35,7 +35,7 @@ $is_heute = 'heute' === strtolower($parent_category->name);
             src="<?php echo get_theme_file_uri('/assets/images/arrow-right.png'); ?>"
             alt=""
           />
-          <?php echo $category->name; ?>
+          <span><?php echo $category->name; ?></span>
         </h1>
         <p><?php echo $category->description; ?></p>
       </div>
