@@ -19,6 +19,9 @@ $post = get_post();
 ?>
   <article class="article article--heute">
     <div class="article__header">
+      <button class="article__back-button" onclick="window.history.go(-1);">
+        <img src="<?php echo get_theme_file_uri('/assets/images/short-arrow-left.png'); ?>" alt="Go Back" />
+      </button>
       <h1 class="article__title"><?php the_title() ?></h1>
 
       <span class="article__meta">
