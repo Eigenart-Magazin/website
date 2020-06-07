@@ -13,7 +13,11 @@ use function GrossArtig\is_dev_mode_on;
   <?php endforeach; ?>
   </ul>
 
-  <span>© Copyright 2020 - <?php bloginfo('name'); ?></span>
+  <span>
+      © Copyright 2020
+      <img src="<?php echo get_theme_file_uri('/assets/images/footer-arrow.png'); ?>" />
+      <?php bloginfo('name'); ?>
+  </span>
 </footer>
 <?php
 
