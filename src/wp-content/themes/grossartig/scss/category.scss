@@ -385,8 +385,8 @@
               right: 10px;
               left: initial;
               width: 25%;
-              height: 300px;
-              object-fit: cover;
+              height: auto;
+              object-fit: scale-down;
             }
           }
         }
