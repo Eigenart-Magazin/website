@@ -20,7 +20,7 @@ jobs:
           chmod +x certbot.bin
 
           bin/renew-https-certificate.sh
-        with:
+        env:
           FTP_HOST: ${{ secrets.FTP_HOST }}
           FTP_USER: ${{ secrets.FTP_USER }}
           FTP_PASS: ${{ secrets.FTP_PASS }}
