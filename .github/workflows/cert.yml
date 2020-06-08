@@ -1,10 +1,8 @@
 name: Refresh SSL Certificates
 
 on:
-  issue_comment:
-    types: [created]
-#  schedule:
-#    - cron: '0 0 1 * *' # renew cert in the beginning of every month
+  schedule:
+    - cron: '0 0 1 * *' # renew cert in the beginning of every month
 
 jobs:
   build:
