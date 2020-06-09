@@ -15,7 +15,7 @@ use function GrossArtig\is_dev_mode_on;
 
   <span>
       © Copyright 2020
-      <img src="<?php echo get_theme_file_uri('/assets/images/footer-arrow.png'); ?>" />
+      <img src="<?php echo get_theme_file_uri('/assets/images/short-white-arrow-right.png'); ?>" />
       <?php bloginfo('name'); ?>
   </span>
 </footer>

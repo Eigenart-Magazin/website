@@ -37,7 +37,11 @@
     }
 
     &__description {
-      padding-right: 70px;
+      position: relative;
+
+      @include screen-size-m {
+        padding-right: 70px;
+      }
 
       background-color: $background-inverted;
       color: $primary-color-inverted;
@@ -62,6 +66,20 @@
           font-weight: 400;
           text-indent: initial;
         }
+
+        .arrow {
+          position: absolute;
+          left: 0;
+          transform: translateY(50%);
+
+          height: 18px; // font-size
+          width: auto;
+
+          @include screen-size-m {
+            left: -36px; // font-size * -2
+            transform: initial;
+          }
+        }
       }
 
       margin-top: 1px;
@@ -73,24 +91,7 @@
       }
     }
 
-    &__description-arrow {
-      width: 22px;
-      height: 18px;
-      image-rendering: optimizeQuality;
-    }
-
-    &__edge-arrow {
-      display: none;
-      width: 25px;
-      height: 38px;
-      margin-right: 10px;
-    }
-
     .articles-list {
-      &__item-excerpt-arrow {
-        display: none;
-      }
-
       &__item {
         border: 2px solid $primary-color;
         border-top: 0;

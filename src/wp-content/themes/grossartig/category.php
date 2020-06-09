@@ -16,14 +16,22 @@ $posts = query_posts([
 
 $category = get_the_category()[0];
 $is_heute = 'heute' === strtolower($parent_category->name);
+$is_morgen = 'morgen' === strtolower($parent_category->name);
 ?>
 
-<div class="<?php echo $is_heute ? 'category-heute' : 'category-morgen' ?>">
+<div class="<?php echo $is_heute ? 'category-heute' : '' ?> <?php echo $is_morgen ? 'category-morgen' : '' ?>">
   <div class="category">
       <aside class="category__aside"></aside>
       <article class="category__main">
         <div class="category__description">
           <p>
+            <?php if ($is_morgen): ?>
+            <img
+              class="arrow"
+              src="<?php echo get_theme_file_uri('/assets/images/short-white-arrow-right.png'); ?>"
+              alt=""
+            />
+            <?php endif; ?>
             <?php echo $parent_category->description; ?>
           </p>
         </div>
