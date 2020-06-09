@@ -73,24 +73,7 @@
       }
     }
 
-    &__description-arrow {
-      width: 22px;
-      height: 18px;
-      image-rendering: optimizeQuality;
-    }
-
-    &__edge-arrow {
-      display: none;
-      width: 25px;
-      height: 38px;
-      margin-right: 10px;
-    }
-
     .articles-list {
-      &__item-excerpt-arrow {
-        display: none;
-      }
-
       &__item {
         border: 2px solid $primary-color;
         border-top: 0;
@@ -364,13 +347,6 @@
           object-fit: scale-down;
         }
       }
-    }
-
-    img.articles-list__item-excerpt-arrow {
-      display: initial;
-      width: 20px;
-      height: auto;
-      vertical-align: middle;
     }
   }
 }
