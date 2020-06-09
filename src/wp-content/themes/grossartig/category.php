@@ -55,7 +55,11 @@ $is_morgen = 'morgen' === strtolower($parent_category->name);
             <li class="articles-list__item">
               <a href="<?php echo get_permalink($post); ?>">
                 <!-- img -->
-                <?php echo get_the_post_thumbnail($post) ?>
+                <?php
+                echo get_the_post_thumbnail($post, 'post-thumbnail', [
+                    'class' => 'articles-list__cover'
+                ]);
+                ?>
 
                 <!-- pill -->
                 <?php foreach (get_the_tags($post) as $tag): ?>
@@ -78,6 +82,18 @@ $is_morgen = 'morgen' === strtolower($parent_category->name);
                 <!-- paragraph -->
                 <p>
                   <?php echo $post->post_excerpt; ?>
+                  <?php if ($is_morgen): ?>
+                  <img
+                    class="articles-list__read-more"
+                    src="<?php echo get_theme_file_uri('/assets/images/arrow-read-more.png'); ?>"
+                    alt=""
+                  />
+                  <img
+                    class="articles-list__read-more articles-list__read-more--inverted"
+                    src="<?php echo get_theme_file_uri('/assets/images/short-white-arrow-right.png'); ?>"
+                    alt=""
+                  />
+                  <?php endif; ?>
                 </p>
               </a>
             </li>

@@ -104,7 +104,7 @@
           font-size: 45px;
         }
 
-        img {
+        .articles-list__cover {
           margin: 5px 0;
           height: 300px;
           object-fit: cover;
@@ -119,7 +119,7 @@
         }
 
         &:hover {
-          img {
+          .articles-list__cover {
             position: fixed;
             left: 0;
             width: 40%;
@@ -137,6 +137,14 @@
             @include screen-size-l {
               top: 65px;
               max-height: calc(100% - 65px);
+            }
+          }
+
+          .articles-list__read-more {
+            display: none;
+
+            &--inverted {
+              display: initial;
             }
           }
         }
@@ -203,8 +211,17 @@
           display: none;
         }
       }
-    }
 
+      &__read-more {
+        width: auto;
+        height: 12px;
+        margin: auto;
+
+        &--inverted {
+          display: none;
+        }
+      }
+    }
   }
 
   .wp-post-image {
