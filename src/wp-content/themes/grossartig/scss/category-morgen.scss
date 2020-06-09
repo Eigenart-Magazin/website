@@ -153,6 +153,10 @@
           display: block;
           text-decoration: none;
           padding: 0 10px;
+
+          @include screen-size-m {
+            display: flex;
+          }
         }
 
         p {
@@ -203,12 +207,11 @@
       }
 
       &__item-tags {
-        display: flex;
-        flex-wrap: wrap;
-        margin-bottom: 5px;
+        display: none;
+        margin-top: 15px;
 
         @include screen-size-m {
-          display: none;
+          display: block;
         }
       }
 
