@@ -185,6 +185,7 @@
         display: block;
         padding: 20px 0;
         padding-bottom: 10px;
+        text-transform: uppercase;
 
         @include screen-size-m {
           padding: 17px 0;
