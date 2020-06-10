@@ -63,7 +63,7 @@ $recommended_articles = query_posts([
 wp_reset_query();
 ?>
   <?php if (count($recommended_articles) > 0): ?>
-  <aside class="article article__recommendations article__recommendations--heute">
+  <aside class="article__recommendations article__recommendations--heute">
     <header class="article__recommendations-header">
       <img src="<?php echo get_theme_file_uri('/assets/images/mehr-und-more-arrow.png'); ?>" alt="" />
       <h2>mehr & much more</h2>
