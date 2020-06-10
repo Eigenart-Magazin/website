@@ -65,7 +65,11 @@ wp_reset_query();
   <?php if (count($recommended_articles) > 0): ?>
   <aside class="article__recommendations article__recommendations--heute">
     <header class="article__recommendations-header">
-      <img src="<?php echo get_theme_file_uri('/assets/images/mehr-und-more-arrow.png'); ?>" alt="" />
+      <div class="arrow-container arrow-container--thin arrow-container--left">
+        <div class="arrow-container__arrow arrow-container__arrow--left">
+          <i class="arrow-container__arrow-head"></i>
+        </div>
+      </div>
       <h2>mehr & much more</h2>
     </header>
     <ul class="article__recommendations-list">

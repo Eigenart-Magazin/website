@@ -262,6 +262,14 @@
         height: 61px;
         width: auto;
       }
+
+      .arrow-container {
+        width: grid-width(2);
+
+        @include screen-size-m {
+          width: grid-width(1.2);
+        }
+      }
     }
 
     &__recommendations-list {

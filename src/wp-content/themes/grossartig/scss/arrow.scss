@@ -1,0 +1,216 @@
+@import "_colors";
+
+$arrow-thickness: 10px;
+
+.arrow-container {
+  display: flex;
+  position: relative;
+
+  &::before, &::after {
+    position: absolute;
+    top: 0;
+
+    display: inline-block;
+    height: 50%;
+    background: $background-inverted;
+    @include screen-size-xs {
+      width: $arrow-thickness / 2;
+    }
+
+    @include screen-size-s {
+      width: $arrow-thickness;
+    }
+
+  }
+
+  &--thin {
+    &::before, &::after {
+      width: $arrow-thickness / 2;
+    }
+
+    .arrow-container__arrow {
+      &::before {
+        height: $arrow-thickness / 2;
+      }
+    }
+
+    .arrow-container__arrow-head {
+      width: ($arrow-thickness * 5) / 2;
+      height: ($arrow-thickness * 5) / 2;
+
+      border: ($arrow-thickness / 2) solid $background-inverted;
+
+      &::before {
+        width: ($arrow-thickness * 1.5) / 2;
+      }
+
+      &::after {
+        height: ($arrow-thickness * 1.5) / 2;
+      }
+    }
+  }
+
+  &--left {
+    &::before {
+      content: ' ';
+      left: 0;
+    }
+  }
+
+  &--right {
+    &::after {
+      content: ' ';
+      right: 0;
+    }
+  }
+
+  &__arrow {
+    flex-grow: 1;
+    position: relative;
+    padding: 0 10px;
+
+    @include screen-size-s {
+      padding: 0 40px;
+    }
+
+    &::before {
+      content: ' ';
+      display: inline-block;
+      height: $arrow-thickness;
+      background: $background-inverted;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+
+      @include screen-size-xs {
+        width: calc(100% - 10px);
+        height: $arrow-thickness / 2;
+      }
+
+      @include screen-size-s {
+        width: calc(100% - 40px);
+      }
+    }
+
+    &--left {
+      padding-left: 0;
+
+      &::before {
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+      }
+    }
+
+    &--right {
+      padding-right: 0;
+
+      &::before {
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+    }
+  }
+
+  &__arrow-head {
+    display: flex;
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+
+
+    @include screen-size-xs {
+      width: ($arrow-thickness * 5) / 2;
+      height: ($arrow-thickness * 5) / 2;
+
+      border: ($arrow-thickness / 2) solid $background-inverted;
+    }
+
+    @include screen-size-s {
+      width: $arrow-thickness * 5;
+      height: $arrow-thickness * 5;
+
+      border: $arrow-thickness solid $background-inverted;
+    }
+
+    &::before, &::after {
+      display: block;
+      background: $background;
+      position: absolute;
+
+    }
+
+    &::before {
+      content: ' ';
+      top: -2px;
+      right: 0;
+      transform: rotate(-15deg);
+      height: 3px;
+
+      @include screen-size-xs {
+        width: ($arrow-thickness * 1.5) / 2;
+      }
+
+      @include screen-size-s {
+        width: $arrow-thickness * 1.5;
+      }
+    }
+
+    &::after {
+      content: ' ';
+      top: 0;
+      right: -2px;
+
+      width: 3px;
+      height: $arrow-thickness * 1.5;
+      @include screen-size-xs {
+        height: ($arrow-thickness * 1.5) / 2;
+      }
+
+      @include screen-size-s {
+        height: $arrow-thickness * 1.5;
+      }
+
+      transform: rotate(15deg);
+    }
+  }
+
+  &:nth-child(odd) .arrow-container__arrow-head {
+    right: 10px;
+    border-left: 0;
+    border-bottom: 0;
+    border-top-right-radius: 10px;
+
+    @include screen-size-s {
+      right: 40px;
+    }
+  }
+
+  &:nth-child(even) .arrow-container__arrow-head {
+    left: 10px;
+    border-top: 0;
+    border-right: 0;
+    border-bottom-left-radius: 10px;
+
+    @include screen-size-s {
+      left: 40px;
+    }
+
+    &::before, &::after {
+      top: initial;
+      right: initial;
+    }
+
+    &::before {
+      bottom: -2px;
+      left: 0;
+      transform: rotate(165deg);
+    }
+
+    &::after {
+      bottom: 0;
+      left: -2px;
+      transform: rotate(-165deg);
+    }
+  }
+}

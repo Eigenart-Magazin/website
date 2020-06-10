@@ -17,11 +17,22 @@ $menu_items = wp_get_nav_menu_items('home-main-menu');
 <div class="home">
   <?php echo get_post()->post_content; ?>
   <ul class="category-list">
-    <?php foreach ($menu_items as $pos => $item): ?>
-      <li class="category-list__item <?php echo 'category-list__item--' . ($pos % 2 === 0 ? 'left' : 'right'); ?>">
+    <?php
+    foreach ($menu_items as $pos => $item):
+        $leftOrRight = ($pos % 2 === 0 ? 'left' : 'right');
+        $class = implode(' ', [
+            'category-list__item',
+            "category-list__item--{$leftOrRight}",
+            'arrow-container',
+            "arrow-container--{$leftOrRight}"
+        ]);
+    ?>
+      <li
+        class="<?php echo $class; ?>"
+      >
         <?php if ($pos % 2 === 0): ?>
-        <div class="category-list__arrow category-list__arrow--left">
-            <i class="category-list__arrow-head"></i>
+        <div class="arrow-container__arrow arrow-container__arrow--left">
+          <i class="arrow-container__arrow-head"></i>
         </div>
         <?php endif; ?>
         <a href="<?php echo $item->url; ?>">
@@ -56,8 +67,8 @@ $menu_items = wp_get_nav_menu_items('home-main-menu');
           />
         </a>
         <?php if ($pos % 2 === 1): ?>
-        <div class="category-list__arrow category-list__arrow--right">
-            <i class="category-list__arrow-head"></i>
+        <div class="arrow-container__arrow arrow-container__arrow--right">
+          <i class="arrow-container__arrow-head"></i>
         </div>
         <?php endif; ?>
       </li>
