@@ -152,7 +152,7 @@
 
           &:hover {
             background-color: $background-inverted;
-            * {
+            h2, p, .articles-list__item-meta {
               border-color: $primary-color-inverted;
               color: $primary-color-inverted;
             }
