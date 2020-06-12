@@ -76,21 +76,17 @@
   display: inline-block;
   width: 100%;
   margin-top: 15px;
-  margin-left: 15px;
+  margin-left: grid-margin();
 
   @include screen-size-m {
     display: inline-flex;
     float: right;
-    width: grid-width(6);
+    width: grid-width(5);
     height: 100%;
     margin: auto;
   }
 
   @include screen-size-l {
-    width: grid-width(4);
-  }
-
-  @include screen-size-xl {
     width: grid-width(4) - (grid-width(1) / 2);
   }
 
