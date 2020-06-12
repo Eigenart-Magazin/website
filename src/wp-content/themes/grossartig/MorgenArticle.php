@@ -63,7 +63,7 @@ $recommended_articles = query_posts([
 wp_reset_query();
 ?>
   <?php if (count($recommended_articles) > 0): ?>
-  <aside class="article__recommendations article__recommendations--heute">
+  <aside class="article__recommendations article__recommendations--morgen">
     <header class="article__recommendations-header">
       <div class="arrow-container arrow-container--thin arrow-container--left">
         <div class="arrow-container__arrow arrow-container__arrow--left">

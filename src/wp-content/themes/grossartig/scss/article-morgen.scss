@@ -107,44 +107,75 @@
 
     &__title {
       text-align: left;
-      font-size: 45px;
-      line-height: 49px;
 
       @include screen-size-l {
-        font-size: 49px;
         width: 78%;
+      }
+
+      font-size: 30px;
+      line-height: 35px;
+
+      @include screen-size-xl {
+        font-size: 53px;
+        line-height: 53px;
+      }
+
+      @include screen-size-xxl {
+        font-size: 75px;
+        line-height: 75px;
       }
     }
 
     &__excerpt p {
-      font-size: 30px;
       margin: 16px 0;
-      line-height: 38px;
 
       @include screen-size-l {
         width: 78%;
-        margin: 0;
-        font-size: 24px;
         font-weight: 200;
+      }
+
+      font-size: 19px;
+      line-height: 25px;
+
+      @include screen-size-xl {
+        font-size: 25px;
+        line-height: 30px;
+      }
+
+      @include screen-size-xxl {
+        font-size: 35px;
+        line-height: 35px;
       }
     }
 
     &__meta {
       display: block;
       margin-top: 22px;
-      font-size: 18px;
-      line-height: 21px;
       font-weight: 200;
       font-family: 'Founders Mono', monospace;
       text-transform: uppercase;
 
       @include screen-size-l {
         margin-top: 30px;
-        font-size: 11px;
+      }
+
+      font-size: 11px;
+      line-height: 15px;
+
+      @include screen-size-xl {
+        font-size: 12px;
+        line-height: 15px;
+      }
+
+      @include screen-size-xxl {
+        font-size: 17px;
+        line-height: 20px;
       }
     }
 
     &__content {
+      padding: 0 10px;
+
       li {
         padding: 10px 5px;
         list-style-type: initial;
@@ -179,6 +210,7 @@
       }
 
       h2, h3, h4, h5, h6 {
+        padding: 0;
         margin: 0;
       }
 
@@ -209,20 +241,29 @@
       }
 
       p {
-        margin: 48px 0;
-        line-height: 38px;
-        font-size: 30px;
+        margin: 20px 0;
         font-weight: 200;
 
         @include screen-size-l {
-          padding: 10px;
-          margin: 45px 0;
-          line-height: 25px;
-          font-size: 21px;
+          padding: 10px 0;
+          margin: 10px 0;
 
           &:first-child {
             margin-top: 25px;
           }
+        }
+
+        font-size: 19px;
+        line-height: 25px;
+
+        @include screen-size-xl {
+          font-size: 21px;
+          line-height: 25px;
+        }
+
+        @include screen-size-xxl {
+          font-size: 30px;
+          line-height: 35px;
         }
       }
 
@@ -230,10 +271,24 @@
         margin: 15px 0;
       }
 
+      .wp-block-image figcaption, .blocks-gallery-item figcaption {
+        font-size: 12px;
+        line-height: 15px;
+
+        @include screen-size-xl {
+          font-size: 12px;
+          line-height: 15px;
+        }
+
+        @include screen-size-xxl {
+          font-size: 17px;
+          line-height: 20px;
+        }
+      }
+
       .wp-block-image {
         figcaption {
           font-family: 'Founders Mono', monospace;
-          font-size: 12px;
           margin: 3px 0;
         }
 
@@ -252,7 +307,6 @@
           figcaption {
             text-align: left;
             font-family: 'Founders Mono', monospace;
-            font-size: 12px;
             margin: 3px 0;
           }
         }
@@ -340,14 +394,20 @@
   }
 
   .pill {
-    font-size: 15px;
     font-weight: 400;
-    width: 142px;
-    text-align: center;
 
-    @include screen-size-m {
-      font-size: 11px;
-      width: 108px;
+    font-size: 11px;
+    line-height: 15px;
+
+    @include screen-size-xl {
+      width: 120px;
+      font-size: 12px;
+      line-height: 15px;
+    }
+
+    @include screen-size-xxl {
+      font-size: 17px;
+      line-height: 20px;
     }
   }
 }
@@ -443,6 +503,166 @@
         line-height: 30px;
         margin: 5px 0;
         font-weight: 200;
+      }
+    }
+  }
+}
+
+/** Recommendations stuff **/
+.article__recommendations--morgen {
+  border-top: 2px solid $primary-color;
+  padding-top: 0;
+
+  .article {
+    &__recommendations-header {
+      margin: 0 10px;
+      display: inline-flex;
+
+      h2 {
+        display: inline-block;
+        margin: auto;
+        padding: 20px 0;
+        font-weight: 400;
+
+        font-size: 19px;
+        line-height: 25px;
+
+        @include screen-size-xl {
+          font-size: 21px;
+          line-height: 25px;
+        }
+
+        @include screen-size-xxl {
+          font-size: 30px;
+          line-height: 35px;
+        }
+      }
+
+      img {
+        height: 61px;
+        width: auto;
+      }
+
+      .arrow-container {
+        width: grid-width(2);
+
+        @include screen-size-m {
+          width: grid-width(1.2);
+        }
+      }
+    }
+
+    &__recommendations-list {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      padding: 0 grid-margin();
+
+      @include screen-size-l {
+        grid-template-columns: repeat(5, grid-width(2));
+        grid-gap: grid-gap(1);
+      }
+
+      margin-top: 24px;
+    }
+
+    &__recommended-list-item {
+      padding: 0 5px;
+
+      @include screen-size-l {
+        padding: initial;
+      }
+
+      * {
+        display: block;
+        text-decoration: none;
+      }
+
+      a {
+        height: 600px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      span, h2, p {
+        font-size: $font-size-small;
+        line-height: $font-size-small * 1.4;
+        margin: 5px 0;
+      }
+
+      img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+
+        @include screen-size-m {
+          height: 250px;
+        }
+      }
+
+      span {
+        font-size: $font-size-small / 1.5;
+        text-transform: uppercase;
+      }
+
+      h2 {
+        font-size: $font-size-paragraph;
+        margin: 10px 0;
+      }
+
+      span {
+        font-family: 'Founders Mono', monospace;
+        font-weight: 100;
+
+        margin-top: 25px;
+
+        font-size: 10px;
+        line-height: 15px;
+
+        @include screen-size-xl {
+          font-size: 10px;
+          line-height: 15px;
+        }
+
+        @include screen-size-xxl {
+          font-size: 15px;
+          line-height: 20px;
+        }
+      }
+
+      h3 {
+        margin-top: 8px;
+        margin-bottom: 0;
+
+        font-size: 15px;
+        line-height: 20px;
+
+        @include screen-size-xl {
+          font-size: 15px;
+          line-height: 20px;
+        }
+
+        @include screen-size-xxl {
+          font-size: 20px;
+          line-height: 25px;
+        }
+      }
+
+      p {
+        margin: 5px 0;
+        font-weight: 200;
+
+        font-size: 15px;
+        line-height: 20px;
+
+        @include screen-size-xl {
+          font-size: 15px;
+          line-height: 20px;
+        }
+
+        @include screen-size-xxl {
+          font-size: 20px;
+          line-height: 25px;
+        }
       }
     }
   }
