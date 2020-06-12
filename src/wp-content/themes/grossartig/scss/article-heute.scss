@@ -2,6 +2,169 @@
 @import "_colors";
 @import "_mixins";
 
+.article {
+  padding: 10px;
+
+  @include screen-size-l {
+    width: 80vw;
+    margin: auto;
+  }
+
+  &__content {
+    li {
+      padding: 10px 5px;
+      list-style-type: initial;
+      list-style-position: inside;
+    }
+
+    @include screen-size-xl {
+      p, h1, h2, h3, h4, h5, h6, ul {
+        padding: 0 15%;
+      }
+    }
+
+    p strong {
+      font-weight: 600;
+      font-size: inherit;
+    }
+
+    p em {
+      font-style: oblique;
+      font-size: inherit;
+    }
+
+    p a {
+      font-size: inherit;
+    }
+  }
+
+  &__header {
+    text-align: center;
+    @include screen-size-l {
+      margin: 50px 0;
+    }
+  }
+
+  &__back-button {
+    display: none;
+    @include screen-size-l {
+      display: initial;
+    }
+
+    border: 0;
+    padding: 0;
+    background: inherit;
+
+    position: absolute;
+    left: grid-margin();
+    width: grid-width(0.38);
+
+    img {
+      width: inherit;
+      height: auto;
+    }
+  }
+
+  &__meta {
+    font-size: $font-size-small;
+    font-weight: lighter;
+  }
+
+  p {
+    margin: $font-size-paragraph 0;
+    line-height: $font-size-paragraph * 1.4;
+
+    @include screen-size-l {
+      margin: $font-size-paragraph * 2 0;
+    }
+  }
+
+  figure {
+    margin: 15px 0;
+    width: 100%;
+    text-align: center;
+
+    img {
+      width: 100%;
+      height: auto;
+      max-height: 400px;
+      object-fit: scale-down;
+    }
+  }
+
+  &__recommendations {
+    border: 5px solid $background-inverted;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+
+    @include screen-size-m {
+      min-height: 82vh;
+    }
+
+    @include screen-size-l {
+      width: 100%;
+    }
+  }
+
+  &__recommendations-list {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 15px;
+    padding: 0 grid-margin();
+
+    @include screen-size-l {
+      grid-template-columns: repeat(5, grid-width(2));
+      grid-gap: grid-gap(1);
+    }
+  }
+
+  &__recommended-list-item {
+    padding: 0 5px;
+
+    @include screen-size-l {
+      padding: initial;
+    }
+
+    * {
+      display: block;
+      text-decoration: none;
+    }
+
+    a {
+      height: 600px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    span, h2, p {
+      font-size: $font-size-small;
+      line-height: $font-size-small * 1.4;
+      margin: 5px 0;
+    }
+
+    img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+
+      @include screen-size-m {
+        height: 250px;
+      }
+    }
+
+    span {
+      font-size: $font-size-small / 1.5;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      font-size: $font-size-paragraph;
+      margin: 10px 0;
+    }
+  }
+}
+
 .article--heute {
   padding: 25px 0 0 0;
   margin-bottom: 25vh;
