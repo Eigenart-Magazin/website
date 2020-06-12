@@ -61,19 +61,21 @@
     }
 
     &__title {
-      font-size: 40px;
-      line-height: 45px;
-
       @include screen-size-l {
-        font-size: 71px;
-        line-height: 75px;
         padding: 0 grid-width(1);
+      }
+
+      font-size: 30px;
+      line-height: 30px;
+
+      @include screen-size-xl {
+        font-size: 71px;
+        line-height: 71px;
       }
 
       @include screen-size-xxl {
         font-size: 100px;
-        line-height: 110px;
-        padding: 0 grid-width(1);
+        line-height: 100px;
       }
     }
 
@@ -83,25 +85,28 @@
       @include screen-size-l {
         width: grid-width(5) + grid-gap(1);
       }
-    }
 
-    &__excerpt p {
-      margin: 24px;
-      text-align: initial;
+      p {
+        margin: 24px;
+        text-align: initial;
 
-      font-size: 25px;
-      line-height: 30px;
+        @include screen-size-l {
+          margin: 12px 0;
+          font-weight: 200;
+        }
 
-      @include screen-size-l {
-        margin: 12px 0;
-        font-weight: 200;
-        font-size: 24px;
-        line-height: 28px;
-      }
+        font-size: 19px;
+        line-height: 25px;
 
-      @include screen-size-xxl {
-        font-size: 35px;
-        line-height: 38px;
+        @include screen-size-xl {
+          font-size: 21px;
+          line-height: 25px;
+        }
+
+        @include screen-size-xxl {
+          font-size: 35px;
+          line-height: 40px;
+        }
       }
     }
 
@@ -111,16 +116,22 @@
       font-weight: 200;
       font-family: 'Founders Mono', monospace;
       text-transform: uppercase;
-      font-size: 15px;
-      line-height: 20px;
 
       @include screen-size-l {
         margin-top: 27px;
       }
 
+      font-size: 11px;
+      line-height: 11px;
+
+      @include screen-size-xl {
+        font-size: 12px;
+        line-height: 12px;
+      }
+
       @include screen-size-xxl {
         font-size: 17px;
-        line-height: 20px;
+        line-height: 17px;
       }
     }
 
@@ -191,20 +202,23 @@
       p {
         margin: 25px;
         font-weight: 200;
-        font-size: 20px;
-        line-height: 25px;
 
         @include screen-size-l {
           padding: 0;
           margin: 25px 0;
+        }
 
+        font-size: 19px;
+        line-height: 25px;
+
+        @include screen-size-xl {
           font-size: 21px;
-          line-height: 28px;
+          line-height: 25px;
         }
 
         @include screen-size-xxl {
           font-size: 30px;
-          line-height: 39px;
+          line-height: 40px;
         }
       }
     }
@@ -227,6 +241,21 @@
   }
 
   /** Gallery related stuff **/
+  .wp-block-image, .blocks-gallery-item figcaption {
+    font-size: 10px;
+    line-height: 15px;
+
+    @include screen-size-xl {
+      font-size: 12px;
+      line-height: 15px;
+    }
+
+    @include screen-size-xxl {
+      font-size: 17px;
+      line-height: 25px;
+    }
+  }
+
   .wp-block-image.size-large {
     @include screen-size-l {
       width: grid-width(8);
@@ -289,7 +318,6 @@
 
     figure figcaption {
       font-family: 'Founders Mono', monospace;
-      font-size: 15px;
       margin: 10px;
     }
   }
@@ -309,8 +337,20 @@
         display: inline-block;
         margin: auto;
         padding: 20px 0;
-        font-size: 30px;
         font-weight: 400;
+
+        font-size: 19px;
+        line-height: 25px;
+
+        @include screen-size-xl {
+          font-size: 21px;
+          line-height: 25px;
+        }
+
+        @include screen-size-xxl {
+          font-size: 30px;
+          line-height: 35px;
+        }
       }
 
       img {
@@ -386,25 +426,58 @@
 
       span {
         font-family: 'Founders Mono', monospace;
-        font-size: 16px;
-        line-height: 18px;
         font-weight: 100;
 
         margin-top: 25px;
+
+        font-size: 10px;
+        line-height: 15px;
+
+        @include screen-size-xl {
+          font-size: 10px;
+          line-height: 15px;
+        }
+
+        @include screen-size-xxl {
+          font-size: 15px;
+          line-height: 20px;
+        }
       }
 
       h3 {
         margin-top: 8px;
         margin-bottom: 0;
-        font-size: 25px;
-        line-height: 27px;
+
+        font-size: 15px;
+        line-height: 20px;
+
+        @include screen-size-xl {
+          font-size: 15px;
+          line-height: 20px;
+        }
+
+        @include screen-size-xxl {
+          font-size: 20px;
+          line-height: 25px;
+        }
       }
 
       p {
-        font-size: 26px;
-        line-height: 30px;
         margin: 5px 0;
         font-weight: 200;
+
+        font-size: 15px;
+        line-height: 20px;
+
+        @include screen-size-xl {
+          font-size: 15px;
+          line-height: 20px;
+        }
+
+        @include screen-size-xxl {
+          font-size: 20px;
+          line-height: 25px;
+        }
       }
     }
   }
