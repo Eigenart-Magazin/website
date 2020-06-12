@@ -137,37 +137,38 @@ $arrow-thickness: 10px;
       display: block;
       background: $background;
       position: absolute;
-
     }
 
     &::before {
       content: ' ';
-      top: -2px;
       right: 0;
       transform: rotate(-15deg);
       height: 3px;
 
       @include screen-size-xs {
         width: ($arrow-thickness * 1.5) / 2;
+        top: -1px;
       }
 
       @include screen-size-s {
         width: $arrow-thickness * 1.5;
+        top: -2px;
       }
     }
 
     &::after {
       content: ' ';
       top: 0;
-      right: -2px;
 
       width: 3px;
       height: $arrow-thickness * 1.5;
       @include screen-size-xs {
+        right: -1px;
         height: ($arrow-thickness * 1.5) / 2;
       }
 
       @include screen-size-s {
+        right: -2px;
         height: $arrow-thickness * 1.5;
       }
 
@@ -202,15 +203,29 @@ $arrow-thickness: 10px;
     }
 
     &::before {
-      bottom: -2px;
       left: 0;
       transform: rotate(165deg);
+
+      @include screen-size-xs {
+        bottom: -1px;
+      }
+
+      @include screen-size-s {
+        bottom: -2px;
+      }
     }
 
     &::after {
       bottom: 0;
-      left: -2px;
       transform: rotate(-165deg);
+
+      @include screen-size-xs {
+        left: -1px;
+      }
+
+      @include screen-size-s {
+        left: -2px;
+      }
     }
   }
 }
