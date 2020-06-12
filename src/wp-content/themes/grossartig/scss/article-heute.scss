@@ -4,6 +4,7 @@
 
 .article--heute {
   padding: 25px 0 0 0;
+  margin: auto;
   margin-bottom: 25vh;
 
   @include screen-size-l {
@@ -143,7 +144,7 @@
       }
 
       @include screen-size-xl {
-        p, h1, h2, h3, h4, h5, h6, ul {
+        p, h1, h2, h3, h4, h5, h6 {
           padding: 0 15%;
         }
       }
@@ -171,12 +172,7 @@
       }
 
       h2, h3, h4, h5, h6 {
-        margin: 0 20px;
-
-        @include screen-size-l {
-          padding: 0;
-          margin: 0;
-        }
+        margin: 20px;
       }
 
       h2 {
@@ -241,7 +237,7 @@
   }
 
   /** Gallery related stuff **/
-  .wp-block-image, .blocks-gallery-item figcaption {
+  .wp-block-image figcaption, .blocks-gallery-item figcaption {
     font-size: 10px;
     line-height: 15px;
 
@@ -257,11 +253,20 @@
   }
 
   .wp-block-image.size-large {
+    text-align: center;
+
     @include screen-size-l {
       width: grid-width(8);
       position: relative;
       left: 50%;
       transform: translateX(-50%);
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      max-height: 400px;
+      object-fit: scale-down;
     }
   }
 
@@ -269,6 +274,10 @@
     width: 94%;
 
     &__button {
+      img {
+        width: 100%;
+      }
+
       @include screen-size-l {
         width: 3%;
         top: 47%;
@@ -301,16 +310,25 @@
   }
 
   .blocks-gallery-grid {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
     width: 94%;
 
     @include screen-size-l {
       width: 86%;
+    }
+
+    figure img {
+      width: 100%;
     }
   }
 
   .blocks-gallery-item {
     figure img {
       @include screen-size-l {
+        width: 100%;
         object-fit: contain;
         max-height: 700px;
       }
