@@ -50,8 +50,6 @@
       p {
         position: relative;
         font-weight: 200;
-        font-size: 30px;
-        line-height: 35px;
         text-indent: 30px;
 
         @include screen-size-m {
@@ -61,6 +59,19 @@
           line-height: 22px;
           font-weight: 400;
           text-indent: initial;
+        }
+
+        font-size: 19px;
+        line-height: 25px;
+
+        @include screen-size-xl {
+          font-size: 21px;
+          line-height: 25px;
+        }
+
+        @include screen-size-xxl {
+          font-size: 30px;
+          line-height: 35px;
         }
       }
 
@@ -83,7 +94,37 @@
         h2 {
           margin: 10px 0;
           font-weight: 800;
-          font-size: 45px;
+
+          font-size: 27px;
+          line-height: 30px;
+
+          @include screen-size-xl {
+            font-size: 42px;
+            line-height: 42px;
+          }
+
+          @include screen-size-xxl {
+            font-size: 60px;
+            line-height: 60px;
+          }
+        }
+
+        p {
+          margin: 10px 0;
+          font-weight: 400;
+
+          font-size: 19px;
+          line-height: 25px;
+
+          @include screen-size-xl {
+            font-size: 21px;
+            line-height: 25px;
+          }
+
+          @include screen-size-xxl {
+            font-size: 30px;
+            line-height: 35px;
+          }
         }
 
         img {
@@ -129,23 +170,13 @@
           padding: 0 10px;
         }
 
-        p {
-          margin: 10px 0;
-          font-weight: 400;
-          font-size: 28px;
-          line-height: 38px;
-        }
-
         @include screen-size-m {
           h2 {
-            font-size: 35px;
             margin: 5px 0;
           }
 
           p {
             font-weight: 200;
-            font-size: 22px;
-            line-height: 22px;
             margin: 5px 0;
             margin-bottom: 15px;
           }
@@ -172,15 +203,6 @@
             margin-left: 120px;
           }
 
-          h2 {
-            font-size: 40px;
-          }
-
-          p {
-            font-size: 22px;
-            line-height: 28px;
-          }
-
           &:hover {
             position: relative;
 
@@ -200,7 +222,6 @@
 
       &__item-meta {
         font-family: 'Founders Mono', monospace;
-        font-size: 18px;
         font-weight: 200;
         display: block;
         padding: 20px 0;
@@ -209,18 +230,54 @@
         @include screen-size-m {
           padding: 17px 0;
           padding-bottom: 0;
-          font-size: 13px;
+        }
+
+        font-size: 11px;
+        line-height: 11px;
+
+        @include screen-size-xl {
+          font-size: 12px;
+          line-height: 12px;
+        }
+
+        @include screen-size-xxl {
+          font-size: 20px;
+          line-height: 20px;
         }
       }
 
       &__item-tags {
-        display: block;
-        margin-bottom: 5px;
+        display: flex;
+        flex-direction: row;
 
         @include screen-size-m {
           position: absolute;
           left: 0;
           margin-left: 10px;
+          flex-direction: column;
+        }
+
+        @include screen-size-xxl {
+          margin-left: 0;
+        }
+
+        .pill {
+          width: auto;
+          margin-top: 5px;
+          margin-bottom: 5px;
+
+          font-size: 11px;
+          line-height: 11px;
+
+          @include screen-size-xl {
+            font-size: 12px;
+            line-height: 12px;
+          }
+
+          @include screen-size-xxl {
+            font-size: 17px;
+            line-height: 17px;
+          }
         }
       }
     }
@@ -250,7 +307,7 @@
         padding: 10px 0;
 
         p {
-          padding: 34px 24px;
+          padding: 5px 24px;
         }
 
         @include screen-size-l {
@@ -279,7 +336,7 @@
           h1 {
             color: $primary-color;
             background-color: $background;
-            margin: 25px 15px 10px 0;
+            margin: 10px 15px 10px 0;
             padding: 14px 0;
 
             border-radius: 50px;
@@ -292,6 +349,7 @@
               padding-top: 0;
               padding-bottom: 0;
               font-weight: 800;
+              margin: 10px 0;
             }
 
             span {
@@ -299,21 +357,39 @@
               margin: auto 0 auto grid-gap(1);
               text-transform: uppercase;
               font-weight: 600;
-              font-size: 50px;
+              font-size: 34px;
+
+              @include screen-size-xl {
+                font-size: 53px;
+              }
+
+              @include screen-size-xxl {
+                font-size: 75px;
+              }
             }
           }
 
           p {
             display: block;
             padding: 18px 25px;
-            line-height: 35px;
 
             @include screen-size-l {
               margin-left: grid-gap(1) + grid-width(1) + grid-margin();
               padding: 0;
               font-weight: 600;
+            }
+
+            font-size: 19px;
+            line-height: 25px;
+
+            @include screen-size-xl {
+              font-size: 21px;
               line-height: 25px;
-              font-size: 20px;
+            }
+
+            @include screen-size-xxl {
+              font-size: 30px;
+              line-height: 35px;
             }
           }
 
@@ -323,13 +399,9 @@
             background-color: $background;
             padding: 10px 80px;
             padding-left: 0;
-            border-radius: 80px;
+            border-radius: 200px;
             border-top-left-radius: 0;
             border-bottom-left-radius: 0;
-
-            h1 {
-              margin: 10px 0;
-            }
           }
         }
       }
