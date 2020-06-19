@@ -1,19 +1,25 @@
 <?php
 
-use function GrossArtig\get_top_category;
+$morgen_category = get_category_by_slug('morgen');
+if (null === $morgen_category) {
+    global $wp_query;
 
-get_header('category');
-
-$parent_category = get_top_category();
+    $wp_query->set_404();
+    status_header(404);
+    get_template_part('404');
+    exit;
+}
 
 $posts = query_posts([
-    'cat' => $parent_category->cat_ID,
+    'cat' => $morgen_category->cat_ID,
     'post_type' => 'post',
     'orderby' => 'date',
     'order' => 'DESC',
     'nopaging' => true,
 ]);
 
+// Print header
+get_header('category');
 ?>
 <div class="category-morgen">
   <div class="category">
@@ -26,7 +32,7 @@ $posts = query_posts([
             src="<?php echo get_theme_file_uri('/assets/images/short-white-arrow-right.png'); ?>"
             alt=""
           />
-          <?php echo $parent_category->description; ?>
+          <?php echo $morgen_category->description; ?>
         </p>
       </div>
       <ul class="articles-list">

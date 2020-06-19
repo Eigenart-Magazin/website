@@ -1,20 +1,28 @@
 <?php
 
-use function GrossArtig\get_top_category;
+$post_categories = get_the_category();
+$open_call_category = count($post_categories) > 0 ? $post_categories[0] : null;
+if (null === $open_call_category) {
+    global $wp_query;
 
-get_header('category');
-
-$parent_category = get_top_category();
+    $wp_query->set_404();
+    status_header(404);
+    get_template_part('404');
+    exit;
+}
 
 $posts = query_posts([
-    'cat' => $parent_category->cat_ID,
+    'cat' => $open_call_category->cat_ID,
     'post_type' => 'post',
     'orderby' => 'date',
     'order' => 'DESC',
     'nopaging' => true,
 ]);
 
-$category = get_the_category()[0];
+$parent_category = get_category_by_slug('heute');
+
+// Print header
+get_header('category');
 ?>
 
 <div class="category-heute">
@@ -32,9 +40,9 @@ $category = get_the_category()[0];
               src="<?php echo get_theme_file_uri('/assets/images/arrow-right.png'); ?>"
               alt=""
             />
-            <span><?php echo $category->name; ?></span>
+            <span><?php echo $open_call_category->name; ?></span>
           </h1>
-          <p><?php echo $category->description; ?></p>
+          <p><?php echo $open_call_category->description; ?></p>
         </div>
       </div>
       <ul class="articles-list">
