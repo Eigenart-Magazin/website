@@ -1,0 +1,57 @@
+@import "_colors";
+@import "_mixins";
+
+.category-gestern {
+  width: 100%;
+  background-color: $background-inverted;
+  color: $primary-color-inverted;
+
+  &__header {
+    display: grid;
+    grid-template-columns: (grid-width(4) + grid-margin()) (grid-width(6) + grid-margin());
+    padding: 0 grid-margin();
+    height: 60px;
+
+    color: $primary-color;
+    background: $background;
+
+    &--left, &--right {
+      padding-top: calc(((35px / 2) + ((18px + 10px) / 2)) / 2); // 35px = total footer margin; (18px + 5px) / 2 = pill font-size + padding
+    }
+
+    &--left {
+      border-right: 1px solid $background-inverted;
+    }
+
+    &--right {
+      padding-left: grid-margin();
+      border-left: 1px solid $background-inverted;
+    }
+
+    .pill {
+      font-size: 18px;
+      margin: 0;
+      margin-right: grid-gap(1);
+      width: grid-width(1);
+      border: 2px solid $background-inverted;
+    }
+  }
+
+  &__frames {
+    display: grid;
+    grid-template-columns: (grid-width(4) + grid-margin()) (grid-width(6) + grid-margin());
+    padding: 0 grid-margin();
+
+    border-bottom: 2px solid $background;
+    height: calc(100% - 35px * 2); // 35px = total footer margin
+  }
+}
+
+.gestern-print {
+  border-right: 1px solid $background;
+}
+
+.gestern-digital {
+  border-left: 1px solid $background;
+  padding-left: grid-margin();
+}
