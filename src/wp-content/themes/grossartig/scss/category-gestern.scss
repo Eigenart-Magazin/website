@@ -49,9 +49,112 @@
 
 .gestern-print {
   border-right: 1px solid $background;
+  padding-right: 0.7vw;
+
+  &__post {
+    position: relative;
+    padding: grid-gap(1) 0;
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: grid-margin() * -1;
+
+      content: ' ';
+      width: grid-width(4) + grid-margin() * 2;
+      height: 2px;
+      background: $background;
+    }
+  }
+
+  &__post-head {
+    display: flex;
+
+    .pill {
+      width: grid-width(1);
+      height: 100%;
+      font-size: 18px;
+      border: 2px solid $background;
+      margin: 0;
+    }
+
+    h2 {
+      color: $primary-color-inverted;
+      flex-grow: 1;
+      margin: auto 0;
+      margin-left: grid-gap(1);
+
+      font-size: 40px;
+      font-weight: 500;
+    }
+  }
+
+  &__post-cover {
+    width: 100%;
+    height: auto;
+    margin: grid-gap(2) 0 grid-gap(1) 0;
+  }
+
+  p {
+    width: grid-width(3);
+    color: $primary-color-inverted;
+
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .gestern-digital {
   border-left: 1px solid $background;
   padding-left: grid-margin();
+
+  h2, p {
+    color: $primary-color-inverted;
+  }
+
+  &__post {
+    display: flex;
+    position: relative;
+    padding: grid-gap(1) 0;
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: grid-margin() * -1;
+
+      content: ' ';
+      width: grid-width(6) + grid-margin() * 2;
+      height: 2px;
+      background: $background;
+    }
+
+    .pill {
+      width: grid-width(1);
+      height: 100%;
+      font-size: 18px;
+      border: 2px solid $background;
+      margin: 0;
+    }
+
+    div {
+      flex-grow: 1;
+      width: 100%;
+      padding-left: grid-margin();
+      padding-right: grid-width(.5);
+
+      h2 {
+        font-size: 40px;
+        font-weight: 500;
+        margin: 0;
+      }
+
+      p {
+        margin-top: grid-margin();
+        font-size: 24px;
+        line-height: 30px;
+        font-weight: 300;
+      }
+    }
+  }
 }
