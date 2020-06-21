@@ -390,6 +390,7 @@
   &__post {
     position: relative;
     padding: grid-gap(4) 0;
+    z-index: 0;
 
     &:first-child {
       @include screen-size-xs {
@@ -411,6 +412,29 @@
     @include screen-size-m {
       display: inherit;
       padding: grid-gap(1) 0;
+    }
+
+    &:hover {
+      @include screen-size-m {
+        &::before {
+          content: ' ';
+          position: absolute;
+          top: 10px;
+          left: grid-margin() * -1;
+          height: calc(100% - 20px);
+          width: 100%;
+          background-color: $background;
+
+          border-radius: 150px;
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+          z-index: -1;
+        }
+
+        p, h2 {
+          color: $primary-color;
+        }
+      }
     }
 
     &::after {
@@ -454,11 +478,12 @@
     div {
       display: inline-block;
       padding: 0 grid-gap(1);
+      background: transparent; // bumps the rendering stack (z-index)
 
       width: 100%;
 
       @include screen-size-m {
-        width: grid-width(4.5);
+        width: grid-width(4);
       }
 
       @include screen-size-l {
