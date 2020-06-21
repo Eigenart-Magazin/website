@@ -16,6 +16,24 @@ get_header('category');
 ?>
 
 <div class="category-gestern">
+  <!-- Mobile only -->
+  <nav class="category-gestern__mobile-navigation">
+    <p><?php echo $parent_category->description; ?></p>
+    <div class="archive">
+      <span class="pill pill--inverted">archiv</span>
+    </div>
+    <div class="category">
+      <a href="#print">
+        <span class="pill">print<small>1991-2019</small></span>
+      </a>
+    </div>
+    <div class="category">
+      <a href="#digital">
+        <span class="pill">digital<small>seit 2020</small></span>
+      </a>
+    </div>
+  </nav>
+
   <header class="category-gestern__header">
     <div class="category-gestern__header--left">
       <span class="pill">print</span>
@@ -28,7 +46,12 @@ get_header('category');
   </header>
 
   <div class="category-gestern__frames">
-    <section class="gestern-print">
+    <section class="gestern-print" id="print">
+      <header>
+        <span class="pill">print</span>
+        <span class="pill">1991-2019</span>
+      </header>
+
       <?php
       $print_category = get_category_by_slug('print');
 
@@ -119,7 +142,11 @@ get_header('category');
         <?php endwhile; ?>
       </ul>
     </section>
-    <section class="gestern-digital">
+    <section class="gestern-digital" id="digital">
+      <header>
+        <span class="pill">digital</span>
+        <span class="pill">seit 2020</span>
+      </header>
     <?php
         $digital_category = get_category_by_slug('digital');
         $digital_categories = get_categories([

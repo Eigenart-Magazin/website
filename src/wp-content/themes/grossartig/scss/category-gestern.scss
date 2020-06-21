@@ -6,17 +6,69 @@
   background-color: $background-inverted;
   color: $primary-color-inverted;
 
+  &__mobile-navigation {
+    display: flex;
+    flex-direction: column;
+
+    @include screen-size-m {
+      display: none;
+    }
+
+    padding: grid-margin();
+    margin-bottom: grid-width(3);
+    border-top: 2px solid $background;
+
+    .archive, .category {
+      border-top: 2px solid $background;
+      padding: grid-gap(4) 0;
+
+      .pill {
+        width: 100%;
+        margin: 0;
+        border-width: 2px;
+      }
+    }
+
+    .archive .pill {
+      font-size: 30px;
+    }
+
+    .category .pill {
+      font-size: 35px;
+      border-radius: 40px;
+
+      small {
+        display: block;
+        font-size: 20px;
+      }
+    }
+
+    p {
+      font-size: 25px;
+      line-height: 30px;
+      padding: grid-gap(5) 0;
+
+      color: $primary-color-inverted;
+    }
+  }
+
   &__header {
-    display: grid;
-    grid-template-columns: (grid-width(4) + grid-margin()) (grid-width(6) + grid-margin());
+    display: none;
     padding: 0 grid-margin();
     height: 60px;
+
+    @include screen-size-m {
+      display: grid;
+      grid-template-columns: (grid-width(4) + grid-margin()) (grid-width(6) + grid-margin());
+    }
 
     color: $primary-color;
     background: $background;
 
     &--left, &--right {
-      padding-top: calc(((35px / 2) + ((18px + 10px) / 2)) / 2); // 35px = total footer margin; (18px + 5px) / 2 = pill font-size + padding
+      @include screen-size-m {
+        padding-top: calc(((35px / 2) + ((18px + 10px) / 2)) / 2); // 35px = total footer margin; (18px + 5px) / 2 = pill font-size + padding
+      }
     }
 
     &--left {
@@ -52,32 +104,76 @@
   }
 
   &__frames {
-    display: grid;
-    grid-template-columns: (grid-width(4) + grid-margin()) (grid-width(6) + grid-margin());
     padding: 0 grid-margin();
-
     border-bottom: 2px solid $background;
+
+    @include screen-size-m {
+      display: grid;
+      grid-template-columns: (grid-width(4) + grid-margin()) (grid-width(6) + grid-margin());
+    }
   }
 }
 
 .gestern-print {
-  border-right: 1px solid $background;
   padding-right: 0.7vw;
   margin-bottom: 200px;
 
+  @include screen-size-m {
+    border-right: 1px solid $background;
+  }
+
+  header {
+    @include screen-size-m {
+      display: none;
+    }
+
+    border-top: 2px solid $background;
+    border-bottom: 2px solid $background;
+    margin-bottom: grid-width(1);
+    padding: grid-gap(2) 0;
+
+    .pill {
+      margin: 0;
+      font-size: 15px;
+
+      @include screen-size-xs {
+        width: grid-width(4);
+      }
+
+      @include screen-size-l {
+        font-size: 12px;
+        width: grid-width(1);
+      }
+
+      @include screen-size-xl {
+        font-size: 17px;
+        width: grid-width(1);
+      }
+    }
+  }
+
   &__post {
     position: relative;
-    padding: grid-gap(1) 0;
+    padding: grid-gap(4) 0;
+
+    @include screen-size-m {
+      display: inherit;
+      padding: grid-gap(1) 0;
+    }
 
     &::after {
       position: absolute;
       bottom: 0;
       left: grid-margin() * -1;
-
       content: ' ';
-      width: grid-width(4) + grid-margin() * 2;
+
       height: 2px;
       background: $background;
+
+      width: 100%;
+      @include screen-size-m {
+        width: grid-width(4) + grid-margin() * 2;
+      }
     }
   }
 
@@ -146,13 +242,17 @@
   }
 
   p {
-    width: grid-width(3.5);
     color: $primary-color-inverted;
-
     font-weight: 300;
 
     font-size: 25px;
     line-height: 30px;
+
+    width: 100%;
+
+    @include screen-size-m {
+      width: grid-width(3.5);
+    }
 
     @include screen-size-l {
       font-size: 14px;
@@ -190,7 +290,12 @@
   &__meta {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    width: grid-width(3.5);
+
+    width: 100%;
+
+    @include screen-size-m {
+      width: grid-width(3.5);
+    }
 
     div, span {
       font-family: 'Founders Mono', monospace;
@@ -211,8 +316,41 @@
 }
 
 .gestern-digital {
-  border-left: 1px solid $background;
   padding-left: grid-margin();
+
+  @include screen-size-m {
+    border-left: 1px solid $background;
+  }
+
+  header {
+    @include screen-size-m {
+      display: none;
+    }
+
+    border-top: 2px solid $background;
+    border-bottom: 2px solid $background;
+    margin-bottom: grid-width(1);
+    padding: grid-gap(2) 0;
+
+    .pill {
+      margin: 0;
+      font-size: 15px;
+
+      @include screen-size-xs {
+        width: grid-width(4);
+      }
+
+      @include screen-size-l {
+        font-size: 12px;
+        width: grid-width(1);
+      }
+
+      @include screen-size-xl {
+        font-size: 17px;
+        width: grid-width(1);
+      }
+    }
+  }
 
   h2, p {
     color: $primary-color-inverted;
@@ -220,7 +358,15 @@
 
   &__post {
     position: relative;
-    padding: grid-gap(1) 0;
+    padding: grid-gap(4) 0;
+
+    display: flex;
+    flex-direction: column;
+
+    @include screen-size-m {
+      display: inherit;
+      padding: grid-gap(1) 0;
+    }
 
     &::after {
       position: absolute;
@@ -228,9 +374,13 @@
       left: grid-margin() * -1;
 
       content: ' ';
-      width: grid-width(6) + grid-margin() * 2;
       height: 2px;
       background: $background;
+
+      width: 100%;
+      @include screen-size-m {
+        width: grid-width(6) + grid-margin() * 2;
+      }
     }
 
     .pill {
@@ -260,7 +410,11 @@
       display: inline-block;
       padding: 0 grid-gap(1);
 
-      width: grid-width(4.5);
+      width: 100%;
+
+      @include screen-size-m {
+        width: grid-width(4.5);
+      }
 
       @include screen-size-l {
         width: grid-width(5);
@@ -268,10 +422,12 @@
 
       h2 {
         font-weight: 500;
-        margin: 0;
+        font-size: 35px;
+        line-height: 35px;
 
-        font-size: 25px;
-        line-height: 30px;
+        @include screen-size-m {
+          margin: 0;
+        }
 
         @include screen-size-l {
           font-size: 27px;
