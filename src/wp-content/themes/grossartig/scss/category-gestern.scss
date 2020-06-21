@@ -53,6 +53,28 @@
 
       color: $primary-color-inverted;
     }
+
+  }
+
+  .mobile-scroll-top {
+    @include screen-size-m {
+      display: none;
+    }
+
+    position: fixed; // fallback when position: sticky is not supported
+    position: sticky;
+    top: 92vh;
+    width: 100%;
+
+    text-align: right;
+    display: block;
+    z-index: 2;
+
+    img {
+      width: 40px;
+      height: auto;
+      transform: rotate(-90deg);
+    }
   }
 
   &__header {
@@ -160,7 +182,9 @@
     padding: grid-gap(4) 0;
 
     &:first-child {
-      padding-top: 0;
+      @include screen-size-xs {
+        padding-top: 0;
+      }
     }
 
     @include screen-size-m {
@@ -368,7 +392,9 @@
     padding: grid-gap(4) 0;
 
     &:first-child {
-      padding-top: 0;
+      @include screen-size-xs {
+        padding-top: 0;
+      }
     }
 
     display: flex;

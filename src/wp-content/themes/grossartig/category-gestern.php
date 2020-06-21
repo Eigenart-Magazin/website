@@ -32,7 +32,15 @@ get_header('category');
         <span class="pill">digital<small>seit 2020</small></span>
       </a>
     </div>
+
   </nav>
+  <a href="#" class="mobile-scroll-top">
+    <img
+      class="category__open-call-arrow"
+      src="<?php echo get_theme_file_uri('/assets/images/short-white-arrow-right.png'); ?>"
+      alt=""
+    />
+  </a>
 
   <header class="category-gestern__header">
     <div class="category-gestern__header--left">
