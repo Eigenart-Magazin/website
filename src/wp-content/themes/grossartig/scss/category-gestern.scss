@@ -398,8 +398,10 @@
     }
 
     &:last-child {
-      &::after {
-        display: none;
+      @include screen-size-xs {
+        &::after {
+          display: none;
+        }
       }
     }
 
