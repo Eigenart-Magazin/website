@@ -167,25 +167,27 @@ get_header('category');
     <ul>
       <?php foreach ($digital_categories as $digital_category): ?>
       <li class="gestern-digital__post">
+        <a href="<?php echo get_category_link($digital_category) ?>" style="display: block;">
         <?php
-        // Fetch first post so we can present the year
-        query_posts([
-            'cat' => $digital_category->cat_ID,
-            'post_type' => 'post',
-            'orderby' => 'date',
-            'order' => 'ASC',
-            'nopaging' => true,
-            'limit' => 1,
-        ]);
-        the_post();
+            // Fetch first post so we can present the year
+            query_posts([
+                'cat' => $digital_category->cat_ID,
+                'post_type' => 'post',
+                'orderby' => 'date',
+                'order' => 'ASC',
+                'nopaging' => true,
+                'limit' => 1,
+            ]);
+            the_post();
 
-        $year = the_date('Y', '', '', false);
+            $year = the_date('Y', '', '', false);
         ?>
-        <span class="pill pill--inverted"><?php echo $year; ?></span>
-        <div>
-          <h2><?php echo $digital_category->cat_name; ?></h2>
-          <p><?php echo $digital_category->category_description; ?></p>
-        </div>
+          <span class="pill pill--inverted"><?php echo $year; ?></span>
+          <div>
+            <h2><?php echo $digital_category->cat_name; ?></h2>
+            <p><?php echo $digital_category->category_description; ?></p>
+          </div>
+        </a>
       </li>
       <?php endforeach; ?>
     </ul>
