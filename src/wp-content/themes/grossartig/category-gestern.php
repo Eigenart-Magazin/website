@@ -1,6 +1,7 @@
 <?php
 
 $parent_category = get_category_by_slug('gestern');
+
 if (null === $parent_category) {
     global $wp_query;
 
@@ -192,7 +193,7 @@ get_header('category');
   </div>
 </div>
 
-<?
+<?php
 wp_reset_query();
 
 get_footer();

@@ -54,6 +54,32 @@
       color: $primary-color-inverted;
     }
 
+    &--white {
+      min-height: initial;
+      background: $background;
+
+      h2 {
+        color: $primary-color-inverted;
+        background: $background-inverted;
+        text-transform: uppercase;
+        font-weight: 500;
+
+        border-top-right-radius: 150px;
+        border-bottom-right-radius: 150px;
+
+        padding: 10px;
+
+        margin-left: grid-margin() * -1;
+      }
+
+      p {
+        margin: 0;
+        padding: 0;
+        color: $primary-color;
+
+        min-height: initial;
+      }
+    }
   }
 
   .mobile-scroll-top {
@@ -137,11 +163,27 @@
       grid-template-columns: (grid-width(4) + grid-margin()) (grid-width(6) + grid-margin());
     }
   }
+
+  &__frames-header {
+    &--hide-mobile {
+      display: none;
+      @include screen-size-m {
+        display: inherit;
+      }
+    }
+  }
 }
 
 .gestern-print {
   padding-right: 0.7vw;
   margin-bottom: 200px;
+
+  &--hide-mobile {
+    display: none;
+    @include screen-size-m {
+      display: inherit;
+    }
+  }
 
   @include screen-size-m {
     border-right: 1px solid $background;
@@ -431,7 +473,7 @@
           z-index: -1;
         }
 
-        p, h2 {
+        p, h2, .gestern-digital__post-meta {
           color: $primary-color;
         }
       }
@@ -526,6 +568,31 @@
           line-height: 30px;
         }
       }
+    }
+
+    &--no-padding div {
+      padding: 0;
+    }
+  }
+
+  &__post-meta {
+    color: $primary-color-inverted;
+    text-transform: uppercase;
+
+    font-family: 'Founders Mono', monospace;
+    font-weight: 200;
+
+    font-size: 11px;
+    line-height: 11px;
+
+    @include screen-size-xl {
+      font-size: 12px;
+      line-height: 12px;
+    }
+
+    @include screen-size-xxl {
+      font-size: 20px;
+      line-height: 20px;
     }
   }
 }

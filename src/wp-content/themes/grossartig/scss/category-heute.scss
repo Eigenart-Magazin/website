@@ -3,6 +3,8 @@
 @import "_mixins";
 
 .category-heute {
+  width: 100%;
+
   .category {
     @include screen-size-m {
       display: grid;
