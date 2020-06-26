@@ -52,7 +52,8 @@ get_header('category');
             <!-- img -->
             <?php
                 echo get_the_post_thumbnail($post, 'post-thumbnail', [
-                    'class' => 'articles-list__cover'
+                    'class' => 'articles-list__cover',
+                    'loading' => 'lazy',
                 ]);
             ?>
 

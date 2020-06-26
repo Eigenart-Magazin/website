@@ -68,7 +68,7 @@ wp_reset_query();
     <?php foreach ($recommended_articles as $recommended): ?>
     <li class="article__recommended-list-item">
       <a href="<?php echo get_permalink($recommended); ?>">
-        <?php echo get_the_post_thumbnail($recommended) ?>
+        <?php echo get_the_post_thumbnail($recommended, 'post-thumbnail', ['loading' => 'lazy']) ?>
         <?php
             $custom = get_post_custom($recommended->ID) ?? [];
             $meta = $custom['article_author'] ?? [];

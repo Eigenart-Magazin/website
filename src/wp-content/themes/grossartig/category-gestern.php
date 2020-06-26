@@ -91,7 +91,14 @@ get_header('category');
           </div>
           <!-- featured image -->
           <?php
-              echo get_the_post_thumbnail($post, 'post-thumbnail', ['class' => 'gestern-print__post-cover']);
+              echo get_the_post_thumbnail(
+                  $post,
+                  'post-thumbnail',
+                  [
+                      'class' => 'gestern-print__post-cover',
+                      'loading' => 'lazy',
+                  ]
+              );
           ?>
           <!-- Paragraph -->
           <?php the_excerpt(); ?>
