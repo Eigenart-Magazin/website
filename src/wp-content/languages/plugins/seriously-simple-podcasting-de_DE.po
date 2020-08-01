@@ -1,0 +1,1027 @@
+# Translation of Plugins - Seriously Simple Podcasting - Development (trunk) in German
+# This file is distributed under the same license as the Plugins - Seriously Simple Podcasting - Development (trunk) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2016-02-06 20:31:36+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: de\n"
+"Project-Id-Version: Plugins - Seriously Simple Podcasting - Development (trunk)\n"
+
+#: php/classes/handlers/class-settings-handler.php:325
+msgid "Social Sciences"
+msgstr "Gessellschaftswissenschaften"
+
+#: php/classes/handlers/class-settings-handler.php:165
+msgid "Medicine"
+msgstr "Medizin"
+
+#: php/classes/handlers/class-settings-handler.php:313
+msgid "Natural Sciences"
+msgstr "Naturwissenschaften"
+
+#: php/classes/controllers/class-admin-controller.php:964
+msgid "Podcast file:"
+msgstr "Podcast-Datei:"
+
+#: php/classes/controllers/class-admin-controller.php:1028
+msgid "Block:"
+msgstr "Sperren:"
+
+#: php/classes/controllers/class-admin-controller.php:1029
+msgid "Block this episode from appearing in the iTunes & Google Play podcast libraries."
+msgstr "Verhindern, dass diese Folge in iTunes & Google Play Podcastverzeichnissen angezeigt wird."
+
+#: php/classes/controllers/class-admin-controller.php:956
+msgid "Video"
+msgstr "Video"
+
+#: php/classes/controllers/class-admin-controller.php:741
+msgid "Choose a file"
+msgstr "Datei auswählen"
+
+#: php/classes/controllers/class-admin-controller.php:955
+msgid "Audio"
+msgstr "Audio"
+
+#: php/classes/controllers/class-admin-controller.php:741
+msgid "Insert podcast file"
+msgstr "Podcast-Datei einfügen"
+
+#: php/classes/controllers/class-admin-controller.php:950
+msgid "Episode type:"
+msgstr "Art der Folge:"
+
+#: php/classes/controllers/class-admin-controller.php:1211
+msgid "Add-ons"
+msgstr "Add-ons"
+
+#: php/classes/controllers/class-admin-controller.php:698
+msgid "Height:"
+msgstr "Höhe:"
+
+#: php/classes/handlers/class-settings-handler.php:699
+msgid "Complete"
+msgstr "Abgeschlossen"
+
+#: php/classes/handlers/class-settings-handler.php:700
+msgid "Mark if this podcast is complete or not. Only do this if no more episodes are going to be added to this feed."
+msgstr "Auswählen, ob dieser Podcast abgeschlossen ist, oder nicht. Nur auswählen, wenn keine weiteren Folgen zu diesem Feed hinzugefügt werden sollen."
+
+#: php/classes/controllers/class-settings-controller.php:734
+msgid "It looks like your server has FastCGI enabled, which will prevent the feed password protection feature from working. You can fix this by following %1$sthis quick guide%2$s."
+msgstr "Es scheint, dass auf dem Server FastCGI aktiviert ist. Dadurch kann der Passwortschutz für Feeds nicht aktiviert werden. Dies kann behoben werden, indem sie die Schritte in %1$sdiesem Quick Guide (englisch)%2$s befolgen."
+
+#: php/classes/controllers/class-admin-controller.php:698
+msgid "Width:"
+msgstr "Breite:"
+
+#: php/classes/controllers/class-admin-controller.php:697
+msgid "Customise the size of your episode embed below, then copy the HTML to your clipboard."
+msgstr "Größe der Einbettung der untigen Folge anpassen und dann den HTML-Code in die Zwischenablage kopieren."
+
+#: php/classes/controllers/class-admin-controller.php:216
+msgid "Filter %s list"
+msgstr "Liste %s filtern"
+
+#: php/classes/controllers/class-admin-controller.php:217
+msgid "%s list navigation"
+msgstr "%s-Listen-Navigation"
+
+#: php/classes/controllers/class-admin-controller.php:218
+msgid "%s list"
+msgstr "Liste %s"
+
+#: php/classes/controllers/class-admin-controller.php:284
+msgid "Series list navigation"
+msgstr "Navigation für Listen"
+
+#: php/classes/controllers/class-admin-controller.php:285
+msgid "Series list"
+msgstr "Serienliste"
+
+#: php/classes/controllers/class-admin-controller.php:673
+msgid "Episode Embed Code"
+msgstr "Einbettungscode für Folge"
+
+#: php/classes/handlers/class-settings-handler.php:604
+msgid "Your podcast's secondary sub-category (if available) - must be a sub-category of the secondary category selected above."
+msgstr "Die Zweit-Unterkategorie muss (sofern vorhanden) eine Unterkategorie der oben gewählten Zweitkategorie sein. "
+
+#: php/classes/handlers/class-settings-handler.php:586
+msgid "Your podcast's primary sub-category (if available) - must be a sub-category of the primary category selected above."
+msgstr "Die Erst-Unterkategorie muss (sofern vorhanden) eine Unterkategorie der oben gewählten Erstkategorie sein."
+
+#: php/classes/handlers/class-settings-handler.php:594
+msgid "Secondary Category"
+msgstr "Zweitkategorie"
+
+#: php/classes/handlers/class-settings-handler.php:576
+msgid "Primary Category"
+msgstr "Erstkategorie"
+
+#: php/classes/handlers/class-settings-handler.php:577
+msgid "Your podcast's primary category."
+msgstr "Erstkategorie des Podcast."
+
+#: php/classes/handlers/class-settings-handler.php:585
+msgid "Primary Sub-Category"
+msgstr "Erst-Unterkategorie"
+
+#: php/classes/handlers/class-settings-handler.php:595
+msgid "Your podcast's secondary category."
+msgstr "Die Zweitkategorie des Podcast."
+
+#: php/classes/handlers/class-settings-handler.php:603
+msgid "Secondary Sub-Category"
+msgstr "Erst-Unterkategorie"
+
+#: php/classes/handlers/class-settings-handler.php:612
+msgid "Tertiary Category"
+msgstr "Drittkategorie"
+
+#: php/classes/handlers/class-settings-handler.php:613
+msgid "Your podcast's tertiary category."
+msgstr "Die Drittkategorie des Podcast. "
+
+#: php/classes/handlers/class-settings-handler.php:621
+msgid "Tertiary Sub-Category"
+msgstr "Dritt-Unterkategorie"
+
+#: php/classes/handlers/class-settings-handler.php:660
+msgid "Podcast owner's email address."
+msgstr "E-Mail-Adresse des Rechteinhabers/Besitzers des Podcast"
+
+#: php/classes/handlers/class-settings-handler.php:669
+msgid "Language"
+msgstr "Sprache"
+
+#. translators: placeholders are for a link to the ISO standards
+#: php/classes/handlers/class-settings-handler.php:671
+msgid "Your podcast's language in %1$sISO-639-1 format%2$s."
+msgstr "Sprache des Podcast im %1$sISO-639-1-Format%2$s."
+
+#: php/classes/handlers/class-settings-handler.php:680
+msgid "Copyright"
+msgstr "Copyright"
+
+#: php/classes/handlers/class-settings-handler.php:681
+msgid "Copyright line for your podcast."
+msgstr "Copyright-Zeile für den Podcast"
+
+#: php/classes/handlers/class-settings-handler.php:690
+msgid "Explicit"
+msgstr "Explizit"
+
+#: php/classes/handlers/class-settings-handler.php:793
+msgid "Security"
+msgstr "Zugriffsrechte"
+
+#: php/classes/handlers/class-settings-handler.php:794
+msgid "Change these settings to ensure that your podcast feed remains private. This will block feed readers (including iTunes) from accessing your feed."
+msgstr "Mit dieser Einstellung kann sichergestellt werden, dass der Podcast-Feed privat bleibt. Dies wird den Zugriff von Feed-Readern (inkl. iTunes) verhindern."
+
+#: php/classes/handlers/class-settings-handler.php:798
+msgid "Password protect your podcast feed"
+msgstr "Feed mit Passwort schützen"
+
+#: php/classes/handlers/class-settings-handler.php:799
+msgid "Mark if you would like to password protect your podcast feed - you can set the username and password below. This will block all feed readers (including iTunes) from accessing your feed."
+msgstr "Auswählen, wenn der Feed passwortgeschützt werden soll - Benutzername und Passwort können unten angegeben werden. Dies wird den Zugriff von Feed-Readern (inkl. iTunes) verhindern."
+
+#: php/classes/handlers/class-settings-handler.php:806
+msgid "Username"
+msgstr "Benutzername"
+
+#: php/classes/handlers/class-settings-handler.php:807
+msgid "Username for your podcast feed."
+msgstr "Benutzername für den Zugriff auf den Feed."
+
+#: php/classes/handlers/class-settings-handler.php:810
+msgid "Feed username"
+msgstr "Feed-Benutzername"
+
+#: php/classes/handlers/class-settings-handler.php:816
+msgid "Password"
+msgstr "Passwort"
+
+#: php/classes/handlers/class-settings-handler.php:817
+msgid "Password for your podcast feed. Once saved, the password is encoded and secured so it will not be visible on this page again."
+msgstr "Passwort für den Zugriff auf den Feed. Nach dem Speichern wird das Passwort verschlüsselt, so dass es nicht mehr im Klartext auf dieser Seite auftaucht."
+
+#: php/classes/handlers/class-settings-handler.php:820
+msgid "Feed password"
+msgstr "Feed-Passwort"
+
+#: php/classes/handlers/class-settings-handler.php:826
+msgid "No access message"
+msgstr "Benachrichtigung bei keinem Zugriff"
+
+#: php/classes/handlers/class-settings-handler.php:827
+msgid "This message will be displayed to people who are not allowed access to your podcast feed. Limited HTML allowed."
+msgstr "Diese Nachricht wird angezeigt, wenn eine Authentifizierung für den Podcast-Feed erforderlich ist. Einfaches HTML erlaubt. "
+
+#: templates/feed-podcast.php:69
+#: php/classes/handlers/class-settings-handler.php:829
+msgid "You are not permitted to view this podcast feed."
+msgstr "Keine Zugriffsrechte zur Anzeige dieses Podcast-Feed !"
+
+#: php/classes/handlers/class-settings-handler.php:830
+msgid "Message displayed to users who do not have access to the podcast feed"
+msgstr "Diese Nachricht wird angezeigt, wenn die Authentifizierung fehl schlug."
+
+#: php/classes/handlers/class-settings-handler.php:838
+msgid "Redirection"
+msgstr "Umleitung"
+
+#: php/classes/handlers/class-settings-handler.php:839
+msgid "Use these settings to safely move your podcast to a different location. Only do this once your new podcast is setup and active."
+msgstr "Benutze diese Einstellung, um den Podcast-Feed sicher zu einer anderen Adresse umzuleiten. Einmalig einstellen, sobald der neue Podcast eingerichtet und aktiv ist."
+
+#: php/classes/handlers/class-settings-handler.php:863
+msgid "Publishing"
+msgstr "Veröffentlichen"
+
+#: php/classes/handlers/class-settings-handler.php:878
+msgid "Complete feed"
+msgstr "Gesamter Feed"
+
+#: php/classes/handlers/class-settings-handler.php:885
+msgid "Feed for a specific series"
+msgstr "Feed einer bestimmten Serie"
+
+#: php/classes/handlers/class-settings-handler.php:892
+msgid "Podcast page"
+msgstr "Podcast-Seite"
+
+#: php/classes/controllers/class-settings-controller.php:402
+msgid "View feed"
+msgstr "Feed anzeigen"
+
+#: php/classes/controllers/class-options-controller.php:371
+#: php/classes/controllers/class-settings-controller.php:485
+msgid "Password stored securely"
+msgstr "Passwort wurde verschlüsselt gespeichert"
+
+#: php/classes/controllers/class-options-controller.php:437
+#: php/classes/controllers/class-settings-controller.php:551
+msgid "Upload new image"
+msgstr "Neues Bild hochladen"
+
+#: php/classes/controllers/class-options-controller.php:438
+#: php/classes/controllers/class-settings-controller.php:552
+msgid "Remove image"
+msgstr "Bild entfernen"
+
+#: php/classes/controllers/class-settings-controller.php:726
+msgid "%1$s settings updated."
+msgstr "Einstellungen des %1$s aktualisiert."
+
+#: templates/ssp-analytics.php:37
+#: php/classes/controllers/class-settings-controller.php:756
+msgid "Toggle series list display"
+msgstr "Schalte Listenansicht der Serie um"
+
+#: php/classes/controllers/class-settings-controller.php:762
+msgid "Default feed"
+msgstr "Standard-Feed"
+
+#: php/classes/controllers/class-settings-controller.php:832
+msgid "Save Settings"
+msgstr "Einstellungen speichern"
+
+#: php/includes/ssp-functions.php:282
+msgid " episodes"
+msgstr "-Folgen"
+
+#: php/classes/widgets/class-recent-episodes.php:34
+msgid "Display a list of your most recent podcast episodes."
+msgstr "Zeige eine Liste der neuesten Podcast-Folgen"
+
+#: php/classes/widgets/class-recent-episodes.php:36
+msgid "Podcast: Recent Episodes"
+msgstr "Podcast: Neueste Folgen"
+
+#: php/classes/widgets/class-recent-episodes.php:76
+msgid "Recent Episodes"
+msgstr "Neueste Folgen"
+
+#: php/classes/widgets/class-series.php:174
+#: php/classes/widgets/class-recent-episodes.php:142
+#: php/classes/widgets/class-single-episode.php:181
+msgid "Title:"
+msgstr "Titel:"
+
+#: php/classes/widgets/class-series.php:187
+#: php/classes/widgets/class-recent-episodes.php:145
+msgid "Number of episodes to show:"
+msgstr "Anzahl der anzuzeigenden Folgen:"
+
+#: php/classes/widgets/class-series.php:198
+#: php/classes/widgets/class-recent-episodes.php:149
+msgid "Display episode date?"
+msgstr "Zeige Datum der Folge?"
+
+#: php/classes/widgets/class-series.php:34
+msgid "Display a list of episodes from a single series."
+msgstr "Zeige eine Liste der Folgen einer bestimmten Serie."
+
+#: php/classes/widgets/class-series.php:36
+msgid "Podcast: Series"
+msgstr "Podcast: Serie"
+
+#: php/classes/widgets/class-series.php:175
+msgid "Use series title"
+msgstr "Benutze Serientitel"
+
+#: php/classes/widgets/class-series.php:177
+#: php/classes/widgets/class-playlist.php:141
+msgid "Series:"
+msgstr "Serie:"
+
+#: php/classes/widgets/class-series.php:192
+msgid "Display series title inside widget?"
+msgstr "Zeige Serientitel in Widget?"
+
+#: php/classes/widgets/class-series.php:195
+msgid "Display series description?"
+msgstr "Zeige Serientitel in Beschreibung?"
+
+#: php/classes/widgets/class-single-episode.php:33
+msgid "Display a single podcast episode."
+msgstr "Zeige einzelne Podcast-Folge."
+
+#: php/classes/widgets/class-single-episode.php:35
+msgid "Podcast: Single Episode"
+msgstr "Podcast: Einzelfolge"
+
+#: php/classes/widgets/class-single-episode.php:182
+msgid "Use episode title"
+msgstr "Benutze Titel der Folge"
+
+#: php/classes/widgets/class-single-episode.php:184
+msgid "Episode:"
+msgstr "Folge:"
+
+#: php/classes/widgets/class-single-episode.php:186
+msgid "- Latest episode -"
+msgstr "- Neueste Folge - "
+
+#: php/classes/widgets/class-single-episode.php:196
+msgid "Display episode title inside widget?"
+msgstr "Zeige Titel der Folge in Widget?"
+
+#: php/classes/widgets/class-single-episode.php:199
+msgid "Display episode excerpt?"
+msgstr "Zeige Auszug der Folge?"
+
+#: php/classes/widgets/class-single-episode.php:202
+msgid "Display full episode content?"
+msgstr "Zeige gesamten Text der Folge?"
+
+#: php/classes/widgets/class-single-episode.php:205
+msgid "Display episode audio player?"
+msgstr "Zeige Audio-Player?"
+
+#: php/classes/widgets/class-single-episode.php:208
+msgid "Display episode details?"
+msgstr "Zeige Details der Folge?"
+
+#. Plugin Name of the plugin
+msgid "Seriously Simple Podcasting"
+msgstr "Seriously Simple Podcasting"
+
+#. Description of the plugin
+msgid "Podcasting the way it's meant to be. No mess, no fuss - just you and your content taking over the world."
+msgstr "Podcasting the way it's meant to be. No mess, no fuss - just you and your content taking over the world."
+
+#: php/classes/handlers/class-settings-handler.php:771
+msgid "Redirect this feed to new URL"
+msgstr "Diesen Feed zu einer neuen URL umleiten"
+
+#: php/classes/handlers/class-settings-handler.php:772
+msgid "Redirect your feed to a new URL (specified below)."
+msgstr "Leite den Feed zu einer neuen URL um (unten spezifizieren)."
+
+#: php/classes/handlers/class-settings-handler.php:779
+#: php/classes/handlers/class-settings-handler.php:851
+msgid "New podcast feed URL"
+msgstr "Neue URL des Podcast-Feed"
+
+#: php/classes/handlers/class-settings-handler.php:780
+#: php/classes/handlers/class-settings-handler.php:852
+msgid "Your podcast feed's new URL."
+msgstr "Neue URL des Podcast-Feed."
+
+#: php/classes/handlers/class-settings-handler.php:783
+#: php/classes/handlers/class-settings-handler.php:855
+msgid "New feed URL"
+msgstr "Neue Feed-URL"
+
+#: php/classes/handlers/class-settings-handler.php:843
+msgid "Redirect podcast feed to new URL"
+msgstr "Podcast-Feed zu neuer URL umleiten"
+
+#: php/classes/handlers/class-settings-handler.php:844
+msgid "Redirect your feed to a new URL (specified below).%1$sThis will inform all podcasting services that your podcast has moved and 48 hours after you have saved this option it will permanently redirect your feed to the new URL."
+msgstr "Leite den Podcast-Feed zu der unten angegeben URL um. %1$sDies wird alle Podcast-Dienste informieren, dass der Podcast umgezogen ist. 48 Stunden nachdem diese Einstellung gesetzt wurde, wir der Feed permanent zu der neuen URL umgeleitet."
+
+#: php/classes/handlers/class-settings-handler.php:864
+msgid "Use these URLs to share and publish your podcast feed. These URLs will work with any podcasting service (including iTunes)."
+msgstr "Mit dieser URL kann der Podcast-Feed geshared und veröffentlicht werden. Diese URLs sollten mit jeglichem Podcast-Service (inkl. iTunes) funktionieren."
+
+#: php/classes/handlers/class-settings-handler.php:868
+#: php/classes/handlers/class-settings-handler.php:872
+msgid "External feed URL"
+msgstr "Extrene Feed-URL"
+
+#: php/classes/handlers/class-settings-handler.php:869
+msgid "If you are syndicating your podcast using a third-party service (like Feedburner) you can insert the URL here, otherwise this must be left blank."
+msgstr "Wenn der Podcast-Feed über einen externen Feed-Service (z.B. Feedburner) veröffentlicht wurde, kann die URL hier eingegeben werden. Ansonsten leer lassen!"
+
+#: php/classes/controllers/class-admin-controller.php:203
+msgctxt "post type general name"
+msgid "Podcast"
+msgstr "Podcast"
+
+#: php/classes/controllers/class-admin-controller.php:204
+msgctxt "post type singular name"
+msgid "Podcast"
+msgstr "Podcast"
+
+#: php/classes/controllers/class-admin-controller.php:205
+msgctxt "podcast"
+msgid "Add New"
+msgstr "Neu hinzufügen"
+
+#: php/classes/controllers/class-admin-controller.php:206
+msgid "Add New %s"
+msgstr "Neue %s hinzufügen"
+
+#: php/classes/controllers/class-admin-controller.php:206
+#: php/classes/controllers/class-admin-controller.php:207
+#: php/classes/controllers/class-admin-controller.php:208
+#: php/classes/controllers/class-admin-controller.php:210
+#: php/classes/controllers/class-admin-controller.php:216
+#: php/classes/controllers/class-admin-controller.php:217
+#: php/classes/controllers/class-admin-controller.php:218
+msgid "Episode"
+msgstr "Folge"
+
+#: php/classes/controllers/class-admin-controller.php:207
+msgid "Edit %s"
+msgstr "%s bearbeiten"
+
+#: php/classes/controllers/class-admin-controller.php:208
+msgid "New %s"
+msgstr "Neue %s"
+
+#: php/classes/controllers/class-admin-controller.php:209
+msgid "All %s"
+msgstr "Alle %s"
+
+#: php/classes/controllers/class-admin-controller.php:209
+#: php/classes/controllers/class-admin-controller.php:211
+#: php/classes/controllers/class-admin-controller.php:212
+#: php/classes/controllers/class-admin-controller.php:213
+#: php/classes/controllers/class-admin-controller.php:566
+msgid "Episodes"
+msgstr "Folgen"
+
+#: php/classes/controllers/class-admin-controller.php:210
+msgid "View %s"
+msgstr "%s betrachten"
+
+#: php/classes/controllers/class-admin-controller.php:211
+msgid "Search %a"
+msgstr "%a suchen"
+
+#: php/classes/controllers/class-admin-controller.php:212
+msgid "No %s Found"
+msgstr "Keine %s gefunden"
+
+#: php/classes/controllers/class-admin-controller.php:213
+msgid "No %s Found In Trash"
+msgstr "Keine %s im Papierkorb"
+
+#: php/classes/controllers/class-admin-controller.php:215
+msgid "Podcast"
+msgstr "Podcast"
+
+#: php/classes/controllers/class-admin-controller.php:220
+msgid "podcast"
+msgstr "podcast"
+
+#: php/classes/controllers/class-admin-controller.php:267
+msgid "Podcast Series"
+msgstr "Podcast-Folge"
+
+#: php/classes/controllers/class-admin-controller.php:268
+#: php/classes/controllers/class-admin-controller.php:277
+#: php/classes/controllers/class-admin-controller.php:509
+msgid "Series"
+msgstr "Serie"
+
+#: php/classes/controllers/class-admin-controller.php:269
+msgid "Search Series"
+msgstr "Serie suchen"
+
+#: templates/ssp-analytics.php:43
+#: php/classes/controllers/class-admin-controller.php:270
+msgid "All Series"
+msgstr "Alle Serien"
+
+#: php/classes/controllers/class-admin-controller.php:271
+msgid "Parent Series"
+msgstr "Übergeordnete Serie"
+
+#: php/classes/controllers/class-admin-controller.php:272
+msgid "Parent Series:"
+msgstr "Übergeordnete Serie:"
+
+#: php/classes/controllers/class-admin-controller.php:273
+msgid "Edit Series"
+msgstr "Serie bearbeiten"
+
+#: php/classes/controllers/class-admin-controller.php:274
+msgid "Update Series"
+msgstr "Serie aktualisieren"
+
+#: php/classes/controllers/class-admin-controller.php:275
+msgid "Add New Series"
+msgstr "Neue Serie hinzufügen"
+
+#: php/classes/controllers/class-admin-controller.php:276
+msgid "New Series Name"
+msgstr "Name der neuen Serie"
+
+#: php/classes/controllers/class-admin-controller.php:278
+msgid "View Series"
+msgstr "Serie betrachten"
+
+#: php/classes/controllers/class-admin-controller.php:279
+msgid "Popular Series"
+msgstr "Beliebte Serien"
+
+#: php/classes/controllers/class-admin-controller.php:280
+msgid "Separate series with commas"
+msgstr "Trenne mehrere Serien mit Komma"
+
+#: php/classes/controllers/class-admin-controller.php:281
+msgid "Add or remove Series"
+msgstr "Serie hinzufügen oder entfernen"
+
+#: php/classes/controllers/class-admin-controller.php:282
+msgid "Choose from the most used Series"
+msgstr "Wähle aus den häufigen Serien"
+
+#: php/classes/controllers/class-admin-controller.php:283
+msgid "No Series Found"
+msgstr "Keine Serie gefunden"
+
+#: php/classes/controllers/class-admin-controller.php:510
+msgid "Image"
+msgstr "Bild"
+
+#: php/classes/controllers/class-admin-controller.php:565
+msgid "Series feed URL"
+msgstr "Feed-URL der Serie"
+
+#: php/classes/controllers/class-admin-controller.php:631
+msgid "Episode updated. %sView episode%s."
+msgstr "Folge wurde aktualisiert. %sBetrachte Folge%s."
+
+#: php/classes/controllers/class-admin-controller.php:632
+msgid "Custom field updated."
+msgstr "Benutzerdefiniertes Feld wurde aktualisiert."
+
+#: php/classes/controllers/class-admin-controller.php:633
+msgid "Custom field deleted."
+msgstr "Benutzerdefiniertes Feld wurde entfernt."
+
+#: php/classes/controllers/class-admin-controller.php:634
+msgid "Episode updated."
+msgstr "Folge wurde aktualisiert."
+
+#: php/classes/controllers/class-admin-controller.php:635
+msgid "Episode restored to revision from %s."
+msgstr "Revision der Folge von %s wurde wiederhergestellt."
+
+#: php/classes/controllers/class-admin-controller.php:636
+msgid "Episode published. %sView episode%s."
+msgstr "Folge wurde veröffentlicht. %sBetrachte Folge%s."
+
+#: php/classes/controllers/class-admin-controller.php:637
+msgid "Episode saved."
+msgstr "Folge wurde gespeichert."
+
+#: php/classes/controllers/class-admin-controller.php:638
+msgid "Episode submitted. %sPreview episode%s."
+msgstr "Folge wurde eingereicht. %sVorschau der Folge%s."
+
+#: php/classes/controllers/class-admin-controller.php:639
+msgid "Episode scheduled for: %1$s. %2$sPreview episode%3$s."
+msgstr "Folge geplant für: %1$s. %2$s Vorschau der Folge %3$s."
+
+#: php/classes/controllers/class-admin-controller.php:639
+msgid "M j, Y @ G:i"
+msgstr "d.m.Y @ H:i"
+
+#: php/classes/controllers/class-admin-controller.php:640
+msgid "Episode draft updated. %sPreview episode%s."
+msgstr "Entwurf der Folge wurde aktualisiert. %s Vorschau der Folge %s."
+
+#: php/classes/controllers/class-admin-controller.php:667
+msgid "Podcast Episode Details"
+msgstr "Details der Podcast-Folge"
+
+#: php/classes/controllers/class-admin-controller.php:741
+msgid "Upload File"
+msgstr "Datei hochladen"
+
+#: php/classes/controllers/class-admin-controller.php:983
+msgid "Duration:"
+msgstr "Audiolänge:"
+
+#: php/classes/controllers/class-admin-controller.php:992
+msgid "File size:"
+msgstr "Dateigröße:"
+
+#: php/classes/controllers/class-admin-controller.php:1010
+msgid "Date recorded:"
+msgstr "Aufnahmedatum:"
+
+#: php/classes/controllers/class-admin-controller.php:1011
+msgid "The date on which this episode was recorded."
+msgstr "Das Datum, an dem die Folge aufgenommen wurde."
+
+#: php/classes/controllers/class-admin-controller.php:1019
+msgid "Explicit:"
+msgstr "Explizit:"
+
+#: php/classes/controllers/class-admin-controller.php:1020
+msgid "Mark this episode as explicit."
+msgstr "Diese Folge als \"Explizit\" markieren."
+
+#: php/classes/controllers/class-admin-controller.php:1183
+msgid "%s Episode"
+msgid_plural "%s Episodes"
+msgstr[0] "%s Folge"
+msgstr[1] "%s Folgen"
+
+#: php/classes/controllers/class-admin-controller.php:1210
+msgid "Documentation"
+msgstr "Dokumentation"
+
+#: php/classes/controllers/class-admin-controller.php:1212
+msgid "Write a review"
+msgstr "Bewertung abgeben"
+
+#: php/classes/controllers/class-admin-controller.php:1225
+msgid "Enter episode title here"
+msgstr "Titel der Folge eingeben"
+
+#: php/classes/controllers/class-admin-controller.php:1479
+msgid "If you like %1$sSeriously Simple Podcasting%2$s please leave a %3$s&#9733;&#9733;&#9733;&#9733;&#9733;%4$s rating. A huge thank you in advance!"
+msgstr "Bei Gefallen an %1$sSeriously Simple Podcasting%2$s bitte eine %3$s ★★★★★%4$s-Bewertung abgeben. Ein riesiges Dankeschön im Voraus!"
+
+#: php/classes/controllers/class-admin-controller.php:1479
+msgid "Thanks!"
+msgstr "Danke!"
+
+#: php/classes/controllers/class-admin-controller.php:1487
+msgid "%1$sThank you for publishing with %2$sSeriously Simple Podcasting%3$s.%4$s"
+msgstr "%1$sDanke für die Nutzung von %2$sSeriously Simple Podcasting%3$s.%4$s"
+
+#: php/classes/controllers/class-frontend-controller.php:629
+msgid "Download file"
+msgstr "Datei herunterladen"
+
+#: php/classes/controllers/class-frontend-controller.php:634 build/index.js:17
+msgid "Play in new window"
+msgstr "In neuem Fenster abspielen"
+
+#: php/classes/controllers/class-frontend-controller.php:638 build/index.js:17
+msgid "Duration"
+msgstr "Audiolänge"
+
+#: php/classes/controllers/class-frontend-controller.php:642
+msgid "Recorded on"
+msgstr "Aufgenommen am "
+
+#: php/classes/controllers/class-frontend-controller.php:1450
+msgid "Podcast RSS feed"
+msgstr "Podcast RSS-Feed"
+
+#: php/classes/controllers/class-settings-controller.php:131
+#: php/classes/controllers/class-settings-controller.php:675
+msgid "Podcast Settings"
+msgstr "Podcast-Einstellungen"
+
+#: php/classes/controllers/class-settings-controller.php:131
+#: php/classes/controllers/class-settings-controller.php:213
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: php/classes/handlers/class-settings-handler.php:43
+#: php/classes/handlers/class-settings-handler.php:67
+msgid "-- None --"
+msgstr "-- Keine --"
+
+#: php/classes/handlers/class-settings-handler.php:44
+#: php/classes/handlers/class-settings-handler.php:70
+#: php/classes/handlers/class-settings-handler.php:74
+#: php/classes/handlers/class-settings-handler.php:78
+#: php/classes/handlers/class-settings-handler.php:82
+#: php/classes/handlers/class-settings-handler.php:86
+#: php/classes/handlers/class-settings-handler.php:90
+msgid "Arts"
+msgstr "Kunst"
+
+#: php/classes/handlers/class-settings-handler.php:45
+#: php/classes/handlers/class-settings-handler.php:94
+#: php/classes/handlers/class-settings-handler.php:98
+#: php/classes/handlers/class-settings-handler.php:102
+#: php/classes/handlers/class-settings-handler.php:106
+#: php/classes/handlers/class-settings-handler.php:110
+#: php/classes/handlers/class-settings-handler.php:114
+msgid "Business"
+msgstr "Wirtschaft"
+
+#: php/classes/handlers/class-settings-handler.php:46
+#: php/classes/handlers/class-settings-handler.php:118
+#: php/classes/handlers/class-settings-handler.php:122
+#: php/classes/handlers/class-settings-handler.php:126
+msgid "Comedy"
+msgstr "Comedy"
+
+#: php/classes/handlers/class-settings-handler.php:47
+#: php/classes/handlers/class-settings-handler.php:130
+#: php/classes/handlers/class-settings-handler.php:134
+#: php/classes/handlers/class-settings-handler.php:138
+#: php/classes/handlers/class-settings-handler.php:142
+msgid "Education"
+msgstr "Bildung"
+
+#: php/classes/handlers/class-settings-handler.php:52
+#: php/classes/handlers/class-settings-handler.php:182
+#: php/classes/handlers/class-settings-handler.php:186
+#: php/classes/handlers/class-settings-handler.php:190
+#: php/classes/handlers/class-settings-handler.php:194
+msgid "Kids & Family"
+msgstr "Kinder & Familie"
+
+#: php/classes/handlers/class-settings-handler.php:54
+#: php/classes/handlers/class-settings-handler.php:230
+#: php/classes/handlers/class-settings-handler.php:234
+#: php/classes/handlers/class-settings-handler.php:238
+msgid "Music"
+msgstr "Musik"
+
+#: php/classes/handlers/class-settings-handler.php:56
+#: php/classes/handlers/class-settings-handler.php:270
+#: php/classes/handlers/class-settings-handler.php:274
+#: php/classes/handlers/class-settings-handler.php:278
+#: php/classes/handlers/class-settings-handler.php:282
+#: php/classes/handlers/class-settings-handler.php:286
+#: php/classes/handlers/class-settings-handler.php:290
+msgid "Religion & Spirituality"
+msgstr "Religion & Spiritualität"
+
+#: php/classes/handlers/class-settings-handler.php:58
+#: php/classes/handlers/class-settings-handler.php:330
+#: php/classes/handlers/class-settings-handler.php:334
+#: php/classes/handlers/class-settings-handler.php:338
+#: php/classes/handlers/class-settings-handler.php:342
+#: php/classes/handlers/class-settings-handler.php:346
+msgid "Society & Culture"
+msgstr "Gesellschaft & Kultur"
+
+#: php/classes/handlers/class-settings-handler.php:60
+msgid "Technology"
+msgstr "Technik"
+
+#: php/classes/handlers/class-settings-handler.php:62
+#: php/classes/handlers/class-settings-handler.php:410
+#: php/classes/handlers/class-settings-handler.php:414
+#: php/classes/handlers/class-settings-handler.php:418
+#: php/classes/handlers/class-settings-handler.php:422
+#: php/classes/handlers/class-settings-handler.php:426
+msgid "TV & Film"
+msgstr "Film & Fernsehen"
+
+#: php/classes/handlers/class-settings-handler.php:73
+msgid "Design"
+msgstr "Design"
+
+#: php/classes/handlers/class-settings-handler.php:77
+msgid "Fashion & Beauty"
+msgstr "Mode & Beauty"
+
+#: php/classes/handlers/class-settings-handler.php:81
+msgid "Food"
+msgstr "Nahrung"
+
+#: php/classes/handlers/class-settings-handler.php:85
+msgid "Performing Arts"
+msgstr "Darstellende Kunst"
+
+#: php/classes/handlers/class-settings-handler.php:89
+msgid "Visual Arts"
+msgstr "Bildende Kunst"
+
+#: php/classes/handlers/class-settings-handler.php:241
+msgid "Business News"
+msgstr "Wirtschaftsnachrichten"
+
+#: php/classes/handlers/class-settings-handler.php:93
+msgid "Careers"
+msgstr "Karriere"
+
+#: php/classes/handlers/class-settings-handler.php:101
+msgid "Investing"
+msgstr "Forschung"
+
+#: php/classes/handlers/class-settings-handler.php:201
+msgid "Automotive"
+msgstr "Motor & Auto"
+
+#: php/classes/handlers/class-settings-handler.php:205
+msgid "Aviation"
+msgstr "Flugverkehr"
+
+#: php/classes/handlers/class-settings-handler.php:217
+msgid "Hobbies"
+msgstr "Hobbys"
+
+#: php/classes/handlers/class-settings-handler.php:225
+msgid "Video Games"
+msgstr "Videospiele"
+
+#: php/classes/handlers/class-settings-handler.php:157
+msgid "Alternative Health"
+msgstr "Alternative Heilverfahren"
+
+#: php/classes/handlers/class-settings-handler.php:177
+msgid "Sexuality"
+msgstr "Sexualität"
+
+#: php/classes/handlers/class-settings-handler.php:269
+msgid "Buddhism"
+msgstr "Buddhismus"
+
+#: php/classes/handlers/class-settings-handler.php:273
+msgid "Christianity"
+msgstr "Christentum"
+
+#: php/classes/handlers/class-settings-handler.php:277
+msgid "Hinduism"
+msgstr "Hinduismus"
+
+#: php/classes/handlers/class-settings-handler.php:281
+msgid "Islam"
+msgstr "Islam"
+
+#: php/classes/handlers/class-settings-handler.php:285
+msgid "Judaism"
+msgstr "Judentum"
+
+#: php/classes/handlers/class-settings-handler.php:289
+msgid "Spirituality"
+msgstr "Spiritualität"
+
+#: php/classes/handlers/class-settings-handler.php:50
+msgid "History"
+msgstr "Geschichte"
+
+#: php/classes/handlers/class-settings-handler.php:333
+msgid "Personal Journals"
+msgstr "Persönliches Tagebuch"
+
+#: php/classes/handlers/class-settings-handler.php:337
+msgid "Philosophy"
+msgstr "Philosophie"
+
+#: php/classes/handlers/class-settings-handler.php:341
+msgid "Places & Travel"
+msgstr "Reisen und Orte"
+
+#: php/classes/handlers/class-settings-handler.php:265
+msgid "Tech News"
+msgstr "Techniknews"
+
+#: php/classes/handlers/class-settings-handler.php:433
+msgid "General"
+msgstr "Allgemein"
+
+#: php/classes/handlers/class-settings-handler.php:438
+msgid "Podcast post types"
+msgstr "Post Types für Postcasts"
+
+#: php/classes/handlers/class-settings-handler.php:439
+msgid "Use this setting to enable podcast functions on any post type - this will add all podcast posts from the specified types to your podcast feed."
+msgstr "Mit dieser Einstellung kann die Podcast-Funktion zu beliebigen Post Types hinzufügen - Alle Posts dieses Types werden zum Podcast-Feed hinzugefügt"
+
+#: php/classes/handlers/class-settings-handler.php:446
+msgid "Include podcast in main blog"
+msgstr "Podcast zu Haupt-Blog hinzufügen"
+
+#: php/classes/handlers/class-settings-handler.php:447
+msgid "This setting may behave differently in each theme, so test it carefully after activation - it will add the 'podcast' post type to your site's main query so that your podcast episodes appear on your home page along with your blog posts."
+msgstr "Diese Einstellung ist abhängig vom eingestellten Thema, sollte also nach Aktivierung genau getestet werden. Der Post Type 'podcast' wird zur allgemeinen Query hinzugefügt, so dass Podcast-Folgen gleich wie andere Blog-Posts dargestellt werden."
+
+#: php/classes/handlers/class-settings-handler.php:457
+msgid "Full content"
+msgstr "Gesamter Inhalt"
+
+#: php/classes/handlers/class-settings-handler.php:458
+msgid "Excerpt"
+msgstr "Auszug"
+
+#: php/classes/handlers/class-settings-handler.php:469
+msgid "Above content"
+msgstr "Über dem Inhalt"
+
+#: php/classes/handlers/class-settings-handler.php:470
+msgid "Below content"
+msgstr "Unter dem Inhalt"
+
+#: php/classes/handlers/class-settings-handler.php:538
+msgid "Feed details"
+msgstr "Details des Feed"
+
+#. translators: placeholders are simply html tags to break up the content
+#: php/classes/handlers/class-settings-handler.php:540
+msgid "This data will be used in the feed for your podcast so your listeners will know more about it before they subscribe.%1$sAll of these fields are optional, but it is recommended that you fill in as many of them as possible. Blank fields will use the assigned defaults in the feed.%2$s"
+msgstr "Diese Daten zeigen vor dem Abonnieren nähere Informationen zum Podcast-Feed an.%1$sAlle diese Angaben sind optional, aber es wird empfohlen, so viele wie möglich auszufüllen. Für leere Felder werden die Default-Werte gesetzt.%2$s"
+
+#: php/classes/handlers/class-settings-handler.php:546
+msgid "Title"
+msgstr "Titel"
+
+#: php/classes/handlers/class-settings-handler.php:547
+msgid "Your podcast title."
+msgstr "Titel des Podcast."
+
+#: php/classes/handlers/class-settings-handler.php:556
+msgid "Subtitle"
+msgstr "Untertitel"
+
+#: php/classes/handlers/class-settings-handler.php:557
+msgid "Your podcast subtitle."
+msgstr "Untertitel des Podcast."
+
+#: php/classes/handlers/class-settings-handler.php:566
+msgid "Author"
+msgstr "Autor"
+
+#: php/classes/handlers/class-settings-handler.php:567
+msgid "Your podcast author."
+msgstr "Autor des Podcast. "
+
+#: php/classes/handlers/class-settings-handler.php:630
+msgid "Description/Summary"
+msgstr "Beschreibung/Zusammenfassung"
+
+#: php/classes/handlers/class-settings-handler.php:631
+msgid "A description/summary of your podcast - no HTML allowed."
+msgstr "Beschreibung/Zusammenfassung des Podcast - kein HTML erlaubt."
+
+#: php/classes/handlers/class-settings-handler.php:640
+msgid "Cover Image"
+msgstr "Cover-Bild"
+
+#: php/classes/handlers/class-settings-handler.php:641
+msgid "Your podcast cover image - must have a minimum size of 1400x1400 px."
+msgstr "Cover-Bild des Podcast (Mindestmaße: 1400x1400px)."
+
+#: php/classes/handlers/class-settings-handler.php:649
+msgid "Owner name"
+msgstr "Name des Rechteinhabers"
+
+#: php/classes/handlers/class-settings-handler.php:650
+msgid "Podcast owner's name."
+msgstr "Name des Rechteinhabers/Besitzers des Podcast."
+
+#: php/classes/handlers/class-settings-handler.php:659
+msgid "Owner email address"
+msgstr "E-Mail des Rechteinhabers"
+
+#: php/classes/controllers/class-frontend-controller.php:1465
+msgid "%s RSS feed"
+msgstr "%s RSS-feed"
+
+#: php/classes/handlers/class-settings-handler.php:622
+msgid "Your podcast's tertiary sub-category (if available) - must be a sub-category of the tertiary category selected above."
+msgstr "Die Dritt-Unterkategorie muss (sofern vorhanden) eine Unterkategorie der oben gewählten Drittkategorie sein. "
+
+#: php/classes/controllers/class-admin-controller.php:984
+msgid "Duration of podcast file for display (calculated automatically if possible)."
+msgstr "Dauer der Podcast-Datei für die Anzeige (wird, wenn möglich automatisch berechnet)."
+
+#: php/classes/controllers/class-admin-controller.php:993
+msgid "Size of the podcast file for display (calculated automatically if possible)."
+msgstr "Größe der Podcast-Datei für die Anzeige (wird, wenn möglich automatisch berechnet)."
