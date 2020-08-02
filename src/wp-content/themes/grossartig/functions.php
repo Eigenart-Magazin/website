@@ -61,6 +61,15 @@ function grossartig_block_wrapper(string $block_content, array $block): string
     return $block_content;
 }
 
+function grossartig_unsafe_image_url(string $imageUrl) {
+    return str_replace('https', 'http', $imageUrl);
+}
+
+/**
+ * Podcast plugin
+ */
+add_filter('ssp_feed_item_image', 'GrossArtig\grossartig_unsafe_image_url');
+
 /**
  * Gallery
  */
