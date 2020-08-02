@@ -68,6 +68,10 @@ function grossartig_unsafe_image_url(string $imageUrl) {
 /**
  * Podcast plugin
  */
+add_filter('option_permalink_structure', function () {
+    return false;
+});
+add_filter('ssp_feed_image', 'GrossArtig\grossartig_unsafe_image_url');
 add_filter('ssp_feed_item_image', 'GrossArtig\grossartig_unsafe_image_url');
 
 /**
