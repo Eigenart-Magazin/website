@@ -124,6 +124,14 @@
   </a>
 
   <ul class="header__menu">
+    <li class="header__menu-search">
+      <a href="#">
+        <img
+          src="<?php echo get_theme_file_uri("/assets/images/search-icon.png"); ?>"
+          alt="Search"
+        />
+      </a>
+    </li>
     <?php foreach (wp_get_nav_menu_items('header-menu') ?: [] as $menu_item): ?>
     <li>
       <a href="<?php echo $menu_item->url ?: '#'; ?>">

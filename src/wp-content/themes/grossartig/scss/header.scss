@@ -46,7 +46,7 @@
     float: right;
 
     @include screen-size-l {
-      width: grid-width(4);
+      width: grid-width(5);
     }
 
     li {
@@ -114,6 +114,22 @@
         z-index: 2;
         margin: 5% auto;
         width: grid-width(4);
+      }
+    }
+  }
+
+  &__menu-search {
+    a {
+      width: 100%;
+
+      img {
+        width: auto;
+        height: calc(45px  / 3);
+        margin: auto;
+
+        @include screen-size-l {
+          margin: auto 0 auto auto;
+        }
       }
     }
   }
