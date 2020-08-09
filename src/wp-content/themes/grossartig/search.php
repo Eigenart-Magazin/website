@@ -1,12 +1,39 @@
 <?php
 
 global $wp_query;
+global $query_string;
+wp_parse_str( $query_string, $search_query );
+$search_query = implode(' ', $search_query);
+
 $total_results = $wp_query->found_posts;
 
 get_header('category');
 ?>
 <div class="category-heute">
   <div class="category">
+    <aside class="category__aside">
+      <form action="<?php echo get_the_permalink(); ?>" class="search">
+        <h1>Search results:</h1>
+        <input class="search__input" type="text" name="s" placeholder="suchen..." value="<?php echo $search_query; ?>">
+        <?php if ($total_results > 0): ?>
+          <p class="search__found">
+            <?php echo "Found {$total_results} result(s) for your term: <strong>{$search_query}</strong>."; ?>
+          </p>
+        <?php else: ?>
+          <p class="search__found">
+            <?php echo "No results found for your term: <strong>{$search_query}</strong>."; ?>
+          </p>
+        <?php endif; ?>
+      </form>
+      <?php if ($total_results > 0): ?>
+        <div class="search__arrow">
+          <img
+            src="<?php echo get_theme_file_uri('/assets/images/gallery-arrow-right.png'); ?>"
+            alt="Results arrow"
+          />
+        </div>
+      <?php endif; ?>
+    </aside>
     <article class="category__main">
       <ul class="articles-list">
         <?php while (have_posts()): the_post(); ?>
