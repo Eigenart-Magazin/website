@@ -25,7 +25,6 @@
 
     &__main {
       @include screen-size-m {
-        border-left: 2px solid $background-inverted;
         padding-bottom: 20px;
       }
     }
