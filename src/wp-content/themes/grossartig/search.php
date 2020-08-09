@@ -14,7 +14,17 @@ get_header('category');
     <aside class="category__aside">
       <form action="<?php echo get_site_url(); ?>" class="search">
         <h1>Search results:</h1>
-        <input class="search__input" type="text" name="s" placeholder="suchen..." value="<?php echo $search_query; ?>">
+
+        <div class="search__input-wrapper">
+          <input class="search__input" type="text" name="s" placeholder="suchen..." value="<?php echo $search_query; ?>">
+          <button class="search__button">
+            <img
+              src="<?php echo get_theme_file_uri('/assets/images/search-icon-black.png'); ?>"
+              alt="Search button"
+            />
+          </button>
+        </div>
+
         <?php if ($total_results > 0): ?>
           <p class="search__found">
             <?php echo "Found {$total_results} result(s) for your term: <strong>{$search_query}</strong>."; ?>
