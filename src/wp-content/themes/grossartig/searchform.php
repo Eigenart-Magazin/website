@@ -12,7 +12,7 @@ function toggleSearch() {
     />
   </a>
   <form action="<?php echo get_site_url(); ?>" class="search">
-    <input class="search__input" type="text" name="s" placeholder="suchen...">
+    <input class="search__input" type="text" name="s" placeholder="suchen..." autofocus>
   </form>
 
   <button class="search__toggle-button" onclick="toggleSearch(this)">
