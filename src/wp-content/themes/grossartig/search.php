@@ -12,7 +12,7 @@ get_header('category');
 <div class="category-heute">
   <div class="category">
     <aside class="category__aside">
-      <form action="<?php echo get_the_permalink(); ?>" class="search">
+      <form action="<?php echo get_site_url(); ?>" class="search">
         <h1>Search results:</h1>
         <input class="search__input" type="text" name="s" placeholder="suchen..." value="<?php echo $search_query; ?>">
         <?php if ($total_results > 0): ?>
@@ -49,7 +49,7 @@ get_header('category');
 
               <div class="bubble-container">
                 <!-- pill -->
-                <?php foreach (get_the_tags() as $tag): ?>
+                <?php foreach (get_the_tags() ?: [] as $tag): ?>
                   <div class="articles-list__item-tags">
                     <span class="pill"><?php echo $tag->name; ?></span>
                   </div>
