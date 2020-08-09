@@ -189,3 +189,53 @@
     }
   }
 }
+
+.search-modal {
+  display: block;
+  z-index: 2;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background: $background-inverted;
+
+  &__logo {
+    position: absolute;
+    top: 0;
+    left: 0.7vw;
+
+    img {
+      width: grid-width(2);
+    }
+  }
+
+  .search {
+    display: flex;
+    height: 100%;
+
+    &__toggle-button {
+      position: absolute;
+      top: 0;
+      right: 0.7vw;;
+      background: none;
+      border: 0;
+      height: 40px;
+    }
+
+    &__input {
+      margin: auto;
+      width: grid-width(5);
+      height: grid-width(.5);
+      border-radius: 50px;
+      border: 0;
+      font-size: 18px;
+      padding: 0 20px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
