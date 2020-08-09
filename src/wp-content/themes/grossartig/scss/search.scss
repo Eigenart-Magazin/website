@@ -17,26 +17,6 @@
       font-weight: bold;
     }
 
-    &__input {
-      border-radius: 50px;
-      border: 1px solid $primary-color;
-      font-size: 18px;
-      padding: 0 20px;
-      margin: 10px auto;
-      width: grid-width(8);
-      height: 30px;
-
-      @include screen-size-l {
-        margin: 20px 0;
-        width: grid-width(4);
-        height: grid-width(.4);
-      }
-
-      &:focus {
-        outline: none;
-      }
-    }
-
     &__found, &__found strong {
       margin: 10px auto;
       font-size: 22px;
@@ -57,6 +37,26 @@
   &__input-wrapper {
     display: inline-flex;
     margin: auto;
+  }
+
+  &__input {
+    border-radius: 50px;
+    border: 1px solid $primary-color;
+    font-size: 18px;
+    padding: 0 20px;
+    margin: 10px auto;
+    width: grid-width(8);
+    height: 30px;
+
+    @include screen-size-l {
+      margin: 20px 0;
+      width: grid-width(4);
+      height: grid-width(.4);
+    }
+
+    &:focus {
+      outline: none;
+    }
   }
 
   &__button {

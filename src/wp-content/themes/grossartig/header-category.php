@@ -123,14 +123,24 @@
     >
   </a>
 
+
   <ul class="header__menu">
-    <li class="header__menu-search">
+    <li class="header__menu-search search__input-wrapper">
       <a href="#" onclick="toggleSearch && toggleSearch();">
         <img
           src="<?php echo get_theme_file_uri("/assets/images/search-icon.png"); ?>"
           alt="Search"
         />
       </a>
+      <form method="GET" action="<?php get_site_url(); ?>">
+        <input class="search__input" type="text" name="s" placeholder="suchen..." autofocus>
+        <button class="search__button">
+          <img
+            src="<?php echo get_theme_file_uri('/assets/images/search-icon-black.png'); ?>"
+            alt="Search button"
+          />
+        </button>
+      </form>
     </li>
     <?php foreach (wp_get_nav_menu_items('header-menu') ?: [] as $menu_item): ?>
     <li>

@@ -57,9 +57,45 @@
         width: grid-width(1);
         height: 100%;
         margin-left: 1.4vw;
+      }
 
-        &:first-child {
+      &:first-child {
+        margin: auto;
+        width: 100%;
+
+        @include screen-size-l {
+          width: grid-width(1);
           margin-left: 0;
+        }
+
+        a {
+          display: none;
+
+          @include screen-size-l {
+            display: inline-flex;
+          }
+        }
+
+        form {
+          margin: auto auto 30px;
+          width: grid-width(9);
+          position: relative;
+          top: 14px;
+          right: 0;
+          display: inline-flex;
+
+          @include screen-size-l {
+            display: none;
+          }
+
+          input {
+            width: 100%;
+            margin: 5px auto;
+          }
+
+          img {
+            width: 50px;
+          }
         }
       }
 
