@@ -12,7 +12,15 @@ function toggleSearch() {
     />
   </a>
   <form action="<?php echo get_site_url(); ?>" class="search">
-    <input class="search__input" type="text" name="s" placeholder="suchen..." autofocus>
+    <div class="search__input-wrapper">
+      <input class="search__input" type="text" name="s" placeholder="suchen..." autofocus>
+      <button class="search__button">
+        <img
+          src="<?php echo get_theme_file_uri('/assets/images/search-icon-black.png'); ?>"
+          alt="Search button"
+        />
+      </button>
+    </div>
   </form>
 
   <button class="search__toggle-button" onclick="toggleSearch(this)">

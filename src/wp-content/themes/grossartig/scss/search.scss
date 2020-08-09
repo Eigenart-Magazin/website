@@ -42,27 +42,6 @@
       font-size: 22px;
     }
 
-    &__input-wrapper {
-      display: inline-flex;
-    }
-
-    &__button {
-      background: none;
-      border: 0;
-
-      margin: auto auto auto -50px;
-      height: 25px;
-
-      @include screen-size-l {
-        margin: auto 0 auto -50px;
-      }
-
-      img {
-        width: auto;
-        height: 100%;
-      }
-    }
-
     &__arrow {
       img {
         transform: rotate(90deg);
@@ -70,6 +49,30 @@
         display: block;
         margin: 20px auto;
       }
+    }
+  }
+}
+
+.search {
+  &__input-wrapper {
+    display: inline-flex;
+    margin: auto;
+  }
+
+  &__button {
+    background: none;
+    border: 0;
+
+    margin: auto auto auto -50px;
+    height: 25px;
+
+    @include screen-size-l {
+      margin: auto 0 auto -50px;
+    }
+
+    img {
+      width: auto;
+      height: 100%;
     }
   }
 }
