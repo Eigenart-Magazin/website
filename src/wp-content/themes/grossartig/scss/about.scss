@@ -16,6 +16,14 @@
       grid-template-columns: grid-width(4) grid-width(6);
       grid-gap: grid-gap(1);
 
+      // Left div (arrow)
+      .wp-block-group:nth-child(1) .wp-block-group__inner-container {
+        position: absolute;
+        top: 0;
+        left: grid-margin();
+        z-index: -1;
+      }
+
       .wp-block-group:nth-child(2) {
         margin-top: 40vh;
       }
