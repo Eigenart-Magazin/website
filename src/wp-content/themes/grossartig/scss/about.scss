@@ -10,6 +10,28 @@
     margin: 20px 0;
   }
 
+  @include screen-size-m {
+    .magazine-description > .wp-block-group__inner-container {
+      display: grid;
+      grid-template-columns: grid-width(4) grid-width(6);
+      grid-gap: grid-gap(1);
+
+      .wp-block-group:nth-child(2) {
+        margin-top: 40vh;
+      }
+    }
+
+    .concept {
+      margin-top: 50px;
+    }
+
+    .concept > .wp-block-group__inner-container {
+      display: grid;
+      grid-template-columns: grid-width(4) grid-width(6);
+      grid-gap: grid-gap(1);
+    }
+  }
+
   .magazine-description {
     .wp-block-image.arrow {
       display: flex;
@@ -19,6 +41,10 @@
         margin: auto;
         height: 100%;
         width: auto;
+      }
+
+      @include screen-size-m {
+        transform: rotate(-45deg);
       }
     }
   }

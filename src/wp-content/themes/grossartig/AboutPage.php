@@ -1,7 +1,7 @@
 <?php
 /* Template Name: AboutPage */
 
-get_header();
+get_header('category');
 
 $post = get_post();
 
