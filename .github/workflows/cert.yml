@@ -1,6 +1,12 @@
 name: Refresh SSL Certificates
 
 on:
+  workflow_dispatch:
+    inputs:
+      debug:
+        description: 'Debug message'
+        required: false
+        default: ''
   schedule:
     - cron: '0 0 1 * *' # renew cert in the beginning of every month
 
