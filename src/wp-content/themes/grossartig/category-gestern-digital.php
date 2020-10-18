@@ -49,7 +49,7 @@ get_header('category');
       <ul>
       <?php while (have_posts()): the_post();?>
         <li class="gestern-digital__post gestern-digital__post--no-padding">
-          <div>
+          <a href="<?php the_permalink(); ?>">
             <?php
                 $custom = get_post_custom($post->ID) ?? [];
                 $meta = $custom['article_author'] ?? [];
@@ -64,7 +64,7 @@ get_header('category');
 
             <!-- excerpt -->
             <p><?php the_excerpt(); ?></p>
-          </div>
+          </a>
         </li>
       <?php endwhile;?>
       </ul>

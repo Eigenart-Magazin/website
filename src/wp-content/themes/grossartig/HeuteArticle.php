@@ -9,8 +9,19 @@ use function GrossArtig\{get_custom_field_or_alert};
 get_header();
 the_post();
 
+$category = get_the_category()[0];
+$is_gestern = false;
+
+if ($category) {
+    $topMost = $category;
+    while ($topMost->parent) {
+        $topMost = get_category($topMost->parent);
+    }
+
+    $is_gestern = $topMost->slug === 'gestern';
+}
 ?>
-<article class="article article--heute">
+<article class="article article--heute <?php echo $is_gestern ? 'article--gestern' : ''; ?>">
   <div class="article__header">
     <button class="article__back-button" onclick="window.history.go(-1);">
       <img src="<?php echo get_theme_file_uri('/assets/images/short-arrow-left.png'); ?>" alt="Go Back" />
@@ -37,7 +48,6 @@ the_post();
   <div class="article__content"><?php the_content(); ?></div>
 </article>
 <?php
-$category = get_the_category()[0];
 $recommended_articles = query_posts([
   'cat' => $category->term_id,
   'post__not_in' => [get_post_field('ID')],
