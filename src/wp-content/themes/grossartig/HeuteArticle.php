@@ -20,8 +20,10 @@ if ($category) {
 
     $is_gestern = $topMost->slug === 'gestern';
 }
+
+if ($is_gestern === false):
 ?>
-<article class="article article--heute <?php echo $is_gestern ? 'article--gestern' : ''; ?>">
+<article class="article article--heute">
   <div class="article__header">
     <button class="article__back-button" onclick="window.history.go(-1);">
       <img src="<?php echo get_theme_file_uri('/assets/images/short-arrow-left.png'); ?>" alt="Go Back" />
@@ -96,4 +98,8 @@ wp_reset_query();
 </a>
 
 <?php
+else: // is_gestern === true
+    require_once __DIR__ . '/GesternArticle.php';
+endif;
+
 get_footer();
