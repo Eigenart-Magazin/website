@@ -389,6 +389,7 @@
 }
 
 .gestern-digital {
+  min-height: 100vh;
   padding-left: grid-margin();
 
   @include screen-size-m {
