@@ -2,8 +2,6 @@
 
 namespace GrossArtig;
 
-use WP_Term;
-
 add_theme_support('post-thumbnails');
 
 function is_dev_mode_on(): bool
@@ -24,15 +22,6 @@ ALERT;
     }
 
     return is_array($custom_field) ? $custom_field : [$custom_field];
-}
-
-function get_top_category(): WP_Term
-{
-    $parent_category = current(array_filter(get_the_category(), function (WP_Term $term) {
-        return $term->parent === 0;
-    }));
-
-    return $parent_category;
 }
 
 function grossartig_block_wrapper(string $block_content, array $block): string
