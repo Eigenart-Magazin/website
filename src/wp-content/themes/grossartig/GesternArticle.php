@@ -2,11 +2,6 @@
 use function GrossArtig\get_custom_field_or_alert;
 ?>
 <div class="category-gestern">
-  <!-- Mobile only -->
-  <nav class="category-gestern__mobile-navigation category-gestern__mobile-navigation--white">
-    <h2><?php echo $category->name; ?></h2>
-    <p><?php echo $category->description; ?></p>
-  </nav>
   <a href="#" class="mobile-scroll-top">
     <img
       class="category__open-call-arrow"
