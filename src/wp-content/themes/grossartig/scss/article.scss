@@ -21,3 +21,12 @@
   margin: 0 42%;
   border: 1px solid $primary-color;
 }
+
+.wp-block-embed {
+  &__wrapper {
+    iframe {
+      display: block;
+      margin: auto;
+    }
+  }
+}
