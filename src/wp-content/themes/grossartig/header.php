@@ -100,6 +100,7 @@
       src: url('<?php echo get_theme_file_uri('/assets/fonts/Apercu/Apercu\ Bold\ Italic.otf'); ?>');
     }
   </style>
+  <link id="favicon" rel="shortcut icon" href="<?php echo get_theme_file_uri('/assets/images/favicon.ico'); ?>">
   <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script type="text/javascript">
