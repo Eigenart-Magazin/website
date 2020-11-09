@@ -47,9 +47,8 @@ services:
     image: nginx:1.17.8-alpine
     ports:
       - 80:80
-      - 443:443
-    hostname: eigenart.dev
-    domainname: eigenart.dev
+    hostname: eigenart.local
+    domainname: eigenart.local
     volumes:
       - ./nginx:/etc/nginx/conf.d
       - ./src:/var/www/html:rw,cached
