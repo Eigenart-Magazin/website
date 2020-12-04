@@ -69,14 +69,20 @@ $current_open_call = query_posts([
         $category = get_category($item->object_id);
         $category_name = strtolower($category->slug);
 
-        $posts = query_posts([
+        $posts_query = [
             'cat' => $category->cat_ID,
             'post_type' => 'post',
             'orderby' => 'date',
             'order' => 'DESC',
             'nopaging' => false,
             'posts_per_page' => 3,
-        ]);
+        ];
+
+        if ($featured_post) {
+            $posts_query['post__not_in'] = [$featured_post->ID];
+        }
+
+        $posts = query_posts($posts_query);
 
         if (count($posts) === 0) {
             continue;
