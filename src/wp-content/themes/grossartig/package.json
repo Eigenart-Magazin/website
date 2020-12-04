@@ -13,7 +13,7 @@
     "sass": "^1.26.5"
   },
   "scripts": {
-    "sass": "sass -s compressed scss/index.scss style.css -s compressed",
-    "sass-watch": "sass -s compressed --watch scss/index.scss style.css"
+    "sass": "sass -s compressed scss/main.scss:main.css scss/home-page.scss:home.css -s compressed",
+    "sass-watch": "sass -s compressed --watch scss/main.scss:main.css scss/home-page.scss:home.css"
   }
 }
