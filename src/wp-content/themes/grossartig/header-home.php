@@ -15,6 +15,18 @@
 
   <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() . '/home.css'; ?>">
   <link href='http://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+
+  <?php if (\GrossArtig\is_dev_mode_on() === false): ?>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168196029-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-168196029-1');
+    </script>
+  <?php endif; ?>
 </head>
 
 <body class="iffs-debug">
