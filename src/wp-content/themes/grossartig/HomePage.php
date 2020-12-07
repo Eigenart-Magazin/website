@@ -120,9 +120,9 @@ $current_open_call = query_posts([
           <div class="content" id="<?php echo $category_name ?>-content">
             <?php
             foreach ($posts as $post):
-                $custom = get_post_custom($featured_post->ID) ?? [];
+                $custom = get_post_custom($post->ID) ?? [];
                 $meta = $custom['article_author'] ?? [];
-                $date = new DateTimeImmutable($featured_post->post_date);
+                $date = new DateTimeImmutable($post->post_date);
                 $meta = array_merge([$date->format('d.m.Y')], $meta);
             ?>
             <a class="url" href="<?php the_permalink($post); ?>">
